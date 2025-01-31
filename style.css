@@ -215,7 +215,7 @@ a {
     padding: .1em 2em;
     aspect-ratio: 2 / 1; /* Maintain width-to-height ratio */
     text-align: justify; /* Center text inside the element */
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 
 @media only screen and (max-width: 768px) {
