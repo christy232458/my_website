@@ -270,7 +270,7 @@ a {
         text-align: justify;
         padding: 0.5% 1.5em;
         width: 80%;
-        height: 90%;
+        height: 0%;
         margin: 0;
         align-self: center;
         overflow: auto;
@@ -449,16 +449,13 @@ a {
 #body-experience {
     border: 5px solid gold;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     display: flex;
+    padding-bottom: 2em;
     align-items: center; /* Align children to the top */
     justify-content: flex-start;
     flex-direction: column;
-}
-
-#body-experience h1 {
-    margin-top: .2em;
 }
 
 #navigation-experience {
@@ -471,72 +468,171 @@ a {
     display: flex; /* Use flexbox for the container */
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    width: 90%; /* Full width of the parent */
-    height: 50%;
+    flex-direction: column;
+    width: 95%; /* Full width of the parent */
+    gap: 3em;
+    padding: 1em;
+    height: auto;
     flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
     gap: 20px; /* Space between items */
     margin-bottom: 1em;
-    overflow-x: auto;  /* Enables horizontal scrolling if needed */
-    overflow-y: hidden; /* Hides vertical overflow */
 }
 
-.experiences > div {
-    display: grid; /* Makes each div a grid container */
-    justify-items: center; /* Centers content horizontally inside each div */
-    align-items: center; /* Centers content vertically inside each div */
-    text-align: center; /* Centers text inside each div */
-    width: 15%; /* Fixed width for each item */
-    min-width: 200px;
-    height: 92%; /* Ensures the div fills the parent .projects container */
-    padding: .5em;
-    background-color: #f4f4f4; /* Background for visibility */
-    border: 1px solid #ccc; /* Border for visibility */
-}
-
-.description {
-    border: 5px dotted blue;
-    width: 85%; /* Set the width of the description */
-    height: 80%;
-    padding: .2em .5em;
-    overflow: auto;
+.exp {
+    border: 5px dotted green;
+    padding: .5em 1em;
+    width: 95%;
     display: flex;
-    text-align: justify;
-    justify-content: center; /* Centers the content horizontally inside .description */
-    align-items: center; /* Centers the content vertically inside .description */
+    flex-direction: column;
+    gap: .2em;
 }
 
-.experiences img {
-    max-width: 100px;
-    min-width: 25px;
+#other-exp {
+    border: 5px solid black;
+    width: 95%;
+    display: flex;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.exp-title {
+    text-decoration: underline;
+}
+
+.school {
+    color: red;
+}
+
+.lang {
+    color: green;
+}
+
+.location, .fluency, .position {
+    color: black;
+    font-style: italic;
+}
+
+.degree {
+    text-decoration: underline;
+}
+
+.work {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 60% auto;
+    column-gap: .5em;
+}
+
+.work-name {
+    color: blue;
+    padding: 0 .5em;
+}
+
+.date {
+    padding: 0 .5em;
+    grid-row: 2;
+    text-align: center;
+}
+
+.duties {
+    padding: 1em .5em;
+    list-style-type: disc;
+    list-style-position: inside;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+.duties li {
+    padding: .2em;
+}
+
+hr {
+    border: 0; /* Remove default border */
+    border-top: 2px solid black; /* Create a solid black line */
+    width: 80%; /* Set the width of the line */
+    margin: 20px auto; /* Add margin to center the line and space it out */
 }
 
 #resume {
     border: 5px dotted gray;
     font-size: 2rem;
-    width: 50%;
-    height: auto;
-    padding: .5em;
+    width: auto;
+    padding: 0 .5em;
     text-align: center;
-    align-items: center;
-    justify-items: center;
     margin-bottom: .5em;
 }
 
 @media only screen and (max-width: 768px) {
+    #body-experience {
+        width: 100vw; /* Adjust width to 100% for smaller screens */
+        padding: 1em; /* Add padding for smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
     #resume {
         border: 5px dotted gray;
         font-size: 2rem;
-        padding: .5em;
-        width: 75%;
+        padding: 0;
+        width: 95%;
         text-align: center;
     }
 
     #body-experience h1 {
         margin-top: 1em;
+        width: 100vw;
     }
 
     .experiences {
-        margin-bottom: 4em;
+        margin-bottom: 1em;
+    }
+
+    .work {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 60% auto;
+        column-gap: .5em;
+    }
+
+    .duties {
+        padding: 1em .5em;
+        list-style-type: disc;
+        list-style-position: inside;
+        grid-row: 3;
+        align-self: center;
+        justify-self: center;
+        text-align: justify;
+        font-size: 1.1em;
+    }
+
+    .work {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 60% auto;
+        column-gap: .5em;
+    }
+    
+    .date {
+        padding: 0 .5em;
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+
+    .work-name {
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+
+    .duties {
+        grid-column: 1 / span 2;
+    }
+
+    #other-exp {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
