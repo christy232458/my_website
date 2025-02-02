@@ -232,7 +232,8 @@ a {
     
     .bio {
         border: 5px solid blue;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         width: 95%;
         height: 80%;
         grid-template-columns: 1fr; /* One column for mobile */
@@ -270,7 +271,7 @@ a {
         text-align: justify;
         padding: 0.5% 1.5em;
         width: 80%;
-        height: 0%;
+        height: 90%;
         margin: 0;
         align-self: center;
         overflow: auto;
@@ -288,6 +289,15 @@ a {
     }
 }
 
+@media only screen and (max-width: 500px) {
+    #navigation-about {
+        width: 95%;
+    }
+    
+    #navigation-about li {
+        padding: .5em;
+    }
+}
 
 /*Contact*/
 #body-contact {
