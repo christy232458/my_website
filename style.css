@@ -934,6 +934,7 @@
             .work-name {
                 grid-column: 1 / span 2;
                 text-align: center;
+                color: blue;
             }
 
 
@@ -957,6 +958,14 @@
             #resume a {
                 display: inline-block;
                 text-decoration: none;
+            }
+
+            .school {
+                color: red;
+            }
+            
+            .lang {
+                color: green;
             }
         }
 
