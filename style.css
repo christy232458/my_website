@@ -402,7 +402,7 @@
                 background: linear-gradient(
               rgb(0, 0, 0, 0.1),  /* Semi-transparent black overlay */
               rgba(0, 0, 0, 0.1)   /* Same overlay for smooth effect */
-        )       , url('images/profile_pic.jpg');
+        )       , url('images/profile_pic.png');
                 background-size: cover; /* Ensure the image covers the entire grid */
                 background-position: center; /* Center the image */
                 background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -761,7 +761,6 @@
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
         #body-experience {
-            border: 5px solid gold;
             width: 100vw;
             height: auto;
             margin: 0 auto;
@@ -778,7 +777,6 @@
         }
         
         .experiences {
-            border: 5px solid black;
             display: flex; /* Use flexbox for the container */
             justify-content: center; /* Center items horizontally */
             align-items: center; /* Center items vertically */
@@ -793,7 +791,6 @@
         }
         
         .exp {
-            border: 5px dotted green;
             padding: .5em 1em;
             width: 95%;
             display: flex;
@@ -802,7 +799,6 @@
         }
         
         #other-exp {
-            border: 5px solid black;
             width: 95%;
             display: flex;
             padding: 1em;
@@ -871,7 +867,6 @@
         }
         
         #resume {
-            border: 5px dotted gray;
             font-size: 2rem;
             width: auto;
             padding: 0 .5em;
@@ -889,7 +884,6 @@
             }
 
             #resume {
-                border: 5px dotted gray;
                 font-size: 2rem;
                 padding: 0;
                 width: 95%;
@@ -949,7 +943,6 @@
             }
 
             #resume {
-                border: 5px dotted gray;
                 font-size: 2rem;
                 width: auto;
                 padding: 0 .5em;
@@ -970,7 +963,6 @@
             /*Desktop design*/
             @media only screen and (min-width: 1500px) {
                 #body-experience {
-                    border: 5px solid gold;
                     width: 100vw;
                     height: auto;
                     margin: 0 auto;
@@ -987,7 +979,6 @@
                 }
                 
                 .experiences {
-                    border: 5px solid black;
                     display: flex; /* Use flexbox for the container */
                     justify-content: center; /* Center items horizontally */
                     align-items: center; /* Center items vertically */
@@ -1002,7 +993,6 @@
                 }
                 
                 .exp {
-                    border: 5px dotted green;
                     padding: .5em 1em;
                     width: 95%;
                     display: flex;
@@ -1011,7 +1001,6 @@
                 }
                 
                 #other-exp {
-                    border: 5px solid black;
                     width: 95%;
                     display: flex;
                     padding: 1em;
@@ -1095,7 +1084,6 @@
                 }
                 
                 #resume {
-                    border: 5px dotted gray;
                     font-size: 3.5em;
                     width: auto;
                     padding: 0 .5em;
