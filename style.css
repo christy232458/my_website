@@ -937,6 +937,17 @@
                 color: blue;
             }
 
+            hr {
+                border: 0; /* Remove default border */
+                border-top: 2px solid black; /* Create a solid black line */
+                width: 80%; /* Set the width of the line */
+                margin: 20px auto; /* Add margin to center the line and space it out */
+            }
+
+            .location, .fluency, .position {
+                color: black;
+                font-style: italic;
+            }
 
             #other-exp {
                 flex-direction: column;
