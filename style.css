@@ -168,6 +168,8 @@
             margin: 0;
             padding: 0;
             display: grid;
+            grid-template-columns: 30% 1fr;
+            grid-template-rows: 80% auto;
             align-items: center;
             justify-items: center;
         }
@@ -178,15 +180,13 @@
         }
 
         #logo {
-            width: 100%;
-            max-width: 30%;
+            width: 520px;
         }
 
         .intro {
             display: grid;
-            width: 95%;
-            align-items: center;
-            justify-items: center;
+            width: 90%;
+            padding: .5em;
         }
 
         #navi {
@@ -194,6 +194,8 @@
             justify-items: center;
             width: 80%;
             padding: .5em;
+            grid-row: 2;
+            grid-column: 1 / span 2;
         }
 
         #navi li {
@@ -201,12 +203,12 @@
             list-style-type: none;
             text-align: center;
             width: 80%;
-            font-size: 2em;
+            font-size: 2.5em;
             padding: .2em;
         }
 
         #name {
-           text-align: center;
+           text-align: start;
            width: 80%;
            font-size: 4em;
            padding: .1em .3em;
@@ -214,25 +216,25 @@
         }
 
         #tagline {
-           width: 80%;
-           text-align: center;
+           text-align: end;
            font-size: 2em;
-           padding: .2em 1em;
-           margin: .1em 0;
-           text-wrap: wrap;
+           padding: .1em .3em;
+           margin: .1em .5em;
         }
     }
 
         /*Mobile design*/
         @media only screen and (max-width: 768px) {
             #homepage {
+                border: 5px solid gold;
                 width: 100vw;
                 height: 100vh;
                 margin: 0;
-                display: grid;
-                grid-template-rows: 25% auto;
+                display: flex;
+                flex-direction: column;
                 align-items: center;
-                justify-items: center;
+                justify-content: center;
+                gap: 1em;
             }
 
             #homepage header a {
@@ -243,6 +245,7 @@
             #logo {
                 width: 100%;
                 max-width: 30%;
+                margin-bottom: 2em;
             }
     
             .intro {
@@ -299,6 +302,8 @@
                     margin: 0;
                     padding: 0;
                     display: grid;
+                    grid-template-columns: 30% 1fr;
+                    grid-template-rows: 80% auto;
                     align-items: center;
                     justify-items: center;
                 }
@@ -310,23 +315,22 @@
         
                 #logo {
                     width: 100%;
-                    max-width: 60%;
+                    max-width: 650px;
                 }
         
                 .intro {
                     display: grid;
-                    width: 95%;
-                    height: auto;
-                    align-items: center;
-                    justify-items: center;
-                    padding: .3em;
+                    width: 90%;
+                    padding: .5em;
                 }
         
                 #navi {
                     display: flex;
+                    justify-items: center;
                     width: 80%;
-                    padding: 1em;
-                    margin-top: 2em;
+                    padding: .5em;
+                    grid-row: 2;
+                    grid-column: 1 / span 2;
                 }
         
                 #navi li {
@@ -334,25 +338,23 @@
                     list-style-type: none;
                     text-align: center;
                     width: 80%;
-                    font-size: 3.5em;
+                    font-size: 4.5em;
                     padding: .2em;
                 }
         
                 #name {
-                   text-align: center;
-                   font-size: 8em;
-                   padding: .2em .5em;
-                   margin-bottom: 0;
+                   text-align: start;
                    width: 80%;
+                   font-size: 6em;
+                   padding: .1em .3em;
+                   margin: .1em 0;
                 }
         
                 #tagline {
-                   width: 70%;
-                   text-align: center;
-                   font-size: 3.5em;
-                   padding: .2em 1em;
-                   margin-top: .1em;
-                   text-wrap: wrap;
+                   text-align: end;
+                   font-size: 4em;
+                   padding: .1em .3em;
+                   margin: .1em .5em;
                 }
             }
 
