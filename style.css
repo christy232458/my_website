@@ -189,9 +189,9 @@
         }
 
         #tagline {
-           text-align: end;
+           text-align: start;
            font-size: 2em;
-           padding: .1em .3em;
+           padding: .1em 7em;
            margin: .1em .5em;
         }
     }
@@ -335,7 +335,7 @@
                 #tagline {
                    text-align: end;
                    font-size: 4em;
-                   padding: .1em .3em;
+                   padding: .1em 7em;
                    margin: .1em .5em;
                 }
             }
