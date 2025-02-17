@@ -888,12 +888,6 @@
             padding: .2em;
         }
         
-        hr {
-            border: 0; /* Remove default border */
-            border-top: 2px solid black; /* Create a solid black line */
-            width: 80%; /* Set the width of the line */
-            margin: 20px auto; /* Add margin to center the line and space it out */
-        }
         
         #resume {
             font-size: 2rem;
@@ -966,7 +960,7 @@
                 color: blue;
             }
 
-            hr {
+            .experience-separator {
                 border: 0; /* Remove default border */
                 border-top: 2px solid black; /* Create a solid black line */
                 width: 80%; /* Set the width of the line */
@@ -1131,13 +1125,6 @@
                 
                 .duties li {
                     padding: .2em;
-                }
-                
-                hr {
-                    border: 0; /* Remove default border */
-                    border-top: 2px solid black; /* Create a solid black line */
-                    width: 80%; /* Set the width of the line */
-                    margin: 20px auto; /* Add margin to center the line and space it out */
                 }
                 
                 #resume {
