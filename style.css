@@ -214,9 +214,8 @@
             }
     
             #logo-home {
-                border: 5px solid black;
                 width: 100%;
-                max-width: 170px;
+                max-width: 250px;
                 margin-bottom: 1em;
                 margin-top: 2em;
             }
