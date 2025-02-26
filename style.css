@@ -536,7 +536,7 @@
 
         #all-contact {
             display: grid;
-            grid-template-columns: 30% 1fr;
+            grid-template-columns: 50% 1fr;
             align-items: center;
             justify-items: center;
             width: 95%;
@@ -553,13 +553,50 @@
             width: 90%;
         }
 
-            #email-me {
+        #email-me {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 1em;
+            align-items: center;
+            justify-items: center;
+            grid-column: 1;
+            position: relative; /* Needed for absolute positioning inside */
+            z-index: 1; /* Higher z-index */
+        }
+
+            #email-form {
+                grid-column: 1;
                 display: flex;
                 flex-direction: column;
-                width: 50%;
-                padding: 1em;
+                gap: 0.8em; /* Adds space between form elements */
+                width: 100%; /* Ensures full width */
+                height: 60%;
+                max-width: 400px; /* Prevents form from being too wide */
                 align-items: center;
-                justify-items: center;
+                justify-content: center;
+                position: absolute; /* Positions it inside #email-me */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* Center the form */
+                z-index: -1; /* Lower z-index to position it behind #email-me */
+                visibility: hidden;
+            }
+            
+            #email-form input,
+            #email-form textarea,
+            #email-form button {
+                width: 100%; /* Makes form fields stretch to full width */
+                padding: 10px;
+                font-size: 1em;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            
+            textarea {
+                resize: vertical; /* Allows resizing */
+                height: 100px;
             }
 
             .icons {
@@ -727,26 +764,24 @@
                     font-size: 4em;
                 }
         
-                #email-me {
-                    display: flex;
-                    flex-direction: column;
-                    width: 50%;
-                    padding: 1em;
-                    align-items: center;
-                    justify-items: center;
-                    grid-column: 1;
-                    position: relative; /* Needed for absolute positioning inside */
-                    z-index: 1; /* Higher z-index */
-                }
-    
+                    #email-me {
+                        display: flex;
+                        flex-direction: column;
+                        width: 70%;
+                        height: 80%;
+                        padding: 1em;
+                        align-content: center;
+                        justify-content: center;
+                    }
+
                     #email-form {
                         grid-column: 1;
                         display: flex;
                         flex-direction: column;
                         gap: 0.8em; /* Adds space between form elements */
                         width: 100%; /* Ensures full width */
-                        height: 60%;
-                        max-width: 400px; /* Prevents form from being too wide */
+                        height: 90%;
+                        max-width: 700px; /* Prevents form from being too wide */
                         align-items: center;
                         justify-content: center;
                         position: absolute; /* Positions it inside #email-me */
@@ -762,16 +797,19 @@
                     #email-form button {
                         width: 100%; /* Makes form fields stretch to full width */
                         padding: 10px;
-                        font-size: 1em;
+                        font-size: 1.8em;
                         border: 1px solid #ccc;
                         border-radius: 5px;
-                        box-sizing: border-box;
                     }
+
+                        #email-name, #email-subject {
+                            height: 50px;
+                        }
                     
                     textarea {
                         resize: vertical; /* Allows resizing */
-                        height: 100px;
-                    }
+                        height: 300px;
+                    }   
         
                     .icons {
                         display: flex;               /* Set the container as flex */
