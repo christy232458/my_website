@@ -84,7 +84,7 @@
         
             try {
                 // Send a POST request to the Node.js backend
-                let response = await fetch('https:// email-form-padma-13a77e0aa401.herokuapp.com/send-email', {
+                let response = await fetch('https://email-form-padma-33d71ffb9a1a.herokuapp.com/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
