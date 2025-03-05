@@ -80,7 +80,6 @@
 
             .navigation #logo {
                 width: auto;
-                height: auto;
                 max-width: 75px;
                 min-width: 50px;
             }
@@ -130,12 +129,36 @@
 
 /*----------------------------------------*/
 
-/*Index*/
+/*Main/Index*/
+    /*Laptop design*/
+    @media only screen and (min-width: 769px) {
+        #index {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            
+        }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) {
+                
+            }
+
+/*----------------------------------------*/
+
+/*Title/Home Page*/
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
         #homepage {
-            width: 100vw;
-            height: 100vh;
+            /*TEMPORARY*/
+            border: 5px solid black;
+            /*TEMPORARY*/
+            width: auto;
+            height: auto;
             margin: 0;
             padding: 0;
             display: grid;
@@ -199,6 +222,9 @@
         /*Mobile design*/
         @media only screen and (max-width: 768px) {
             #homepage {
+                /*TEMPORARY*/
+                border: 5px solid black;
+                /*TEMPORARY*/
                 width: 100vw;
                 height: 100vh;
                 margin: 0;
@@ -275,6 +301,9 @@
             /*Desktop design*/
             @media only screen and (min-width: 1500px) {
                 #homepage {
+                    /*TEMPORARY*/
+                    border: 5px solid black;
+                    /*TEMPORARY*/
                     width: 100vw;
                     height: 100vh;
                     margin: 0;
@@ -348,12 +377,14 @@
 /*About*/
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
-        #body-about {
+        #about-section {
+            /*TEMPORARY*/
+            border: 5px solid black;
+            /*TEMPORARY*/
             display: flex;
             flex-direction: column;
-            width: 100vw;
-            height: 100vh;
-            padding: .1em;
+            width: auto;
+            height: auto;
             margin: 0;
             align-items: center;
             justify-items: center;
@@ -362,7 +393,6 @@
         #navigation-about {
             margin-bottom: .9em;
         }
-
 
         .bio {
             display: grid;
@@ -403,7 +433,10 @@
 
         /*Mobile design*/
         @media only screen and (max-width: 768px) {
-            #body-about {
+            #about-section {
+                /*TEMPORARY*/
+                border: 5px solid black;
+                /*TEMPORARY*/
                 height: 100vh;
                 padding: 0;
                 margin: 0;
@@ -444,6 +477,7 @@
                 #bio-p {
                     padding: 1em;
                     grid-row: 2;
+                    text-justify: justify;
                     text-align: justify;
                     width: 85%;
                     height: 90%;
@@ -461,7 +495,10 @@
 
             /*Desktop design*/
             @media only screen and (min-width: 1500px) {
-                #body-about {
+                #about-section {
+                    /*TEMPORARY*/
+                    border: 5px solid black;
+                    /*TEMPORARY*/
                     display: flex;
                     flex-direction: column;
                     width: 100vw;
@@ -475,7 +512,6 @@
                 #navigation-about {
                     margin-bottom: 1em;
                 }
-                
         
                 .bio {
                     display: grid;
@@ -519,9 +555,12 @@
 /*Contact*/
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
-        #body-contact {
-            width: 100vw;
-            height: 100vh;
+        #contact-section {
+            /*TEMPORARY*/
+            border: 5px solid black;
+            /*TEMPORARY*/
+            width: auto;
+            height: auto;
             margin: 0;
             padding: 0;
             display: flex;
@@ -553,51 +592,51 @@
             width: 90%;
         }
 
-        #email-me {
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            padding: 1em;
-            align-items: center;
-            justify-items: center;
-            grid-column: 1;
-            position: relative; /* Needed for absolute positioning inside */
-            z-index: 1; /* Higher z-index */
-        }
-
-            #email-form {
-                grid-column: 1;
+            #email-me {
                 display: flex;
                 flex-direction: column;
-                gap: 0.8em; /* Adds space between form elements */
-                width: 100%; /* Ensures full width */
-                height: 60%;
-                max-width: 400px; /* Prevents form from being too wide */
+                width: 50%;
+                padding: 1em;
                 align-items: center;
-                justify-content: center;
-                position: absolute; /* Positions it inside #email-me */
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%); /* Center the form */
-                z-index: -1; /* Lower z-index to position it behind #email-me */
-                visibility: hidden;
+                justify-items: center;
+                grid-column: 1;
+                position: relative; /* Needed for absolute positioning inside */
+                z-index: 1; /* Higher z-index */
             }
-            
-            #email-form input,
-            #email-form textarea,
-            #email-form button {
-                width: 100%; /* Makes form fields stretch to full width */
-                padding: 10px;
-                font-size: 1em;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                box-sizing: border-box;
-            }
-            
-            textarea {
-                resize: vertical; /* Allows resizing */
-                height: 100px;
-            }
+
+                #email-form {
+                    grid-column: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.8em; /* Adds space between form elements */
+                    width: 100%; /* Ensures full width */
+                    height: 60%;
+                    max-width: 400px; /* Prevents form from being too wide */
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute; /* Positions it inside #email-me */
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%); /* Center the form */
+                    z-index: -1; /* Lower z-index to position it behind #email-me */
+                    visibility: hidden;
+                }
+                
+                #email-form input,
+                #email-form textarea,
+                #email-form button {
+                    width: 100%; /* Makes form fields stretch to full width */
+                    padding: 10px;
+                    font-size: 1em;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+                
+                textarea {
+                    resize: vertical; /* Allows resizing */
+                    height: 100px;
+                }
 
             .icons {
                 display: flex;               /* Set the container as flex */
@@ -616,6 +655,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-items: center;
+                grid-column: 2;
             }
 
                 #social-media ul {
@@ -638,10 +678,12 @@
             }
         }
 
-
         /*Mobile design*/
         @media only screen and (max-width: 768px) {
-            #body-contact {
+            #contact-section {
+                /*TEMPORARY*/
+                border: 5px solid black;
+                /*TEMPORARY*/
                 width: 100vw;
                 height: 100vh;
                 margin: 0;
@@ -766,7 +808,10 @@
 
             /*Desktop design*/
             @media only screen and (min-width: 1500px) {
-                #body-contact {
+                #contact-section {
+                    /*TEMPORARY*/
+                    border: 5px solid black;
+                    /*TEMPORARY*/
                     width: 100vw;
                     height: 100vh;
                     margin: 0;
@@ -886,11 +931,558 @@
 
 /*----------------------------------------*/
 
+/*Reference*/
+    /*Laptop design*/
+    @media only screen and (min-width: 769px) {
+        #reference-section {
+            /*TEMPORARY*/
+            border: 5px solid black;
+            /*TEMPORARY*/
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+        } 
+
+        .references {
+            margin-top: 1em;
+            padding: 0;
+            width: 95vw;  /* Set the container's width to 95% of the viewport */
+            max-width: 95vw;
+            height: 75vh; /* Set a fixed height for the posts container */
+            max-height: 75vh;
+            padding: .5em;
+            display: flex;
+            flex-direction: column; /* Stack the posts vertically */
+            gap: 10px;  /* Add space between posts */
+            align-items: center; /* Center posts horizontally */
+            justify-content: flex-start; /* Stack from the top */
+            overflow-y: auto;  /* Enable scrolling when content overflows */
+            box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
+        }
+
+        .references div {
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            min-width: 560px;
+            max-height: 150px;
+            flex-wrap: wrap;
+        }
+
+            .references img {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+                max-width: 150px;
+            }
+
+            .references .image-link {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+            }
+
+            .references p {
+                grid-row: 2;
+                grid-column: 2;
+                width: 90%;
+                height: 70%;
+                justify-self: flex-start;
+                margin-left: .5em;
+                padding: .1em .3em;
+                overflow-y: auto;
+            }
+
+            .references h2 {
+                margin: 0;
+                padding: 0;
+            }
+
+            .name-ref {
+                display: block;
+                grid-row: 1;
+                grid-column: 2;
+                justify-self: flex-start;
+                margin-left: .5em;
+                padding: .1em .3em;
+                width: 90%;
+            }
+    }
+
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            #reference-section {
+                /*TEMPORARY*/
+                border: 5px solid black;
+                /*TEMPORARY*/
+                margin-top: 1em;
+                padding: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+            } 
+    
+            .references {
+                margin: 0;
+                padding: 0;
+                width: 98%;  /* Set the container's width to 95% of the viewport */
+                max-width: 100%;
+                height: 83%; /* Set a fixed height for the posts container */
+                max-height: 100%;
+                padding: .5em;
+                display: flex;
+                flex-direction: column; /* Stack the posts vertically */
+                gap: 1px;  /* Add space between posts */
+                align-items: center; /* Center posts horizontally */
+                justify-content: flex-start; /* Stack from the top */
+                overflow-y: auto;  /* Enable scrolling when content overflows */
+                box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
+            }
+    
+            .references div {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                align-items: center;
+                justify-items: center;
+                width: 97%;
+                min-height: 150px;
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            .references div::before {
+                content: "";
+                position: absolute;
+                top: 50%;   /* Move to the vertical center */
+                left: 50%;  /* Move to the horizontal center */
+                width: 80%;  /* Control the size of the background */
+                height: 80%; /* Control the size of the background */
+                background: url('images/profile_placeholder.jpg') no-repeat center/cover;
+                opacity: 0.5; /* Adjust opacity as needed */
+                z-index: -1; /* Places background behind content */
+                transform: translate(-50%, -50%);  /* This ensures the pseudo-element is truly centered */
+            }
+    
+                .references img {
+                    display: none;
+                }
+    
+                .references p {
+                    grid-row: 2;
+                    width: 90%;
+                    height: 80%;
+                    padding: .1em .3em;
+                    overflow-y: auto;
+                    text-align: justify;
+                    align-content: flex-start;
+                    justify-items: center;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                    font-weight: bold;
+                    overflow-y: auto;
+                }
+    
+                .references h2 {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .references h1 {
+                    width: 90%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center; /* Center the entire <h1> content */
+                    align-items: center; /* Align vertically */
+                    gap: 5px; /* Add space between text and arrow */
+                    padding: .3em;
+                    margin-bottom: .5em;
+                }
+                
+                .references i {
+                    display: inline;
+                }
+                
+                .references a {
+                    display: block;
+                    align-items: center; /* Center vertically with the text */
+                }
+                
+                .references .name-ref {
+                    grid-row: 1;
+                    width: 85%;
+                    padding: .5em;
+                    text-align: center;
+                    align-content: center;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                    font-weight: bold;
+                }
+        }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) {
+                #reference-section {
+                    /*TEMPORARY*/
+                    border: 5px solid black;
+                    /*TEMPORARY*/
+                    margin-top: 1em;
+                    padding: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-items: center;
+                } 
+        
+                .references {
+                    margin: 0;
+                    padding: 0;
+                    width: 95vw;  /* Set the container's width to 95% of the viewport */
+                    max-width: 95vw;
+                    height: 75vh; /* Set a fixed height for the posts container */
+                    max-height: 75vh;
+                    padding: .5em;
+                    display: flex;
+                    flex-direction: column; /* Stack the posts vertically */
+                    gap: 10px;  /* Add space between posts */
+                    align-items: center; /* Center posts horizontally */
+                    justify-content: flex-start; /* Stack from the top */
+                    overflow-y: auto;  /* Enable scrolling when content overflows */
+                    box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
+                }
+        
+                .references div {
+                    display: grid;
+                    grid-template-columns: 30% 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    align-items: center;
+                    justify-items: center;
+                    width: 80%;
+                    min-height: 300px;
+                    flex-wrap: wrap;
+                }
+        
+                    .references img {
+                        display: block;
+                        grid-column: 1;
+                        grid-row: 1 / span 2;
+                        max-width: 250px;
+                        justify-self: center;
+                        align-self: center;
+                    }
+        
+                    .references .image-link {
+                        display: block;
+                        grid-column: 1;
+                        grid-row: 1 / span 2;
+                        justify-self: center;
+                        align-self: center;
+                    }
+        
+                    .references p {
+                        grid-row: 2;
+                        grid-column: 2;
+                        width: 90%;
+                        height: 70%;
+                        justify-self: flex-start;
+                        margin-left: .5em;
+                        padding: .1em .3em;
+                        font-size: 2.3em;
+                        overflow-y: auto;
+                    }
+        
+                    .references h2 {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .references h1 {
+                        font-size: 3em;
+                    }
+        
+                    .name-ref {
+                        display: block;
+                        grid-row: 1;
+                        grid-column: 2;
+                        justify-self: flex-start;
+                        margin-left: .5em;
+                        padding: .1em .3em;
+                        width: 90%;
+                        font-size: 2.5em;
+                    }
+            }
+
+/*----------------------------------------*/
+
+/*Blog*/
+    /*Laptop design*/
+    @media only screen and (min-width: 769px) {
+        #blog-section {
+            /*TEMPORARY*/
+            border: 5px solid black;
+            /*TEMPORARY*/
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+        } 
+
+        .posts {
+            margin: 0;
+            padding: 0;
+            width: 95vw;  /* Set the container's width to 95% of the viewport */
+            max-width: 95vw;
+            height: 75vh; /* Set a fixed height for the posts container */
+            max-height: 75vh;
+            padding: .5em;
+            display: flex;
+            flex-direction: column; /* Stack the posts vertically */
+            gap: 10px;  /* Add space between posts */
+            align-items: center; /* Center posts horizontally */
+            justify-content: flex-start; /* Stack from the top */
+            overflow-y: auto;  /* Enable scrolling when content overflows */
+            box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
+        }
+
+        .posts div {
+            display: grid;
+            grid-template-columns: 1fr 40%;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            min-width: 560px;
+            max-height: 150px;
+            flex-wrap: wrap;
+        }
+
+            .image-link {
+                display: block;
+                max-width: 250px;
+                grid-row: 1 / span 2;
+                align-self: center;
+            }
+
+            .posts img {
+                max-width: 200px;
+            }
+
+            .blog-description {
+                grid-row: 2;
+                grid-column: 1;
+                width: 90%;
+                height: 70%;
+                justify-self: flex-start;
+                margin-left: .5em;
+                padding: .1em .3em;
+            }
+
+            .blog-title h2 {
+                margin: 0; /* Remove extra margin on <h2> */
+                padding: 0; /* Remove extra padding */
+            }
+
+            .blog-title {
+                justify-self: flex-start;
+                width: 89%;
+                margin-left: .5em;
+                padding: .1em .3em;
+            }
+    }
+
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            #blog-section {
+                /*TEMPORARY*/
+                border: 5px solid black;
+                /*TEMPORARY*/
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+            } 
+
+            .posts {
+                margin: 0;
+                padding: 0;
+                width: 95vw;  /* Set the container's width to 95% of the viewport */
+                max-width: 95vw;
+                height: 75vh; /* Set a fixed height for the posts container */
+                max-height: 75vh;
+                padding: .5em;
+                display: flex;
+                flex-direction: column; /* Stack the posts vertically */
+                gap: 10px;  /* Add space between posts */
+                align-items: center; /* Center posts horizontally */
+                justify-content: flex-start; /* Stack from the top */
+                overflow-y: auto;  /* Enable scrolling when content overflows */
+                box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
+            }
+    
+            .posts div {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                align-items: center;
+                justify-items: center;
+                width: 95%;
+                max-height: 150px;
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            .posts div::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('images/how-to-write-a-good-blog-post.png') no-repeat center/cover;
+                opacity: 0.5; /* Adjust opacity as needed */
+                z-index: -1; /* Places background behind content */
+            }
+                .posts img {
+                    display: none;
+                }
+    
+                .blog-description {
+                    grid-row: 2;
+                    width: 90%;
+                    height: 70%;
+                    justify-self: flex-start;
+                    margin-left: .5em;
+                    padding: .1em .3em;
+                    text-align: justify;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                    font-weight: bold;
+                    overflow-y: auto;
+                }
+    
+                .blog-title h2 {
+                    margin: 0; /* Remove extra margin on <h2> */
+                    padding: 0; /* Remove extra padding */
+                }
+    
+                .blog-title {
+                    justify-self: flex-start;
+                    width: 89%;
+                    margin-left: .5em;
+                    padding: .1em .3em;
+                    grid-row: 1;
+                    text-align: center;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                    font-weight: bold;
+                    color: black;
+                }
+        }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) {
+                #blog-section {
+                    /*TEMPORARY*/
+                    border: 5px solid black;
+                    /*TEMPORARY*/
+                    margin: 0;
+                    padding: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-items: center;
+                } 
+
+                .posts {
+                    margin: 0;
+                    padding: 0;
+                    width: 95vw;  /* Set the container's width to 95% of the viewport */
+                    max-width: 95vw;
+                    height: 75vh; /* Set a fixed height for the posts container */
+                    max-height: 75vh;
+                    padding: .5em;
+                    display: flex;
+                    flex-direction: column; /* Stack the posts vertically */
+                    gap: 10px;  /* Add space between posts */
+                    align-items: center; /* Center posts horizontally */
+                    justify-content: flex-start; /* Stack from the top */
+                    overflow-y: auto;  /* Enable scrolling when content overflows */
+                    box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
+                }
+        
+                .posts div {
+                    display: grid;
+                    grid-template-columns: 1fr 40%;
+                    grid-template-rows: 1fr 1fr;
+                    align-items: center;
+                    justify-items: center;
+                    width: 80%;
+                    min-height: 300px;
+                }
+        
+                    .image-link {
+                        display: block;
+                        grid-row: 1 / span 2;
+                        align-self: center;
+                        justify-self: center;
+                    }
+        
+                    .posts img {
+                        display: block;
+                        max-width: 500px;
+                        align-self: center; /* Vertically center the image within its grid area */
+                        justify-self: center; /* Horizontally center the image within its grid area */
+                    }
+        
+                    .blog-description {
+                        grid-row: 2;
+                        grid-column: 1;
+                        width: 90%;
+                        height: 70%;
+                        justify-self: flex-start;
+                        margin-left: .5em;
+                        padding: .1em .3em;
+                        font-size: 1.75em;
+                    }
+        
+                    .blog-title h2 {
+                        margin: 0; /* Remove extra margin on <h2> */
+                        padding: 0; /* Remove extra padding */
+                    }
+        
+                    .blog-title {
+                        justify-self: flex-start;
+                        width: 89%;
+                        margin-left: .5em;
+                        padding: .1em .3em;
+                        font-size: 2em;
+                    }
+            }
+
+/*----------------------------------------*/
+
+
 /*Experiences*/
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
-        #body-experience {
-            width: 100vw;
+        #experience-section {
+            /*TEMPORARY*/
+            border: 5px solid black;
+            /*TEMPORARY*/
+            width: auto;
             height: auto;
             margin: 0 auto;
             display: flex;
@@ -1008,8 +1600,12 @@
 
         /*Mobile design*/
         @media only screen and (max-width: 768px) {
-            #body-experience {
-                width: 100vw; /* Adjust width to 100% for smaller screens */
+            #experience-section {
+                /*TEMPORARY*/
+                border: 5px solid black;
+                /*TEMPORARY*/
+                width: auto; /* Adjust width to 100% for smaller screens */
+                height: auto;
                 padding: 1em; /* Add padding for smaller screens */
                 flex-direction: column; /* Stack elements vertically */
             }
@@ -1113,8 +1709,11 @@
 
             /*Desktop design*/
             @media only screen and (min-width: 1500px) {
-                #body-experience {
-                    width: 100vw;
+                #experience-section {
+                    /*TEMPORARY*/
+                    border: 5px solid black;
+                    /*TEMPORARY*/
+                    width: auto;
                     height: auto;
                     margin: 0 auto;
                     display: flex;
@@ -1244,529 +1843,4 @@
                 }
             }
             
-/*----------------------------------------*/
-
-/*Reference*/
-    /*Laptop design*/
-    @media only screen and (min-width: 769px) {
-        #body-references {
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-items: center;
-        } 
-
-        .references {
-            margin-top: 1em;
-            padding: 0;
-            width: 95vw;  /* Set the container's width to 95% of the viewport */
-            max-width: 95vw;
-            height: 75vh; /* Set a fixed height for the posts container */
-            max-height: 75vh;
-            padding: .5em;
-            display: flex;
-            flex-direction: column; /* Stack the posts vertically */
-            gap: 10px;  /* Add space between posts */
-            align-items: center; /* Center posts horizontally */
-            justify-content: flex-start; /* Stack from the top */
-            overflow-y: auto;  /* Enable scrolling when content overflows */
-            box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
-        }
-
-        .references div {
-            display: grid;
-            grid-template-columns: 30% 1fr;
-            grid-template-rows: 1fr 1fr;
-            align-items: center;
-            justify-items: center;
-            min-width: 560px;
-            max-height: 150px;
-            flex-wrap: wrap;
-        }
-
-            .references img {
-                grid-column: 1;
-                grid-row: 1 / span 2;
-                max-width: 150px;
-            }
-
-            .references .image-link {
-                grid-column: 1;
-                grid-row: 1 / span 2;
-            }
-
-            .references p {
-                grid-row: 2;
-                grid-column: 2;
-                width: 90%;
-                height: 70%;
-                justify-self: flex-start;
-                margin-left: .5em;
-                padding: .1em .3em;
-                overflow-y: auto;
-            }
-
-            .references h2 {
-                margin: 0;
-                padding: 0;
-            }
-
-            .name-ref {
-                display: block;
-                grid-row: 1;
-                grid-column: 2;
-                justify-self: flex-start;
-                margin-left: .5em;
-                padding: .1em .3em;
-                width: 90%;
-            }
-    }
-
-        /*Mobile design*/
-        @media only screen and (max-width: 768px) {
-            #body-references {
-                margin-top: 1em;
-                padding: 0;
-                width: 100vw;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-items: center;
-            } 
-    
-            .references {
-                margin: 0;
-                padding: 0;
-                width: 98%;  /* Set the container's width to 95% of the viewport */
-                max-width: 100%;
-                height: 83%; /* Set a fixed height for the posts container */
-                max-height: 100%;
-                padding: .5em;
-                display: flex;
-                flex-direction: column; /* Stack the posts vertically */
-                gap: 1px;  /* Add space between posts */
-                align-items: center; /* Center posts horizontally */
-                justify-content: flex-start; /* Stack from the top */
-                overflow-y: auto;  /* Enable scrolling when content overflows */
-                box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
-            }
-    
-            .references div {
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                align-items: center;
-                justify-items: center;
-                width: 97%;
-                min-height: 150px;
-                flex-wrap: wrap;
-                position: relative;
-            }
-
-            .references div::before {
-                content: "";
-                position: absolute;
-                top: 50%;   /* Move to the vertical center */
-                left: 50%;  /* Move to the horizontal center */
-                width: 80%;  /* Control the size of the background */
-                height: 80%; /* Control the size of the background */
-                background: url('images/profile_placeholder.jpg') no-repeat center/cover;
-                opacity: 0.5; /* Adjust opacity as needed */
-                z-index: -1; /* Places background behind content */
-                transform: translate(-50%, -50%);  /* This ensures the pseudo-element is truly centered */
-            }
-    
-                .references img {
-                    display: none;
-                }
-    
-                .references p {
-                    grid-row: 2;
-                    width: 90%;
-                    height: 80%;
-                    padding: .1em .3em;
-                    overflow-y: auto;
-                    text-align: justify;
-                    align-content: flex-start;
-                    justify-items: center;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-                    font-weight: bold;
-                    overflow-y: auto;
-                }
-    
-                .references h2 {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                .references h1 {
-                    width: 90%;
-                    text-align: center;
-                    display: flex;
-                    justify-content: center; /* Center the entire <h1> content */
-                    align-items: center; /* Align vertically */
-                    gap: 5px; /* Add space between text and arrow */
-                    padding: .3em;
-                    margin-bottom: .5em;
-                }
-                
-                .references i {
-                    display: inline;
-                }
-                
-                .references a {
-                    display: block;
-                    align-items: center; /* Center vertically with the text */
-                }
-                
-                .references .name-ref {
-                    grid-row: 1;
-                    width: 85%;
-                    padding: .5em;
-                    text-align: center;
-                    align-content: center;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-                    font-weight: bold;
-                }
-        }
-
-            /*Desktop design*/
-            @media only screen and (min-width: 1500px) {
-                #body-references {
-                    margin-top: 1em;
-                    padding: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-items: center;
-                } 
-        
-                .references {
-                    margin: 0;
-                    padding: 0;
-                    width: 95vw;  /* Set the container's width to 95% of the viewport */
-                    max-width: 95vw;
-                    height: 75vh; /* Set a fixed height for the posts container */
-                    max-height: 75vh;
-                    padding: .5em;
-                    display: flex;
-                    flex-direction: column; /* Stack the posts vertically */
-                    gap: 10px;  /* Add space between posts */
-                    align-items: center; /* Center posts horizontally */
-                    justify-content: flex-start; /* Stack from the top */
-                    overflow-y: auto;  /* Enable scrolling when content overflows */
-                    box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
-                }
-        
-                .references div {
-                    display: grid;
-                    grid-template-columns: 30% 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    align-items: center;
-                    justify-items: center;
-                    width: 80%;
-                    min-height: 300px;
-                    flex-wrap: wrap;
-                }
-        
-                    .references img {
-                        display: block;
-                        grid-column: 1;
-                        grid-row: 1 / span 2;
-                        max-width: 250px;
-                        justify-self: center;
-                        align-self: center;
-                    }
-        
-                    .references .image-link {
-                        display: block;
-                        grid-column: 1;
-                        grid-row: 1 / span 2;
-                        justify-self: center;
-                        align-self: center;
-                    }
-        
-                    .references p {
-                        grid-row: 2;
-                        grid-column: 2;
-                        width: 90%;
-                        height: 70%;
-                        justify-self: flex-start;
-                        margin-left: .5em;
-                        padding: .1em .3em;
-                        font-size: 2.3em;
-                        overflow-y: auto;
-                    }
-        
-                    .references h2 {
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    .references h1 {
-                        font-size: 3em;
-                    }
-        
-                    .name-ref {
-                        display: block;
-                        grid-row: 1;
-                        grid-column: 2;
-                        justify-self: flex-start;
-                        margin-left: .5em;
-                        padding: .1em .3em;
-                        width: 90%;
-                        font-size: 2.5em;
-                    }
-            }
-
-/*----------------------------------------*/
-
-/*Blog*/
-    /*Laptop design*/
-    @media only screen and (min-width: 769px) {
-        #body-blog {
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-items: center;
-        } 
-
-        .posts {
-            margin: 0;
-            padding: 0;
-            width: 95vw;  /* Set the container's width to 95% of the viewport */
-            max-width: 95vw;
-            height: 75vh; /* Set a fixed height for the posts container */
-            max-height: 75vh;
-            padding: .5em;
-            display: flex;
-            flex-direction: column; /* Stack the posts vertically */
-            gap: 10px;  /* Add space between posts */
-            align-items: center; /* Center posts horizontally */
-            justify-content: flex-start; /* Stack from the top */
-            overflow-y: auto;  /* Enable scrolling when content overflows */
-            box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
-        }
-
-        .posts div {
-            display: grid;
-            grid-template-columns: 1fr 40%;
-            grid-template-rows: 1fr 1fr;
-            align-items: center;
-            justify-items: center;
-            min-width: 560px;
-            max-height: 150px;
-            flex-wrap: wrap;
-        }
-
-            .image-link {
-                display: block;
-                max-width: 250px;
-                grid-row: 1 / span 2;
-                align-self: center;
-            }
-
-            .posts img {
-                max-width: 200px;
-            }
-
-            .blog-description {
-                grid-row: 2;
-                grid-column: 1;
-                width: 90%;
-                height: 70%;
-                justify-self: flex-start;
-                margin-left: .5em;
-                padding: .1em .3em;
-            }
-
-            .blog-title h2 {
-                margin: 0; /* Remove extra margin on <h2> */
-                padding: 0; /* Remove extra padding */
-            }
-
-            .blog-title {
-                justify-self: flex-start;
-                width: 89%;
-                margin-left: .5em;
-                padding: .1em .3em;
-            }
-    }
-
-        /*Mobile design*/
-        @media only screen and (max-width: 768px) {
-            #body-blog {
-                margin: 0;
-                padding: 0;
-                width: 100vw;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-items: center;
-            } 
-
-            .posts {
-                margin: 0;
-                padding: 0;
-                width: 95vw;  /* Set the container's width to 95% of the viewport */
-                max-width: 95vw;
-                height: 75vh; /* Set a fixed height for the posts container */
-                max-height: 75vh;
-                padding: .5em;
-                display: flex;
-                flex-direction: column; /* Stack the posts vertically */
-                gap: 10px;  /* Add space between posts */
-                align-items: center; /* Center posts horizontally */
-                justify-content: flex-start; /* Stack from the top */
-                overflow-y: auto;  /* Enable scrolling when content overflows */
-                box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
-            }
-    
-            .posts div {
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                align-items: center;
-                justify-items: center;
-                width: 95%;
-                max-height: 150px;
-                flex-wrap: wrap;
-                position: relative;
-            }
-
-            .posts div::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: url('images/how-to-write-a-good-blog-post.png') no-repeat center/cover;
-                opacity: 0.5; /* Adjust opacity as needed */
-                z-index: -1; /* Places background behind content */
-            }
-                .posts img {
-                    display: none;
-                }
-    
-                .blog-description {
-                    grid-row: 2;
-                    width: 90%;
-                    height: 70%;
-                    justify-self: flex-start;
-                    margin-left: .5em;
-                    padding: .1em .3em;
-                    text-align: justify;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-                    font-weight: bold;
-                    overflow-y: auto;
-                }
-    
-                .blog-title h2 {
-                    margin: 0; /* Remove extra margin on <h2> */
-                    padding: 0; /* Remove extra padding */
-                }
-    
-                .blog-title {
-                    justify-self: flex-start;
-                    width: 89%;
-                    margin-left: .5em;
-                    padding: .1em .3em;
-                    grid-row: 1;
-                    text-align: center;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-                    font-weight: bold;
-                    color: black;
-                }
-        }
-
-            /*Desktop design*/
-            @media only screen and (min-width: 1500px) {
-                #body-project {
-                    margin: 0;
-                    padding: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-items: center;
-                } 
-
-                .posts {
-                    margin: 0;
-                    padding: 0;
-                    width: 95vw;  /* Set the container's width to 95% of the viewport */
-                    max-width: 95vw;
-                    height: 75vh; /* Set a fixed height for the posts container */
-                    max-height: 75vh;
-                    padding: .5em;
-                    display: flex;
-                    flex-direction: column; /* Stack the posts vertically */
-                    gap: 10px;  /* Add space between posts */
-                    align-items: center; /* Center posts horizontally */
-                    justify-content: flex-start; /* Stack from the top */
-                    overflow-y: auto;  /* Enable scrolling when content overflows */
-                    box-sizing: border-box;  /* Make sure padding is included in width and height calculation */
-                }
-        
-                .posts div {
-                    display: grid;
-                    grid-template-columns: 1fr 40%;
-                    grid-template-rows: 1fr 1fr;
-                    align-items: center;
-                    justify-items: center;
-                    width: 80%;
-                    min-height: 300px;
-                }
-        
-                    .image-link {
-                        display: block;
-                        grid-row: 1 / span 2;
-                        align-self: center;
-                        justify-self: center;
-                    }
-        
-                    .posts img {
-                        display: block;
-                        max-width: 500px;
-                        align-self: center; /* Vertically center the image within its grid area */
-                        justify-self: center; /* Horizontally center the image within its grid area */
-                    }
-        
-                    .blog-description {
-                        grid-row: 2;
-                        grid-column: 1;
-                        width: 90%;
-                        height: 70%;
-                        justify-self: flex-start;
-                        margin-left: .5em;
-                        padding: .1em .3em;
-                        font-size: 1.75em;
-                    }
-        
-                    .blog-title h2 {
-                        margin: 0; /* Remove extra margin on <h2> */
-                        padding: 0; /* Remove extra padding */
-                    }
-        
-                    .blog-title {
-                        justify-self: flex-start;
-                        width: 89%;
-                        margin-left: .5em;
-                        padding: .1em .3em;
-                        font-size: 2em;
-                    }
-            }
-
 /*----------------------------------------*/
