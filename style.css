@@ -512,6 +512,68 @@ html {
                 }
     }
 
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            #about-section {
+                /*TEMPORARY*/
+                border: 5px solid black;
+                /*TEMPORARY*/
+                height: 100vh;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                justify-items: center;
+                overflow-y: auto;
+            }
+
+            .bio {
+                height: 98%;
+                width: 99%;
+                display: grid;
+                grid-template-rows: 10% 1fr;
+                align-items: center;
+                justify-items: center;
+                overflow-y: scroll;
+                background: linear-gradient(
+              rgb(0, 0, 0, 0.1),  /* Semi-transparent black overlay */
+              rgba(0, 0, 0, 0.1)   /* Same overlay for smooth effect */
+        )       , url('images/profile_pic.jpg');
+                background-size: cover; /* Ensure the image covers the entire grid */
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Prevent the image from repeating */
+            }
+            
+
+                #bio-title {
+                    width: 85%;
+                    margin-bottom: .4em;
+                    text-align: center;
+                    padding: .2em;
+                    grid-row: 1;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                    font-weight: bold;
+                }
+
+                #bio-p {
+                    padding: 1em;
+                    grid-row: 2;
+                    text-justify: justify;
+                    text-align: justify;
+                    width: 85%;
+                    height: 90%;
+                    font-size: 1.5em;
+                    overflow-y: auto;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                    font-weight: bold;
+                }
+
+                #bio-img {
+                    display: none; /* Hide the image for tablet and larger screens */
+                }
+        }
+
             /*Desktop design*/
             @media only screen and (min-width: 1500px) {
                 #about-section {
@@ -601,7 +663,7 @@ html {
             height: 73%;
         }
 
-        hr {
+        #separator {
             display: none;
         }
 
@@ -946,6 +1008,10 @@ html {
                         justify-content: center;
                         flex-wrap: wrap;
                     }
+
+                #resume {
+                    font-size: 4em;
+                }
             }
 
 /*----------------------------------------*/
