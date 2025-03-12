@@ -387,6 +387,12 @@ html {
             gap: 1.5em;
         }
 
+            #bio-img {
+                width: 100%;
+                max-width: 400px;
+                border: 5px solid black;
+            }
+
             .bio-separator {
                 height: 2px;
                 width: 100px;
@@ -491,7 +497,7 @@ html {
             
             #bio-img {
                 width: 100%;
-                max-width: 300px;
+                max-width: 200px;
                 border: 5px solid black;
             }
 
@@ -1731,7 +1737,11 @@ html {
         }
         
         .exp-title {
-            text-decoration: underline;
+            padding: .3em;
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: .5em;
+            text-align: center;
         }
         
         .school {
