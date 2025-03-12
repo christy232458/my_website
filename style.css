@@ -612,13 +612,13 @@ html {
         
                         #bio-p {
                             grid-column: 2;
-                            width: 80%;
-                            height: 85%;
+                            width: 90%;
+                            height: 90%;
                             overflow-y: auto;
                             padding: 0 1em;
                             text-align: justify;
                             text-wrap: wrap;
-                            font-size: 1.7em;
+                            font-size: 1.9em;
                             margin: 0;
                         }
         
