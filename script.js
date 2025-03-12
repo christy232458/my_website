@@ -1,5 +1,5 @@
-// Variables
-    // Contact page
+// *** Contact page ***
+    // ~Variables~
         // --Email--
         let emailForm = document.getElementById('email-form');
         let emailIcon = document.querySelector('#email a');
@@ -8,10 +8,8 @@
         let emailMe = document.querySelector('#email-me h2')
         let hrLine = document.getElementById('separator');
         let contactMe = document.getElementById('all-contact')
-        // ----------------
 
-// Functions
-    // Contact page
+    // ~Functions~
         // --Email--
         let showEmailForm = function() {
             if (window.matchMedia("(max-width: 768px)").matches) {
@@ -107,12 +105,17 @@
             submitEmail.disabled = false;
             submitEmail.innerText = "Submit";
         }
-        // ----------------
 
-// Events
-    // Contact page
+    // ~Events~
         // --Email--
         emailIcon.onclick = showEmailForm;
         formClose.onclick = hideEmailForm;
         submitEmail.onclick = emailSubmission;
-        // ----------------
+        formClose.addEventListener("click", function(event) {
+            event.preventDefault();  // Prevents the button from acting like a form submission
+            hideEmailForm();
+        });
+// <---------------->
+
+
+        
