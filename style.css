@@ -723,8 +723,6 @@ html {
                 width: 3em;  /* Adjust size to fit the icon */
                 height: 3em; /* Make it a square */
                 text-decoration: none; /* Remove underline */
-                margin: .5em;
-                padding: .3em;
             }
 
             #email i {
@@ -1004,8 +1002,6 @@ html {
                         width: 3em;  /* Adjust size to fit the icon */
                         height: 3em; /* Make it a square */
                         text-decoration: none; /* Remove underline */
-                        margin: .5em;
-                        padding: .3em;
                     }
         
                     #email i {
@@ -1662,9 +1658,6 @@ html {
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
         #experience-section {
-            /*TEMPORARY*/
-            border: 5px solid black;
-            /*TEMPORARY*/
             width: auto;
             height: auto;
             margin: 0 auto;
@@ -1784,9 +1777,6 @@ html {
         /*Mobile design*/
         @media only screen and (max-width: 768px) {
             #experience-section {
-                /*TEMPORARY*/
-                border: 5px solid black;
-                /*TEMPORARY*/
                 width: auto; /* Adjust width to 100% for smaller screens */
                 height: auto;
                 padding: 1em; /* Add padding for smaller screens */
@@ -1893,9 +1883,6 @@ html {
             /*Desktop design*/
             @media only screen and (min-width: 1500px) {
                 #experience-section {
-                    /*TEMPORARY*/
-                    border: 5px solid black;
-                    /*TEMPORARY*/
                     width: auto;
                     height: auto;
                     margin: 0 auto;
