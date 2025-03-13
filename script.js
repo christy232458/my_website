@@ -1,3 +1,31 @@
+// *** About section ***
+    // ~Variables~
+    let slideIndex = 0;
+    let slideInterval = 5000; // Adjust to 5000ms (5s), 7000ms (7s), etc.
+
+    const slides = document.querySelectorAll(".slideshow-container img");
+
+    // ~Functions~
+    function showSlides() {
+    slides.forEach(slide => slide.classList.remove("active")); // Hide all images
+    slideIndex = (slideIndex + 1) % slides.length; // Loop back to the first image
+    slides[slideIndex].classList.add("active"); // Show active image
+}
+
+    function plusSlides(n) {
+        slideIndex = (slideIndex + n + slides.length) % slides.length; // Handle manual navigation
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[slideIndex].classList.add("active");
+    }
+
+    // Start slideshow
+    slides[slideIndex].classList.add("active");
+    setInterval(showSlides, slideInterval);
+
+    // ~Events~
+
+// <---------------->
+
 // *** Contact page ***
     // ~Variables~
         // --Email--
@@ -117,5 +145,22 @@
         });
 // <---------------->
 
+// *** Projects section ***
+    // ~Variables~
+
+    // ~Functions~
+
+    // ~Events~
+
+// <---------------->
+
+// *** Homepage section ***
+    // ~Variables~
+
+    // ~Functions~
+
+    // ~Events~
+
+// <---------------->
 
         

@@ -387,11 +387,66 @@ html {
             gap: 1.5em;
         }
 
-            #bio-img {
+            .bio-img {
                 width: 100%;
                 max-width: 400px;
                 border: 5px solid black;
             }
+
+                .slideshow-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    width: 100%;
+                    max-width: 450px; /* Adjust as needed */
+                    height: 500px;
+                    padding: .7em;
+                }
+                
+                .slideshow-img {
+                    border: 5px solid black;
+                    display: none; /* Hide all images initially */
+                    width: 100%;
+                    height: auto;
+                    max-width: 410px;
+                    object-fit: border-box; /* Ensure full image is visible */
+                    position: absolute; /* Stacks images on top of each other */
+                }
+                
+                .slideshow-container img.active {
+                    display: block; /* Only show the active image */
+                }
+            
+                .prev, .next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 24px;
+                    cursor: pointer;
+                    padding: 10px;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    border-radius: 5px;
+                }
+                
+                .prev {
+                    left: 0;
+                }
+                
+                .next {
+                    right: 0;
+                }
+                
+                .fade {
+                    animation: fadeEffect 1s;
+                }
+                
+                @keyframes fadeEffect {
+                    from { opacity: 0.4; }
+                    to { opacity: 1; }
+                }
 
             .bio-separator {
                 height: 2px;
@@ -401,7 +456,8 @@ html {
             }
 
             #total-bio-p {
-                width: auto;
+                width: 100%;
+                max-width: 70%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -417,7 +473,7 @@ html {
                     margin: .1em;
                     text-align: justify;
                     text-wrap: wrap;
-                    font-size: 1.2em;
+                    font-size: 1.4em;
                 }
 
             #bio-title {
@@ -497,9 +553,71 @@ html {
             
             #bio-img {
                 width: 100%;
-                max-width: 200px;
+                max-width: 300px;
                 border: 5px solid black;
             }
+
+                .slideshow-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    width: 98%;
+                    max-width: 370px; /* Adjust as needed */
+                    height: 470px;
+                    padding: .7em;
+                }
+                
+                .slideshow-img {
+                    border: 5px solid black;
+                    display: none; /* Hide all images initially */
+                    width: 100%;
+                    height: auto;
+                    max-width: 360px;
+                    object-fit: border-box; /* Ensure full image is visible */
+                    position: absolute; /* Stacks images on top of each other */
+                }
+                
+                .slideshow-container img.active {
+                    display: block; /* Only show the active image */
+                }
+            
+                .prev, .next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 24px;
+                    cursor: pointer;
+                    padding: 10px;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    border-radius: 5px;
+                }
+                
+                .prev {
+                    left: 0;
+                }
+                
+                .next {
+                    right: 0;
+                }
+                
+                .fade {
+                    animation: fadeEffect 1s;
+                }
+                
+                @keyframes fadeEffect {
+                    from { opacity: 0.4; }
+                    to { opacity: 1; }
+                }
+
+                .bio-separator {
+                    height: 2px;
+                    width: 100px;
+                    background-color: #000; /* Ensure color contrast */
+                    margin: 1em 0; /* Adjust margin to create space above and below */
+                }
 
 
                 #bio-title {
@@ -607,10 +725,63 @@ html {
                     align-items: center;
                     justify-content: center;
                     padding: 1.2em;
-                    width: auto;
-                    height: 800px;
+                    width: 95%;
                     gap: 1.5em;
                 }
+
+                    .slideshow-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        width: 100%;
+                        max-width: 530px; /* Adjust as needed */
+                        height: 650px;
+                        padding: .7em;
+                    }
+                    
+                    .slideshow-img {
+                        display: none; /* Hide all images initially */
+                        width: 100%;
+                        height: auto;
+                        max-width: 500px;
+                        object-fit: border-box; /* Ensure full image is visible */
+                        position: absolute; /* Stacks images on top of each other */
+                    }
+                    
+                    .slideshow-container img.active {
+                        display: block; /* Only show the active image */
+                    }
+                
+                    .prev, .next {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 24px;
+                        cursor: pointer;
+                        padding: 10px;
+                        color: white;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        border: none;
+                        border-radius: 5px;
+                    }
+                    
+                    .prev {
+                        left: 0;
+                    }
+                    
+                    .next {
+                        right: 0;
+                    }
+                    
+                    .fade {
+                        animation: fadeEffect 1s;
+                    }
+                    
+                    @keyframes fadeEffect {
+                        from { opacity: 0.4; }
+                        to { opacity: 1; }
+                    }
         
                     .bio-separator {
                         height: 2px;
@@ -620,8 +791,9 @@ html {
                     }
         
                     #total-bio-p {
-                        max-width: 1100px;
-                        height: 90%;
+                        max-width: 70%;
+                        height: 100%;
+                        max-height: 50%;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -637,7 +809,7 @@ html {
                             padding: 0 1em;
                             text-align: justify;
                             text-wrap: wrap;
-                            font-size: 1.9em;
+                            font-size: 1.7em;
                             margin: 0;
                         }
         
