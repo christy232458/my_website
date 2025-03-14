@@ -140,6 +140,14 @@ html {
             padding: 0;
             margin: 0;
         }
+
+        .index-separator {
+            height: 2px;
+            width: 10%;
+            background-color: black;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
     }
 
         /*Mobile design*/
@@ -155,6 +163,14 @@ html {
                 #index {
                     padding: 0;
                     margin: 0;
+                }
+
+                .index-separator {
+                    height: 2px;
+                    width: 10%;
+                    background-color: black;
+                    margin-top: 2em;
+                    margin-bottom: 2em;
                 }
             }
 
@@ -216,14 +232,30 @@ html {
             grid-column: 1 / span 2;
         }
 
-        #navi li {
-            text-decoration: none;
-            list-style-type: none;
-            text-align: center;
-            width: 80%;
-            font-size: 2.5em;
-            padding: .2em;
-        }
+            #intro-resume {
+                white-space: nowrap;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            #about-link {
+                white-space: nowrap;
+            }
+
+            #navi li {
+                display: flex;
+                text-decoration: none;
+                list-style-type: none;
+                text-align: center;
+                justify-content: center;
+                width: 80%;
+                font-size: 2.5em;
+                padding: .2em;
+            }
+
+            #navi li a {
+                display: block;
+            }
     }
 
         /*Mobile design*/
@@ -281,15 +313,24 @@ html {
                 padding: 1em;
                 flex-direction: column;
             }
+
+                #about-link {
+                    white-space: nowrap;
+                }
     
-            #navi li {
-                text-decoration: none;
-                list-style-type: none;
-                text-align: center;
-                width: 90%;
-                font-size: 2em;
-                padding: .2em;
-            }
+                #navi li {
+                    text-decoration: none;
+                    list-style-type: none;
+                    text-align: center;
+                    width: 90%;
+                    font-size: 2em;
+                    padding: .2em;
+                }
+
+                #navi li a {
+                    display: inline;
+                    white-space: nowrap;
+                }
         }
 
             /*Desktop design*/
@@ -354,6 +395,12 @@ html {
                     width: 80%;
                     font-size: 5.5em;
                     padding: .2em;
+                    margin: .2em .1em;
+                }
+
+                #navi li a {
+                    display: inline;
+                    white-space: nowrap;
                 }
             }
 
@@ -650,6 +697,11 @@ html {
                     width: 85%;
                     font-size: 1.5em;
                 }
+
+                    #bio-p a {
+                        display: inline;
+                        white-space: nowrap;
+                    }
 
                 #interests {
                     padding: .5em 1em;
