@@ -1,37 +1,19 @@
 {
-    "en": {
-        "homepage": {
-            
-        },
-
-        "about-section": {
-
-        },
-
-        "experience-section": {
-
-        },
-
-        "contact-section": {
-
-        }
-    },
-
     "zh": {
-        "homepage": {
-            
-        },
+       "homepage": {
+           
+       },
 
-        "about-section": {
+       "about-section": {
 
-        },
+       },
 
-        "experience-section": {
+       "project-section": {
 
-        },
+       },
 
-        "contact-section": {
+       "contact-section": {
 
-        }
-    }
+       }
+   }
 }
