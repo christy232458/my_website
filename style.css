@@ -217,7 +217,7 @@ html {
 
             #tagline {
                 text-align: end;
-                font-size: 4em;
+                font-size: 3em;
                 margin: .2em .5em;
                 padding: .1em .2em;
                 width: 90%;
@@ -298,7 +298,7 @@ html {
     
                 #tagline {
                     text-align: center;
-                    font-size: 2em;
+                    font-size: 1.5em;
                     margin: .2em .5em;
                     padding: .3em;
                     width: 90%;
@@ -373,7 +373,7 @@ html {
         
                     #tagline {
                         text-align: end;
-                        font-size: 5.5em;
+                        font-size: 4.5em;
                         margin: .2em .5em;
                         padding: .1em .2em;
                         width: 90%;
