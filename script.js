@@ -165,49 +165,59 @@
 
     // ~Functions~
         // Skills, Education, Project and All sections 
-        let showProjectsSection = function() {
-            allSection.style.display ='none';
-            educationSection.style.display ='none';
-            experienceSection.style.display ='none';
-            skillsSection.style.display ='none';
-
-            projectSection.style.display ='block';
+        let showProjectsSection = function(event) {
+            event.preventDefault();  // Prevent the default click behavior (e.g., following the link)
+        
+            allSection.style.display = 'none';
+            educationSection.style.display = 'none';
+            experienceSection.style.display = 'none';
+            skillsSection.style.display = 'none';
+        
+            projectSection.style.display = 'block';
         };
         
-        let showExperienceSection = function() {
-            allSection.style.display ='none';
-            educationSection.style.display ='none';
-            projectSection.style.display ='none';
-            skillsSection.style.display ='none';
-
-            experienceSection.style.display ='block';
+        let showExperienceSection = function(event) {
+            event.preventDefault();  // Prevent the default click behavior
+        
+            allSection.style.display = 'none';
+            educationSection.style.display = 'none';
+            projectSection.style.display = 'none';
+            skillsSection.style.display = 'none';
+        
+            experienceSection.style.display = 'block';
         };
-
-        let showSkillsSection = function() {
-            allSection.style.display ='none';
-            educationSection.style.display ='none';
-            experienceSection.style.display ='none';
-            projectSection.style.display ='none';
+        
+        let showSkillsSection = function(event) {
+            event.preventDefault();  // Prevent the default click behavior
+        
+            allSection.style.display = 'none';
+            educationSection.style.display = 'none';
+            experienceSection.style.display = 'none';
+            projectSection.style.display = 'none';
             
-            skillsSection.style.display ='block';
+            skillsSection.style.display = 'block';
         };
-
-        let showEducationSection = function() {
-            allSection.style.display ='none';
-            projectSection.style.display ='none';
-            experienceSection.style.display ='none';
-            skillsSection.style.display ='none';
+        
+        let showEducationSection = function(event) {
+            event.preventDefault();  // Prevent the default click behavior
+        
+            allSection.style.display = 'none';
+            projectSection.style.display = 'none';
+            experienceSection.style.display = 'none';
+            skillsSection.style.display = 'none';
             
-            educationSection.style.display ='block';
+            educationSection.style.display = 'block';
         };
-
-        let showAllSections = function() {
-            projectSection.style.display ='none';
-            educationSection.style.display ='none';
-            experienceSection.style.display ='none';
-            skillsSection.style.display ='none';
+        
+        let showAllSections = function(event) {
+            event.preventDefault();  // Prevent the default click behavior
+        
+            projectSection.style.display = 'none';
+            educationSection.style.display = 'none';
+            experienceSection.style.display = 'none';
+            skillsSection.style.display = 'none';
             
-            allSection.style.display ='block';
+            allSection.style.display = 'block';
         };
 
     // ~Events~
