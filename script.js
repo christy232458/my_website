@@ -26,7 +26,7 @@
 
 // <---------------->
 
-// *** Contact page ***
+// *** Contact section ***
     // ~Variables~
         // --Email--
         let emailForm = document.getElementById('email-form');
@@ -72,66 +72,67 @@
                 emailForm.style.visibility = 'hidden';
             }
         }
+        
 
-        // Validate email format using regex
-        const validateEmail = (email) => {
-            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            return emailPattern.test(email);
-        }
+            // Validate email format using regex
+            const validateEmail = (email) => {
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                return emailPattern.test(email);
+            }
 
-        let emailSubmission = async function(event) {
-            event.preventDefault();
-        
-            const senderName = document.getElementById("email-name").value;
-            const senderEmail = document.getElementById("email-email").value;
-            const senderSubject = document.getElementById("email-subject").value;
-            const senderMessage = document.getElementById("email-message").value;
-        
-            if (!senderName || !senderEmail || !senderSubject || !senderMessage) {
-                alert("Please fill in all fields.");
-                return;
-            }
-        
-            if (!validateEmail(senderEmail)) {
-                alert("Please enter a valid email address.");
-                return;
-            }
-        
-            const formData = {
-                name: senderName,
-                email: senderEmail,
-                subject: senderSubject,
-                message: senderMessage
-            };
-        
-            // Disable the submit button and show a loading message
-            submitEmail.disabled = true;
-            submitEmail.innerText = "Sending...";
-        
-            try {
-                // Send a POST request to the Node.js backend
-                let response = await fetch('https://email-form-padma-33d71ffb9a1a.herokuapp.com/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-        
-                if (response.ok) {
-                    alert('Your message has been sent successfully!');
-                    emailForm.reset(); // Reset the form
-                    hideEmailForm(); // Hide the form after successful submission
-                } else {
-                    alert('There was an error sending your message.');
+            let emailSubmission = async function(event) {
+                event.preventDefault();
+            
+                const senderName = document.getElementById("email-name").value;
+                const senderEmail = document.getElementById("email-email").value;
+                const senderSubject = document.getElementById("email-subject").value;
+                const senderMessage = document.getElementById("email-message").value;
+            
+                if (!senderName || !senderEmail || !senderSubject || !senderMessage) {
+                    alert("Please fill in all fields.");
+                    return;
                 }
-            } catch (error) {
-                alert('Error: ' + error.message);
-            }
-        
-            // Re-enable the submit button after the process completes
-            submitEmail.disabled = false;
-            submitEmail.innerText = "Submit";
+            
+                if (!validateEmail(senderEmail)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+            
+                const formData = {
+                    name: senderName,
+                    email: senderEmail,
+                    subject: senderSubject,
+                    message: senderMessage
+                };
+            
+                // Disable the submit button and show a loading message
+                submitEmail.disabled = true;
+                submitEmail.innerText = "Sending...";
+            
+                try {
+                    // Send a POST request to the Node.js backend
+                    let response = await fetch('https://email-form-13a77e0aa401.herokuapp.com/send-email', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+            
+                    if (response.ok) {
+                        alert('Your message has been sent successfully!');
+                        emailForm.reset(); // Reset the form
+                        hideEmailForm(); // Hide the form after successful submission
+                    } else {
+                        alert('There was an error sending your message.');
+                    }
+                } catch (error) {
+                    alert('Error: ' + error.message);
+                }
+            
+                // Re-enable the submit button after the process completes
+                submitEmail.disabled = false;
+                submitEmail.innerText = "Submit";
         }
 
     // ~Events~
@@ -147,11 +148,75 @@
 
 // *** Projects section ***
     // ~Variables~
+        // Skills, Education, Project and All sections   
+        let skillsSection = document.getElementById('skills-section');
+        let educationSection = document.getElementById('education-section');
+        let allSection = document.getElementById('all-experience-section');
+        let experienceSection = document.getElementById('experience-section');
+        let projectSection = document.getElementById('project-section');
+
+        let projectsNavBar = document.getElementById('project-nav');
+        // ----
+        let projectLink = document.getElementById('projects-link');
+        let experienceLink = document.getElementById('experience-link');
+        let allLink = document.getElementById('all-link');
+        let skillsLink = document.getElementById('skills-link');
+        let educationLink = document.getElementById('education-link');
 
     // ~Functions~
+        // Skills, Education, Project and All sections 
+        let showProjectsSection = function() {
+            allSection.style.display ='none';
+            educationSection.style.display ='none';
+            experienceSection.style.display ='none';
+            skillsSection.style.display ='none';
+
+            projectSection.style.display ='block';
+        };
+        
+        let showExperienceSection = function() {
+            allSection.style.display ='none';
+            educationSection.style.display ='none';
+            projectSection.style.display ='none';
+            skillsSection.style.display ='none';
+
+            experienceSection.style.display ='block';
+        };
+
+        let showSkillsSection = function() {
+            allSection.style.display ='none';
+            educationSection.style.display ='none';
+            experienceSection.style.display ='none';
+            projectSection.style.display ='none';
+            
+            skillsSection.style.display ='block';
+        };
+
+        let showEducationSection = function() {
+            allSection.style.display ='none';
+            projectSection.style.display ='none';
+            experienceSection.style.display ='none';
+            skillsSection.style.display ='none';
+            
+            educationSection.style.display ='block';
+        };
+
+        let showAllSections = function() {
+            projectSection.style.display ='none';
+            educationSection.style.display ='none';
+            experienceSection.style.display ='none';
+            skillsSection.style.display ='none';
+            
+            allSection.style.display ='block';
+        };
 
     // ~Events~
-
+        // Skills, Education, Project and All sections 
+        skillsLink.addEventListener('click', showSkillsSection);
+        experienceLink.addEventListener('click', showExperienceSection);
+        allLink.addEventListener('click', showAllSections);
+        educationLink.addEventListener('click', showEducationSection);
+        projectLink.addEventListener('click', showProjectsSection);
 // <---------------->
 
 // *** Homepage section ***
@@ -163,4 +228,7 @@
 
 // <---------------->
 
-        
+
+
+
+
