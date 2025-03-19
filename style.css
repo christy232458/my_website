@@ -1338,6 +1338,8 @@ html {
             padding: 1em .3em;
             margin: 0;
             border: 5px solid black;
+            position: relative;
+            overflow: hidden;
         }
 
         #project-nav {
@@ -1369,6 +1371,7 @@ html {
                 justify-content: center;
                 flex-direction: column;
                 position: relative;
+                overflow: hidden;
             }
     
             #project-nav {
@@ -1441,6 +1444,8 @@ html {
                     padding: 1em .3em;
                     margin: 0;
                     border: 5px solid black;
+                    position: relative;
+                    overflow: hidden;
                 }
         
                 #project-nav {
@@ -1883,7 +1888,6 @@ html {
             .progress-bar {
                 height: 100%;  /* Fill the container */
                 background-color: #4caf50;  /* Green color for the filled part */
-                border-radius: 5px;  /* Match the rounded corners of the container */
             }
 
                 #mandarin {
@@ -2038,7 +2042,6 @@ html {
                     .progress-bar {
                         height: 100%;  /* Fill the container */
                         background-color: #4caf50;  /* Green color for the filled part */
-                        border-radius: 5px;  /* Match the rounded corners of the container */
                     }
         
                     #mandarin {
@@ -2201,7 +2204,6 @@ html {
                     .progress-bar {
                         height: 100%;  /* Fill the container */
                         background-color: #4caf50;  /* Green color for the filled part */
-                        border-radius: 5px;  /* Match the rounded corners of the container */
                     }
         
                     #mandarin {
