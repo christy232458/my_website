@@ -1987,7 +1987,6 @@ html {
                 }
         
                     #language-title {
-                        border: 5px solid black;
                         width: auto;
                         display: flex;
                         align-items: center;
@@ -2086,11 +2085,10 @@ html {
                 }
         
                     #certification-title {
-                        border: 5px solid black;
                         padding: .3em;
                         font-size: 2.5em;
                         width: auto;
-                        margin-top: 0;
+                        margin-top: .3em;
                         margin-bottom: .5em;
                     }
         
@@ -2415,6 +2413,8 @@ html {
     
             #education-title {
                 font-size: 2.5em;
+                margin-top: .1em;
+                padding: .3em;
             }
     
             .education-location {
@@ -2698,7 +2698,8 @@ html {
             }
 
             .exp-title {
-                font-size: 2em;
+                font-size: 2.5em;
+                margin-top: .1em;
                 padding: .3em;
             }
 
