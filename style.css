@@ -3,6 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
         a {
@@ -217,7 +218,7 @@ html {
 
             #tagline {
                 text-align: end;
-                font-size: 3em;
+                font-size: 4em;
                 margin: .2em .5em;
                 padding: .1em .2em;
                 width: 90%;
@@ -232,30 +233,14 @@ html {
             grid-column: 1 / span 2;
         }
 
-            #intro-resume {
-                white-space: nowrap;
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            #about-link {
-                white-space: nowrap;
-            }
-
-            #navi li {
-                display: flex;
-                text-decoration: none;
-                list-style-type: none;
-                text-align: center;
-                justify-content: center;
-                width: 80%;
-                font-size: 2.5em;
-                padding: .2em;
-            }
-
-            #navi li a {
-                display: block;
-            }
+        #navi li {
+            text-decoration: none;
+            list-style-type: none;
+            text-align: center;
+            width: 80%;
+            font-size: 2.5em;
+            padding: .2em;
+        }
     }
 
         /*Mobile design*/
@@ -298,7 +283,7 @@ html {
     
                 #tagline {
                     text-align: center;
-                    font-size: 1.5em;
+                    font-size: 2em;
                     margin: .2em .5em;
                     padding: .3em;
                     width: 90%;
@@ -313,24 +298,15 @@ html {
                 padding: 1em;
                 flex-direction: column;
             }
-
-                #about-link {
-                    white-space: nowrap;
-                }
     
-                #navi li {
-                    text-decoration: none;
-                    list-style-type: none;
-                    text-align: center;
-                    width: 90%;
-                    font-size: 2em;
-                    padding: .2em;
-                }
-
-                #navi li a {
-                    display: inline;
-                    white-space: nowrap;
-                }
+            #navi li {
+                text-decoration: none;
+                list-style-type: none;
+                text-align: center;
+                width: 90%;
+                font-size: 2em;
+                padding: .2em;
+            }
         }
 
             /*Desktop design*/
@@ -373,7 +349,7 @@ html {
         
                     #tagline {
                         text-align: end;
-                        font-size: 4.5em;
+                        font-size: 5.5em;
                         margin: .2em .5em;
                         padding: .1em .2em;
                         width: 90%;
@@ -395,12 +371,6 @@ html {
                     width: 80%;
                     font-size: 5.5em;
                     padding: .2em;
-                    margin: .2em .1em;
-                }
-
-                #navi li a {
-                    display: inline;
-                    white-space: nowrap;
                 }
             }
 
@@ -447,7 +417,7 @@ html {
                     position: relative;
                     width: 100%;
                     max-width: 450px; /* Adjust as needed */
-                    height: 500px;
+                    height: 700px;
                     padding: .7em;
                 }
                 
@@ -520,7 +490,7 @@ html {
                     margin: .1em;
                     text-align: justify;
                     text-wrap: wrap;
-                    font-size: 1.4em;
+                    font-size: 1.2em;
                 }
 
             #bio-title {
@@ -610,8 +580,8 @@ html {
                     justify-content: center;
                     position: relative;
                     width: 98%;
-                    max-width: 370px; /* Adjust as needed */
-                    height: 470px;
+                    max-width: 400px; /* Adjust as needed */
+                    height: 650px;
                     padding: .7em;
                 }
                 
@@ -620,7 +590,7 @@ html {
                     display: none; /* Hide all images initially */
                     width: 100%;
                     height: auto;
-                    max-width: 360px;
+                    max-width: 390px;
                     object-fit: border-box; /* Ensure full image is visible */
                     position: absolute; /* Stacks images on top of each other */
                 }
@@ -697,11 +667,6 @@ html {
                     width: 85%;
                     font-size: 1.5em;
                 }
-
-                    #bio-p a {
-                        display: inline;
-                        white-space: nowrap;
-                    }
 
                 #interests {
                     padding: .5em 1em;
@@ -787,8 +752,8 @@ html {
                         justify-content: center;
                         position: relative;
                         width: 100%;
-                        max-width: 530px; /* Adjust as needed */
-                        height: 650px;
+                        max-width: 580px; /* Adjust as needed */
+                        height: 850px;
                         padding: .7em;
                     }
                     
@@ -861,7 +826,7 @@ html {
                             padding: 0 1em;
                             text-align: justify;
                             text-wrap: wrap;
-                            font-size: 1.7em;
+                            font-size: 1.6em;
                             margin: 0;
                         }
         
@@ -936,8 +901,8 @@ html {
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
         #contact-section {
+            border: 5px solid black;
             width: auto;
-            height: auto;
             margin: 0;
             padding: 1em .5em;
             display: flex;
@@ -1075,12 +1040,6 @@ html {
                 align-content: center;
                 justify-content: center;
                 flex-wrap: wrap;
-            }
-
-            #resume {
-                padding: .5em;
-                font-size: 3em;
-                margin-top: .5em .2em;
             }
         }
 
@@ -1356,8 +1315,1570 @@ html {
                         justify-content: center;
                         flex-wrap: wrap;
                     }
+                    
             }
 
+/*----------------------------------------*/
+
+/*** Portfolio container ***/
+   /*Laptop design*/         
+    @media only screen and (min-width: 769px) {
+        #advertise-me-section {
+            width: auto;
+            height: auto;
+            max-height: 3000px; /* Set a reasonable height limit */
+            padding: 1em .3em;
+            margin: 0;
+            border: 5px solid black;
+        }
+
+        #project-nav {
+            border: 5px solid black;
+            padding: .5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            font-size: 1.5em;
+            margin: .5em .5em 1em .5em;
+        }
+
+        #mobile-projects-nav {
+            display: none;
+        }
+    }
+
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            #advertise-me-section {
+                width: auto;
+                height: auto;
+                padding: .7em .3em;
+                margin: 0;
+                border: 5px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+            }
+    
+            #project-nav {
+                display: none;
+                /*border: 5px solid black;
+                padding: .5em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+                font-size: 1em;*/
+            }
+
+            #mobile-projects-nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                padding: .5em;
+                margin: .3em .5em 1em .5em;
+                position: relative;
+            }
+
+                #menu-toggle {
+                    border: 5px solid black;
+                    padding: .5em;
+                    width: 95%;
+                    font-size: 1.3em;
+                }
+
+                /*#menu-toggle::before {
+                    content: "☰";
+                    font-size: 2em;
+                    margin-right: 5px;
+                }*/
+
+                #mobile-nav-links {
+                    display: flex;
+                    flex-direction: column;
+                    justify-items: center;
+                    align-items: center;
+                    gap: .7em;
+                    padding: .5em;
+                    width: 88%;
+                    height: auto;
+                    position: absolute;
+                    visibility: hidden;
+                    top: .4em;
+                    font-size: 1.5em;
+                    background-color: black;
+                }
+
+                #mobile-nav-links a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 5px solid white;
+                    padding: .5em;
+                    color: white;
+                    width: 70%;
+                }
+        }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) and (min-height: 1024px) {
+                #advertise-me-section {
+                    width: auto;
+                    height: auto;
+                    padding: 1em .3em;
+                    margin: 0;
+                    border: 5px solid black;
+                }
+        
+                #project-nav {
+                    border: 5px solid black;
+                    padding: .5em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1em;
+                }
+
+                #project-nav a {
+                    font-size: 2em; 
+                }
+
+                #mobile-projects-nav {
+                    display: none;
+                }
+            }
+
+/*----------------------------------------*/
+
+/*Project*/
+    /*Laptop design*/
+    @media only screen and (min-width: 769px) {
+        #project-section {
+            margin: 0;
+            padding: 1em;
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+        } 
+
+        #project-title {
+            padding: .3em;
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: .5em;
+        }
+
+        #navigation-project {
+            margin: .5em;
+        }
+
+        .projects {
+            border: 5px solid black;
+            overflow-x: auto;
+            width: 98%;
+            height: auto;
+            gap: .7em;
+            padding: 0 1em;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            scroll-padding-left: 1em; /* Ensures the first item is fully visible */
+            scroll-snap-type: x mandatory;
+        }
+
+            #all-experience-section {
+                visibility: hidden;
+                transition: height 0.3s ease, visibility 0.3s ease;
+                display: flex;
+                gap: .5em
+            }
+
+            .project-item {
+                border: 5px solid blue;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+                padding: 1em;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                height: 500px;
+                width: 25%;
+                min-width: 300px;
+                scroll-snap-align: start;
+            }
+            
+            .project-item:only-child {
+                margin: 1em auto; /* Centers the single item */
+            }
+
+            .projects:has(.project-item:nth-child(4)) { 
+                justify-content: flex-start;
+            }
+
+                .projects h3 {
+                    width: 80%;
+                    text-align: center;
+                    align-content: center;
+                    padding: .5em 1em;
+                    font-size: 1.3em;
+                    text-wrap: wrap;
+                    text-decoration: underline;
+                }
+
+                    .project-separator {
+                        height: 2px;
+                        width: 100px;
+                        background-color: #000; /* Ensure color contrast */
+                        margin: .3em 0; /* Adjust margin to create space above and below */
+                    }
+
+                .projects p {
+                    width: 80%;
+                    height: auto;
+                    max-height: 200px;
+                    padding: .5em 1em;
+                    text-align: justify;
+                    margin: 0;
+                    overflow-y: auto;
+                }
+
+                .project-img {
+                    border: 5px solid black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 50%;
+                }
+
+                    .img-preview {
+                        width: 90%;
+                    }
+
+                    .project-img a {
+                        display: flex;  /* Makes <a> a flex container */
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%; /* Ensures it fills its container */
+                    }
+                    
+    }
+
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            #project-section {
+                margin: 0;
+                padding: 1em 0;
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+            } 
+
+            .projects {
+                overflow-y: auto;
+                width: 90%;
+                gap: .7em;
+                padding: .5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                scroll-padding-left: 1em; /* Ensures the first item is fully visible */
+                scroll-snap-type: x mandatory; /* Optional: makes scrolling snap to items */
+            }
+
+                #all-experience-section {
+                    visibility: hidden;
+                    transition: height 0.3s ease, visibility 0.3s ease;
+                }
+
+                .project-item {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-template-rows: 30% auto auto auto;
+                    align-items: center;
+                    justify-items: center;
+                    width: 95%;
+                    min-height: 175px;
+                    padding: .3em;
+                    scroll-snap-align: start;
+                    position: relative;
+                    border: 5px solid black;
+                }
+
+                    .project-img {
+                        border: 5px solid blue;
+                        width: 100%;
+                        max-width: 70%;
+                        min-width: 75px;
+                        width: auto;
+                        height: auto; /* Ensures aspect ratio is maintained */
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        grid-row: 1 / span 4;
+                        padding: .5em;
+                    }
+
+                    .project-img a {
+                        display: block; /* Ensures it takes up the full container */
+                        width: 100%;
+                        height: 100%;
+                        max-width: 80%;
+                    }
+
+                    .img-preview {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
+
+                    #project-title {
+                        padding: .1em .3em;
+                        font-size: 2em;
+                        margin-top: 0;
+                        margin-bottom: .5em;
+                    }
+                    
+                    .projects li {
+                        display: flex;
+                        justify-content: center;
+                    }   
+
+                    .projects h3 {
+                        grid-column: 2;
+                        width: 90%;
+                        text-align: center;
+                        padding: .1em;
+                        font-size: 1.3em;
+                    }
+
+                    .projects p {
+                        grid-column: 2;
+                        width: 90%;
+                        height: 75%;
+                        padding: .5em;
+                        text-align: justify;
+                        overflow-y: auto;
+                        color: black;
+                    }
+
+                    .project-separator {
+                        height: 2px;
+                        width: 100px;
+                        background-color: #000; /* Ensure color contrast */
+                        margin: .3em 0;
+                        grid-column: 2;
+                    }
+        }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) and (min-height: 1024px) {
+                #project-section {
+                    margin: 0;
+                    padding: 1em;
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-items: center;
+                } 
+        
+                #navigation-project {
+                    margin: .5em;
+                }
+        
+                .projects {
+                    border: 5px solid black;
+                    overflow-x: auto;
+                    width: 98%;
+                    height: auto;
+                    gap: .7em;
+                    padding: 0 1em;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    scroll-padding-left: 1em; /* Ensures the first item is fully visible */
+                    scroll-snap-type: x mandatory;
+                }
+        
+                    #project-title {
+                        padding: .3em;
+                        font-size: 2.5em;
+                        margin-top: 0;
+                        margin-bottom: .5em;
+                    }
+        
+                    .project-item {
+                        border: 5px solid blue;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-items: center;
+                        padding: 1em;
+                        margin-top: 1em;
+                        margin-bottom: 1em;
+                        height: 650px;
+                        width: 20%;
+                        min-width: 200px;
+                        scroll-snap-align: start;
+                    }
+                    
+                    .project-item:only-child {
+                        margin: 1em auto; /* Centers the single item */
+                    }
+        
+                    .projects:has(.project-item:nth-child(4)) { 
+                        justify-content: flex-start;
+                    }
+        
+                        .projects h3 {
+                            width: 80%;
+                            text-align: center;
+                            align-content: center;
+                            padding: .5em 1em;
+                            font-size: 1.7em;
+                            text-wrap: wrap;
+                            text-decoration: underline;
+                        }
+        
+                            .project-separator {
+                                height: 2px;
+                                width: 100px;
+                                background-color: #000; /* Ensure color contrast */
+                                margin: .3em 0; /* Adjust margin to create space above and below */
+                            }
+        
+                        .projects p {
+                            width: 80%;
+                            height: auto;
+                            max-height: 200px;
+                            padding: .5em 1em;
+                            text-align: justify;
+                            font-size: 1.1em;
+                            margin: 0;
+                            overflow-y: auto;
+                        }
+        
+                        .project-img {
+                            border: 5px solid black;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            max-width: 50%;
+                        }
+        
+                            .img-preview {
+                                width: 90%;
+                            }
+        
+                            .project-img a {
+                                display: flex;  /* Makes <a> a flex container */
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%; /* Ensures it fills its container */
+                            }
+            }
+            
+/*----------------------------------------*/
+
+/*** Skills ***/
+    /*Laptop design*/
+    @media only screen and (min-width: 769px) {
+        #skills-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1em .5em;
+            margin: 0;
+            gap: 1em;
+            visibility: hidden;
+            transition: height 0.3s ease, visibility 0.3s ease;
+        }
+
+        .language-div {
+            border: 5px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 55%;
+            padding: .5em;
+        }
+
+            #language-title {
+                border: 5px solid black;
+                width: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: .3em ;
+                font-size: 2.5em;
+                margin-top: .3em;
+                margin-bottom: .5em;
+            }
+
+            #all-languages {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                padding: .5em;
+                gap: 1em;
+                width: 95%;
+            }
+
+            .fluency {
+                color: black;
+                font-style: italic;
+            }
+
+            .lang {
+                color: green;
+            }
+        
+            .languages {
+                padding: .5em 1em;
+                width: 90%;
+                height: auto;
+                max-height: 250px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .progress-container {
+                border: 5px solid black;
+                width: 100%;  /* Set the width of the container */
+                height: 35px;  /* Height of the bar */
+                background-color: #f3f3f3;  /* Light grey background for the empty part of the bar */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: for a slight shadow effect */
+            
+            }
+            
+            .progress-bar {
+                height: 100%;  /* Fill the container */
+                background-color: #4caf50;  /* Green color for the filled part */
+                border-radius: 5px;  /* Match the rounded corners of the container */
+            }
+
+                #mandarin {
+                    width: 100%;  /* Set the width to 90% */
+                }
+
+                #cantonese {
+                    width: 100%;  /* Set the width to 90% */
+                }
+
+                #malay {
+                    width: 50%;  /* Set the width to 90% */
+                }
+
+                #hokkien {
+                    width: 80%;  /* Set the width to 90% */
+                }
+
+                #english {
+                    width: 95%;  /* Set the width to 90% */
+                }
+
+            .percentage-container {
+                padding: .5em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 97%;
+                height: 70px;
+                gap: 1em;
+            }
+
+        #certifications {
+            border: 5px solid black;
+            width: 100%;
+            max-width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-start;
+            padding: .5em;
+        }
+
+            #certification-title {
+                border: 5px solid black;
+                padding: .3em;
+                font-size: 2.5em;
+                width: auto;
+                margin-top: 0;
+                margin-bottom: .5em;
+            }
+
+            .certs {
+                width: 90%;
+                padding: .5em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .certification-div {
+                padding: 1em;
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                gap: .2em;
+                align-items: center;
+            }
+
+            .cert-separator {
+                height: 2px;
+                background-color: black;
+                width: 200px;
+                margin: .5em 0;
+            }
+        }
+            /*Mobile design*/
+            @media only screen and (max-width: 768px) {
+                #skills-section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 1em .5em;
+                    margin: 0;
+                    gap: 1em;
+                    width: 95%;
+                    visibility: hidden;
+                    transition: height 0.3s ease, visibility 0.3s ease;
+                }
+        
+                .language-div {
+                    border: 5px solid black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 95%;
+                    padding: .5em;
+                }
+        
+                    #language-title {
+                        border: 5px solid black;
+                        width: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: .3em ;
+                        font-size: 2.5em;
+                        margin-top: .3em;
+                        margin-bottom: .5em;
+                    }
+        
+                    #all-languages {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: .5em;
+                        gap: 1em;
+                        width: 95%;
+                    }
+        
+                    .fluency {
+                        color: black;
+                        font-style: italic;
+                    }
+        
+                    .lang {
+                        color: green;
+                    }
+                
+                    .languages {
+                        padding: .5em 1em;
+                        width: 92%;
+                        height: auto;
+                        max-height: 250px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+        
+                    .progress-container {
+                        border: 5px solid black;
+                        width: 100%;  /* Set the width of the container */
+                        height: 35px;  /* Height of the bar */
+                        background-color: #f3f3f3;  /* Light grey background for the empty part of the bar */
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: for a slight shadow effect */
+                    }
+                    
+                    .progress-bar {
+                        height: 100%;  /* Fill the container */
+                        background-color: #4caf50;  /* Green color for the filled part */
+                        border-radius: 5px;  /* Match the rounded corners of the container */
+                    }
+        
+                    #mandarin {
+                        width: 100%;  /* Set the width to 90% */
+                    }
+    
+                    #cantonese {
+                        width: 100%;  /* Set the width to 90% */
+                    }
+    
+                    #malay {
+                        width: 50%;  /* Set the width to 90% */
+                    }
+    
+                    #hokkien {
+                        width: 80%;  /* Set the width to 90% */
+                    }
+    
+                    #english {
+                        width: 95%;  /* Set the width to 90% */
+                    }
+        
+                    .percentage-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%; /* Ensures it takes full width of its parent */
+                        max-width: 95%; /* Prevents it from exceeding the parent's width */
+                        height: 70px;
+                        gap: 1em;
+                        padding: .5em;
+                    }
+        
+                #certifications {
+                    border: 5px solid black;
+                    width: 100%;
+                    max-width: 95%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: center;
+                    padding: .5em;
+                }
+        
+                    #certification-title {
+                        border: 5px solid black;
+                        padding: .3em;
+                        font-size: 2.5em;
+                        width: auto;
+                        margin-top: 0;
+                        margin-bottom: .5em;
+                    }
+        
+                    .certs {
+                        width: 90%;
+                        padding: .5em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+        
+                    .certification-div {
+                        padding: 1em;
+                        width: 95%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .2em;
+                        align-items: center;
+                        justify-content: center;
+                    }
+        
+                    .cert-separator {
+                        height: 2px;
+                        background-color: black;
+                        width: 200px;
+                        margin: .5em 0;
+                    }
+            }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) {
+                #skills-section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1em .5em;
+                    margin: 0;
+                    gap: 1em;
+                    visibility: hidden;
+                    transition: height 0.3s ease, visibility 0.3s ease;
+                }
+        
+                .language-div {
+                    border: 5px solid black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 55%;
+                    padding: .5em;
+                }
+        
+                    #language-title {
+                        border: 5px solid black;
+                        width: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: .3em ;
+                        font-size: 3em;
+                        margin-top: .1em;
+                        margin-bottom: .5em;
+                    }
+        
+                    #all-languages {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        padding: .5em;
+                        gap: 1em;
+                        width: 95%;
+                    }
+        
+                    .fluency {
+                        color: black;
+                        font-style: italic;
+                        font-size: 1.2em;
+                    }
+        
+                    .lang {
+                        color: green;
+                        font-size: 1.5em;
+                    }
+
+                    .lang-percent {
+                        font-size: 1.8em;
+                    }
+                
+                    .languages {
+                        padding: .5em 1em;
+                        width: 90%;
+                        height: auto;
+                        max-height: 250px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+        
+                    .progress-container {
+                        border: 5px solid black;
+                        width: 100%;  /* Set the width of the container */
+                        height: 55px;  /* Height of the bar */
+                        background-color: #f3f3f3;  /* Light grey background for the empty part of the bar */
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: for a slight shadow effect */
+                    
+                    }
+                    
+                    .progress-bar {
+                        height: 100%;  /* Fill the container */
+                        background-color: #4caf50;  /* Green color for the filled part */
+                        border-radius: 5px;  /* Match the rounded corners of the container */
+                    }
+        
+                    #mandarin {
+                        width: 100%;  /* Set the width to 90% */
+                    }
+    
+                    #cantonese {
+                        width: 100%;  /* Set the width to 90% */
+                    }
+    
+                    #malay {
+                        width: 50%;  /* Set the width to 90% */
+                    }
+    
+                    #hokkien {
+                        width: 80%;  /* Set the width to 90% */
+                    }
+    
+                    #english {
+                        width: 95%;  /* Set the width to 90% */
+                    }
+        
+                    .percentage-container {
+                        padding: .5em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 97%;
+                        height: 70px;
+                        gap: 1em;
+                    }
+        
+                #certifications {
+                    border: 5px solid black;
+                    width: 100%;
+                    max-width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: flex-start;
+                    padding: .5em;
+                }
+        
+                    #certification-title {
+                        border: 5px solid black;
+                        padding: .3em;
+                        font-size: 3em;
+                        width: auto;
+                        margin-top: 0;
+                        margin-bottom: .5em;
+                    }
+        
+                    .certs {
+                        width: 90%;
+                        padding: .5em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+        
+                    .certification-div {
+                        padding: 1em;
+                        width: 95%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .2em;
+                        align-items: center;
+                    }
+
+                    .cert-name {
+                        font-size: 2.5em;
+                        text-align: center;
+                    }
+        
+                    .cert-separator {
+                        height: 2px;
+                        background-color: black;
+                        width: 200px;
+                        margin: .5em 0;
+                    }
+            }
+
+/*----------------------------------------*/
+
+/*** Education ***/
+    /*Laptop design*/
+    @media only screen and (min-width: 769px) {
+        #education-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1em;
+            margin: 0;
+            visibility: hidden;
+            transition: height 0.3s ease, visibility 0.3s ease;
+        }
+
+        .education-div {
+            padding: .5em 1em;
+            display: flex;
+            flex-direction: column;
+            width: 99%;
+            gap: 1em;
+        }
+
+        .education {
+            border: 5px solid black;
+            padding: .5em;
+            display: grid;
+            grid-template-columns: 45% auto 40%;
+            grid-template-rows: 50% auto auto;
+            align-items: center;
+            justify-items: center;
+            font-size: 2em;
+        }
+
+        #education-title {
+            font-size: 2.5em;
+        }
+
+        .education-location {
+            padding: .5em;
+            font-size: 1.2em;
+            text-align: end;
+            grid-row: 3;
+            grid-column: 1;
+            width: 90%;
+            justify-self: flex-end;
+        }
+
+        .school {
+            border: 5px solid black;
+            color: red;
+            text-align: center;
+            padding: .5em;
+            font-weight: bold;
+            grid-row: 1;
+            grid-column: 1 /span 3;
+        }
+
+        .education-date {
+            grid-row: 4;
+            grid-column: 1 / span 3;
+            padding: .5em;
+        }
+
+        .education-separator {
+            height: 2px;
+            background-color: black;
+            width: 200px;
+            grid-row: 2;
+            grid-column: 1 / span 3;
+        }
+
+        .education-separator2 {
+            height: 50px;
+            background-color: black;
+            width: 2px;
+            grid-row: 3;
+            grid-column: 2;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .degree {
+            color: blue;
+            text-align: start;
+            padding: .5em;
+            text-decoration: underline;
+            grid-column: 3;
+            grid-row: 3;
+            width: 83%;
+            font-size: 1em;
+            justify-self: flex-start;
+        }
+    }
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            #education-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: .5em;
+                margin: 0;
+                visibility: hidden;
+                transition: height 0.3s ease, visibility 0.3s ease;
+            }
+    
+            .education-div {
+                padding: .5em 1em;
+                display: flex;
+                flex-direction: column;
+                width: 99%;
+                gap: 1em;
+            }
+    
+            .education {
+                border: 5px solid black;
+                padding: .5em;
+                display: grid;
+                grid-template-columns: 45% auto 40%;
+                grid-template-rows: 50% auto auto;
+                align-items: center;
+                justify-items: center;
+                font-size: 1em;
+            }
+    
+            #education-title {
+                font-size: 2.5em;
+            }
+    
+            .education-location {
+                padding: .5em;
+                font-size: 1.3em;
+                text-align: end;
+                grid-row: 3;
+                grid-column: 1;
+                width: 90%;
+                justify-self: flex-end;
+            }
+    
+            .school {
+                border: 5px solid black;
+                color: red;
+                text-align: center;
+                padding: .5em;
+                font-weight: bold;
+                font-size: 1.7em;
+                grid-row: 1;
+                grid-column: 1 /span 3;
+            }
+    
+            .education-date {
+                grid-row: 4;
+                grid-column: 1 / span 3;
+                padding: .5em;
+            }
+    
+            .education-separator {
+                height: 2px;
+                background-color: black;
+                width: 200px;
+                grid-row: 2;
+                grid-column: 1 / span 3;
+            }
+    
+            .education-separator2 {
+                height: 50px;
+                background-color: black;
+                width: 2px;
+                grid-row: 3;
+                grid-column: 2;
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+    
+            .degree {
+                color: blue;
+                text-align: start;
+                padding: .5em;
+                text-decoration: underline;
+                grid-column: 3;
+                grid-row: 3;
+                width: 83%;
+                font-size: 1.2em;
+                justify-self: flex-start;
+            }
+        }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) {
+                #education-section {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1em;
+                    margin: 0;
+                    visibility: hidden;
+                    transition: height 0.3s ease, visibility 0.3s ease;
+                }
+        
+                .education-div {
+                    padding: .5em 1em;
+                    display: flex;
+                    flex-direction: column;
+                    width: 99%;
+                    gap: 1em;
+                }
+        
+                .education {
+                    border: 5px solid black;
+                    padding: .5em;
+                    display: grid;
+                    grid-template-columns: 45% auto 40%;
+                    grid-template-rows: 50% auto auto
+                    5;
+                    align-items: center;
+                    justify-items: center;
+                    font-size: 2em;
+                }
+        
+                #education-title {
+                    font-size: 3.5em;
+                }
+        
+                .education-location {
+                    padding: .5em;
+                    font-size: 1.2em;
+                    text-align: end;
+                    grid-row: 3;
+                    grid-column: 1;
+                    width: 90%;
+                    justify-self: flex-end;
+                }
+        
+                .school {
+                    border: 5px solid black;
+                    color: red;
+                    text-align: center;
+                    padding: .5em;
+                    font-weight: bold;
+                    font-weight: 3em;
+                    grid-row: 1;
+                    grid-column: 1 /span 3;
+                }
+        
+                .education-date {
+                    grid-row: 4;
+                    grid-column: 1 / span 3;
+                    padding: .5em;
+                }
+        
+                .education-separator {
+                    height: 2px;
+                    background-color: black;
+                    width: 200px;
+                    grid-row: 2;
+                    grid-column: 1 / span 3;
+                }
+        
+                .education-separator2 {
+                    height: 50px;
+                    background-color: black;
+                    width: 2px;
+                    grid-row: 3;
+                    grid-column: 2;
+                    margin-left: 1em;
+                    margin-right: 1em;
+                }
+        
+                .degree {
+                    color: blue;
+                    text-align: start;
+                    padding: .5em;
+                    text-decoration: underline;
+                    grid-column: 3;
+                    grid-row: 3;
+                    width: 83%;
+                    font-size: 1em;
+                    justify-self: flex-start;
+                }
+            }
+
+/*----------------------------------------*/
+
+/*** Experiences ***/
+    /*Laptop design*/
+    @media only screen and (min-width: 769px) {
+        #experience-section {
+            padding: .5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: height 0.3s ease, visibility 0.3s ease;
+        }
+
+        #navigation-experience {
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        
+        .experiences {
+            display: flex; /* Use flexbox for the container */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            flex-direction: column;
+            width: 95%; /* Full width of the parent */
+            gap: 3em;
+            padding: 1em;
+            height: auto;
+            flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+            gap: 20px; /* Space between items */
+            margin-bottom: 1em;
+        }
+
+        .position {
+            font-weight: bold;
+            color: black;
+            font-size: .8em;
+        }
+        
+        .duty-separator {
+            display: none;
+        }
+
+        .experience-separator {
+            display: block;
+            height: 2px;
+            width: 90%;
+            background-color: black;
+            margin: 20px;
+        }
+
+        .location {
+            grid-row: 2;
+            text-align: center;
+            justify-self: center;
+            align-self: flex-start;
+            font-size: 1.5em;
+            margin: .2em 0;
+        }
+        
+        .work {
+            border: 5px solid black;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 60% auto;
+            padding: 0 .5em;
+            width: 98%;
+        }
+        
+        .work-name {
+            color: blue;
+            padding: 0 .5em;
+            text-align: center;
+            align-self: flex-end;
+            justify-self: center;
+            margin-bottom: .5em;
+            font-size: 2em;
+        }
+
+        .exp-title {
+            font-size: 2.5em;
+            padding: .3em;
+        }
+        
+        .date {
+            padding: 0 .5em;
+            grid-row: 3;
+            text-align: center;
+            margin: 1em;
+        }
+        
+        .duties {
+            padding: 1em .5em;
+            list-style-type: disc;
+            list-style-position: inside;
+            grid-row: 1 / span 3;
+            align-self: center;
+            justify-self: center;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        
+        .duties li {
+            padding: .2em;
+        }
+        
+        #resume {
+            border: 5px solid black;
+            font-size: 2.5em;
+            width: auto;
+            padding: 0 .5em;
+            text-align: center;
+            margin-bottom: .5em;
+        }
+    }
+
+        /*Mobile design*/
+        @media only screen and (max-width: 768px) {
+            #experience-section {
+                width: auto; /* Adjust width to 100% for smaller screens */
+                height: auto;
+                padding: .5em; /* Add padding for smaller screens */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column; /* Stack elements vertically */
+                transition: height 0.3s ease, visibility 0.3s ease;
+            }
+
+            .experiences {
+                margin-bottom: 1em;
+            }
+
+            .exp-title {
+                font-size: 2em;
+                padding: .3em;
+            }
+
+            .work {
+                border: 5px solid black;
+                display: flex;
+                flex-direction: column;
+                padding: .5em;
+                height: auto;
+            }
+
+            .duties {
+                font-size: 1.5em;
+                margin-top: .5em;
+            }
+
+                .duties li {
+                    margin-bottom: 0.5em;
+                }
+            
+            .date {
+                padding: 0 .5em;
+                text-align: center;
+                margin-top: 1.2em;
+            }
+
+            .work-name {
+                text-align: center;
+                color: blue;
+                margin-bottom: .1em;
+                font-size: 1.7em;
+            }
+
+            .duty-separator {
+                height: 2px;
+                background-color: black;
+                width: 50px;
+            }
+
+            .experience-separator {
+                border: 0; /* Remove default border */
+                border-top: 2px solid black; /* Create a solid black line */
+                width: 80%; /* Set the width of the line */
+                margin: 20px auto; /* Add margin to center the line and space it out */
+            }
+
+            .position {
+                font-size: .8em;
+                color: black;
+                font-weight: bold;
+            }
+
+            .location {
+                text-align: center;
+                justify-self: center;
+                font-size: 1.3em;
+                margin: .1em 0;
+            }
+
+            #resume {
+                border: 5px solid black;
+                width: 80%;
+                font-size: 2em;
+                text-align: center;
+                padding: .2em .5em;
+                margin: .5em;
+            }
+
+            #resume a {
+                display: inline; /* Ensures links stay on the same line */
+                white-space: nowrap; /* Prevents wrapping */
+            }
+        }
+
+            /*Desktop design*/
+            @media only screen and (min-width: 1500px) {
+                #experience-section {
+                    padding: .5em;
+                    transition: height 0.3s ease, visibility 0.3s ease;
+                }
+        
+                #navigation-experience {
+                    margin-top: 2em;
+                    margin-bottom: 1em;
+                }
+                
+                .experiences {
+                    display: flex; /* Use flexbox for the container */
+                    justify-content: center; /* Center items horizontally */
+                    align-items: center; /* Center items vertically */
+                    flex-direction: column;
+                    width: 95%; /* Full width of the parent */
+                    gap: 3em;
+                    padding: 1em;
+                    height: auto;
+                    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+                    gap: 20px; /* Space between items */
+                    margin-bottom: 1em;
+                }
+                
+                .exp-title {
+                    font-size: 3em;
+                    padding: .3em;
+                }
+    
+        
+                .position {
+                    font-weight: bold;
+                    color: black;
+                    font-size: .8em;
+                }
+
+                .duty-separator {
+                    display: none;
+                }
+        
+                .experience-separator {
+                    display: block;
+                    height: 2px;
+                    width: 90%;
+                    background-color: black;
+                    margin: 20px;
+                }
+
+                .location {
+                    grid-row: 2;
+                    text-align: center;
+                    justify-self: center;
+                    align-self: flex-start;
+                    font-size: 2.2em;
+                    margin: .2em 0;
+                }
+                
+                .work {
+                    border: 5px solid black;
+                    display: grid;
+                    grid-template-rows: auto auto auto;
+                    grid-template-columns: 60% auto;
+                    padding: 0 .5em;
+                    width: 98%;
+                }
+                
+                .work-name {
+                    color: blue;
+                    padding: 0 .5em;
+                    text-align: center;
+                    margin-bottom: .3em;
+                    font-size: 3em;
+                }
+                
+                .date {
+                    padding: 0 .5em;
+                    grid-row: 3;
+                    text-align: center;
+                    margin: 1em;
+                    font-size: 1.7em;
+                }
+                
+                .duties {
+                    padding: 1em .5em;
+                    list-style-type: disc;
+                    list-style-position: inside;
+                    grid-row: 1 / span 3;
+                    align-self: center;
+                    justify-self: center;
+                    text-align: justify;
+                    font-size: 1.7em;
+                }
+                
+                .duties li {
+                    padding: .2em;
+                }
+
+                #resume {
+                    padding: .5em;
+                    font-size: 3.5em;
+                    margin-top: .5em .2em;
+                    border: 5px solid black;
+                }
+            }
+            
 /*----------------------------------------*/
 
 /*** Reference ***/
@@ -1745,7 +3266,7 @@ html {
 
 /*----------------------------------------*/
 
-/*** Blog ***/
+/*Blog*/
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
         #blog-section {
@@ -1996,359 +3517,4 @@ html {
                     }
             }
 
-/*----------------------------------------*/
-
-
-/*** Experiences ***/
-    /*Laptop design*/
-    @media only screen and (min-width: 769px) {
-        #experience-section {
-            width: auto;
-            height: auto;
-            margin: 0 auto;
-            display: flex;
-            padding-bottom: 2em;
-            align-items: center; /* Align children to the top */
-            justify-content: flex-start;
-            flex-direction: column;
-        }
-        
-        #navigation-experience {
-            margin-top: 2em;
-            margin-bottom: 1em;
-        }
-        
-        .experiences {
-            display: flex; /* Use flexbox for the container */
-            justify-content: center; /* Center items horizontally */
-            align-items: center; /* Center items vertically */
-            flex-direction: column;
-            width: 95%; /* Full width of the parent */
-            gap: 3em;
-            padding: 1em;
-            height: auto;
-            flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
-            gap: 20px; /* Space between items */
-            margin-bottom: 1em;
-        }
-        
-        .exp {
-            padding: .5em 1em;
-            width: 95%;
-            display: flex;
-            flex-direction: column;
-            gap: .2em;
-        }
-        
-        #other-exp {
-            width: 95%;
-            display: flex;
-            padding: 1em;
-            margin-bottom: 2em;
-        }
-
-        .experience-separator {
-            display: block;
-            height: 2px;
-            width: 90%;
-            background-color: black;
-            margin: 20px auto;
-        }
-        
-        .exp-title {
-            padding: .3em;
-            font-size: 2.5em;
-            margin-top: 0;
-            margin-bottom: .5em;
-            text-align: center;
-        }
-        
-        .school {
-            color: red;
-        }
-        
-        .lang {
-            color: green;
-        }
-        
-        .location, .fluency, .position {
-            color: black;
-            font-style: italic;
-        }
-        
-        .degree {
-            text-decoration: underline;
-        }
-        
-        .work {
-            display: grid;
-            grid-template-rows: repeat(2, auto);
-            grid-template-columns: 60% auto;
-            column-gap: .5em;
-        }
-        
-        .work-name {
-            color: blue;
-            padding: 0 .5em;
-        }
-        
-        .date {
-            padding: 0 .5em;
-            grid-row: 2;
-            text-align: center;
-        }
-        
-        .duties {
-            padding: 1em .5em;
-            list-style-type: disc;
-            list-style-position: inside;
-            grid-row: 1 / span 2;
-            align-self: center;
-            justify-self: center;
-            text-align: justify;
-            font-size: 1.1em;
-        }
-        
-        .duties li {
-            padding: .2em;
-        }
-        
-        #resume {
-            font-size: 2rem;
-            width: auto;
-            padding: 0 .5em;
-            text-align: center;
-            margin-bottom: .5em;
-        }
-    }
-
-        /*Mobile design*/
-        @media only screen and (max-width: 768px) {
-            #experience-section {
-                width: auto; /* Adjust width to 100% for smaller screens */
-                height: auto;
-                padding: 1em; /* Add padding for smaller screens */
-                flex-direction: column; /* Stack elements vertically */
-            }
-
-            #resume {
-                border: 5px solid black;
-                width: 90%;
-                font-size: 1.5em;
-                text-align: center;
-                padding: .2em .5em;
-                margin: 1em 0;
-            }
-    
-            #resume a {
-                display: inline; /* Ensures links stay on the same line */
-                white-space: nowrap; /* Prevents wrapping */
-            }
-
-            .exp-title {
-                padding: .3em;
-                font-size: 2em;
-                margin-top: 0;
-                margin-bottom: .5em;
-                text-align: center;
-            }
-
-            #body-experience h1 {
-                margin-top: 1em;
-                width: 100vw;
-            }
-
-            .experiences {
-                margin-bottom: 1em;
-            }
-
-            .work {
-                display: grid;
-                grid-template-rows: repeat(3, auto);
-                grid-template-columns: 60% auto;
-                column-gap: .5em;
-            }
-
-            .duties {
-                padding: 1em .5em;
-                list-style-type: disc;
-                list-style-position: inside;
-                grid-row: 3;
-                grid-column: 1 / span 2;
-                align-self: center;
-                justify-self: center;
-                text-align: justify;
-            }
-
-            .work {
-                display: grid;
-                grid-template-rows: repeat(2, auto);
-                grid-template-columns: 50% 50%;
-                column-gap: .5em;
-            }
-            
-            .date {
-                padding: 0 .5em;
-                grid-row: 2;
-                grid-column: 1 / span 2;
-                text-align: center;
-            }
-
-            .work-name {
-                grid-column: 1 / span 2;
-                text-align: center;
-                color: blue;
-            }
-
-            .experience-separator {
-                border: 0; /* Remove default border */
-                border-top: 2px solid black; /* Create a solid black line */
-                width: 80%; /* Set the width of the line */
-                margin: 20px auto; /* Add margin to center the line and space it out */
-            }
-
-            .location, .fluency, .position {
-                color: black;
-                font-style: italic;
-            }
-
-            #other-exp {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .school {
-                color: red;
-            }
-            
-            .lang {
-                color: green;
-            }
-        }
-
-            /*Desktop design*/
-            @media only screen and (min-width: 1500px) {
-                #experience-section {
-                    width: auto;
-                    height: auto;
-                    margin: 0 auto;
-                    display: flex;
-                    padding-bottom: 2em;
-                    align-items: center; /* Align children to the top */
-                    justify-content: flex-start;
-                    flex-direction: column;
-                }
-                
-                #navigation-experience {
-                    margin-top: 2em;
-                    margin-bottom: 1em;
-                }
-                
-                .experiences {
-                    display: flex; /* Use flexbox for the container */
-                    justify-content: center; /* Center items horizontally */
-                    align-items: center; /* Center items vertically */
-                    flex-direction: column;
-                    width: 95%; /* Full width of the parent */
-                    gap: 3em;
-                    padding: 1em;
-                    height: auto;
-                    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
-                    gap: 20px; /* Space between items */
-                    margin-bottom: 1em;
-                }
-                
-                .exp {
-                    padding: .5em 1em;
-                    width: 95%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: .2em;
-                }
-                
-                #other-exp {
-                    width: 95%;
-                    display: flex;
-                    padding: 1em;
-                    margin-bottom: 2em;
-                }
-                
-                .experience-separator {
-                    display: block;
-                    height: .5px;
-                    width: 90%;
-                    background-color: black;
-                    margin: 20px auto;
-                }
-
-                .cert-name {
-                    font-size: 2.2em;
-                }
-
-                .exp-title {
-                    text-decoration: underline;
-                    font-size: 3em;
-                }
-                
-                .school {
-                    color: red;
-                    font-size: 2em;
-                }
-                
-                .lang {
-                    color: green;
-                    font-size: 1.7em;
-                }
-                
-                .fluency {
-                    color: black;
-                    font-style: italic;
-                    font-size: 1.5em;
-                }
-
-                .position, .location {
-                    font-size: 1.2em;
-                }
-                
-                .degree {
-                    text-decoration: underline;
-                    font-size: 1.7em;
-                }
-                
-                .work {
-                    display: grid;
-                    grid-template-rows: repeat(2, auto);
-                    grid-template-columns: 60% auto;
-                    column-gap: .5em;
-                }
-                
-                .work-name {
-                    color: blue;
-                    padding: 0 .5em;
-                    font-size: 2.3em;
-                }
-                
-                .date {
-                    padding: 0 .5em;
-                    grid-row: 2;
-                    text-align: center;
-                    font-size: 1.5em;
-                }
-                
-                .duties {
-                    padding: 1em .5em;
-                    list-style-type: disc;
-                    list-style-position: inside;
-                    grid-row: 1 / span 2;
-                    align-self: center;
-                    justify-self: center;
-                    text-align: justify;
-                    font-size: 1.8em;
-                }
-                
-                .duties li {
-                    padding: .2em;
-                }
-            }
-            
 /*----------------------------------------*/
