@@ -294,7 +294,7 @@ html {
                 justify-items: center;
                 align-items: center;
                 gap: 1em;
-                width: 60%;
+                width: 70%;
                 padding: 1em;
                 flex-direction: column;
             }
@@ -306,6 +306,14 @@ html {
                 width: 90%;
                 font-size: 2em;
                 padding: .2em;
+            }
+
+            #intro-resume {
+                display: inline;
+            }
+
+            #bio-p a {
+                display: inline;
             }
         }
 
