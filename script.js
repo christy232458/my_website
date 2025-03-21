@@ -277,6 +277,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             defaultSection();
         });
+        
 
         // Mobile nav bar
         mobileSandwichMenu.addEventListener('click', toggleMobileNavBar); // Event listener for the menu button
@@ -293,6 +294,29 @@
         mobileExperienceLink.addEventListener('click', showExperienceSection);
         mobileSkillsLink.addEventListener('click', showSkillsSection);
         mobileEducationLink.addEventListener('click', showEducationSection);
+
+        // Languages
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all language sections
+            document.querySelectorAll(".languages").forEach(language => {
+                let percentageText = language.querySelector(".lang-percent").textContent.trim();
+                let progressBar = language.querySelector(".progress-bar");
+        
+                // Extract numeric value from percentage text
+                let percentage = parseInt(percentageText.replace("%", ""), 10);
+        
+                // Apply color based on percentage range
+                if (percentage >= 90) {
+                    progressBar.style.backgroundColor = "green"; // High fluency
+                } else if (percentage >= 70) {
+                    progressBar.style.backgroundColor = "blue"; // Proficient
+                } else if (percentage >= 50) {
+                    progressBar.style.backgroundColor = "orange"; // Conversational
+                } else {
+                    progressBar.style.backgroundColor = "red"; // Beginner
+                }
+            });
+        });
 
 // <---------------->
 
