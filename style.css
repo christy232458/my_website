@@ -4,6 +4,28 @@ html {
 }
 
 
+/* -- Languages -- */
+#mandarin {
+    width: 100%;  
+}
+
+#english {
+    width: 95%;  
+}
+
+#malay {
+    width: 50%;  
+}
+
+#cantonese {
+    width: 100%; 
+}
+
+#hokkien {
+    width: 80%;  
+}
+
+
     /*Laptop design*/
     @media only screen and (min-width: 769px) {
         a {
@@ -2085,27 +2107,7 @@ html {
                 height: 100%;  /* Fill the container */
                 background-color: #4caf50;  /* Green color for the filled part */
                 border-radius: 5px;  /* Match the rounded corners of the container */
-            }
-
-                #mandarin {
-                    width: 100%;  
-                }
-
-                #english {
-                    width: 95%;  
-                }
-
-                #malay {
-                    width: 50%;  
-                }
-
-                #cantonese {
-                    width: 100%; 
-                }
-                
-                #hokkien {
-                    width: 80%;  
-                }
+            } 
 
             .percentage-container {
                 padding: .5em;
@@ -2241,26 +2243,6 @@ html {
                         height: 100%;  /* Fill the container */
                         background-color: #4caf50;  /* Green color for the filled part */
                         border-radius: 5px;  /* Match the rounded corners of the container */
-                    }
-        
-                    #mandarin {
-                        width: 100%;  
-                    }
-    
-                    #english {
-                        width: 95%;  
-                    }
-    
-                    #malay {
-                        width: 50%;  
-                    }
-    
-                    #cantonese {
-                        width: 100%; 
-                    }
-                    
-                    #hokkien {
-                        width: 80%;  
                     }
         
                     .percentage-container {
@@ -2406,27 +2388,7 @@ html {
                         background-color: #4caf50;  /* Green color for the filled part */
                         border-radius: 5px;  /* Match the rounded corners of the container */
                     }
-        
-                    #mandarin {
-                        width: 100%;  
-                    }
-    
-                    #english {
-                        width: 95%;  
-                    }
-    
-                    #malay {
-                        width: 50%;  
-                    }
-    
-                    #cantonese {
-                        width: 100%; 
-                    }
                     
-                    #hokkien {
-                        width: 80%;  
-                    }
-        
                     .percentage-container {
                         padding: .5em;
                         display: flex;
