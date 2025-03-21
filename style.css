@@ -2144,6 +2144,7 @@ html {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
             }
 
             .certification-div {
@@ -2299,6 +2300,7 @@ html {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        text-align: center;
                     }
         
                     .certification-div {
