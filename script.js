@@ -154,6 +154,8 @@
         let allSection = document.getElementById('all-experience-section');
         let experienceSection = document.getElementById('experience-section');
 
+        let sections = [skillsSection, educationSection, experienceSection];
+
         let projectsNavBar = document.getElementById('project-nav');
         // ----
         let experienceLink = document.getElementById('experience-link');
@@ -218,6 +220,24 @@
         allSection.style.zIndex = '1';
     };
 
+    let defaultSection = function() {
+        hideAllSections();
+    
+        let visibleSection = sections.find(section => section.style.visibility === 'visible');
+    
+        if (visibleSection) {
+            visibleSection.style.opacity = '1';
+            visibleSection.style.position = 'relative';
+            visibleSection.style.zIndex = '1';
+        } else {
+            // Default to `allSection` if none are visible
+            experienceSection.style.visibility = 'visible';
+            experienceSection.style.opacity = '1';
+            experienceSection.style.position = 'relative';
+            experienceSection.style.zIndex = '1';
+        }
+    };
+
     let hideAllSections = function() {
         let sections = [skillsSection, educationSection, experienceSection];
         sections.forEach(sec => {
@@ -253,6 +273,10 @@
         skillsLink.addEventListener('click', showSkillsSection);
         experienceLink.addEventListener('click', showExperienceSection);
         educationLink.addEventListener('click', showEducationSection);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            defaultSection();
+        });
 
         // Mobile nav bar
         mobileSandwichMenu.addEventListener('click', toggleMobileNavBar); // Event listener for the menu button
