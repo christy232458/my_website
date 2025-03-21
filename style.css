@@ -2088,11 +2088,23 @@ html {
             }
 
                 #mandarin {
-                    width: 10%;  /* Set the width to 90% */
+                    width: 100%;  
                 }
 
                 #english {
-                    width: 100%;  /* Set the width to 90% */
+                    width: 95%;  
+                }
+
+                #malay {
+                    width: 50%;  
+                }
+
+                #cantonese {
+                    width: 100%; 
+                }
+                
+                #hokkien {
+                    width: 80%;  
                 }
 
             .percentage-container {
@@ -2231,10 +2243,23 @@ html {
                     }
         
                     #mandarin {
-                        width: 10%;  /* Set the width to 90% */
+                        width: 100%;  
                     }
+    
                     #english {
-                        width: 100%;  /* Set the width to 90% */
+                        width: 95%;  
+                    }
+    
+                    #malay {
+                        width: 50%;  
+                    }
+    
+                    #cantonese {
+                        width: 100%; 
+                    }
+                    
+                    #hokkien {
+                        width: 80%;  
                     }
         
                     .percentage-container {
@@ -2381,23 +2406,23 @@ html {
                     }
         
                     #mandarin {
-                        width: 100%;  /* Set the width to 90% */
-                    }
-    
-                    #cantonese {
-                        width: 100%;  /* Set the width to 90% */
-                    }
-    
-                    #malay {
-                        width: 50%;  /* Set the width to 90% */
-                    }
-    
-                    #hokkien {
-                        width: 80%;  /* Set the width to 90% */
+                        width: 100%;  
                     }
     
                     #english {
-                        width: 95%;  /* Set the width to 90% */
+                        width: 95%;  
+                    }
+    
+                    #malay {
+                        width: 50%;  
+                    }
+    
+                    #cantonese {
+                        width: 100%; 
+                    }
+                    
+                    #hokkien {
+                        width: 80%;  
                     }
         
                     .percentage-container {
