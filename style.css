@@ -2981,10 +2981,9 @@ html {
 
         .experience-separator {
             display: block;
-            height: 2px;
+            height: 1px;
             width: 90%;
             background-color: black;
-            margin: 20px;
         }
 
         .location {
