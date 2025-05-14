@@ -2982,7 +2982,7 @@ html {
         .experience-separator {
             display: block;
             height: 1px;
-            width: 90%;
+            width: 50%;
             background-color: black;
         }
 
@@ -3192,9 +3192,8 @@ html {
                 .experience-separator {
                     display: block;
                     height: 2px;
-                    width: 90%;
+                    width: 50%;
                     background-color: black;
-                    margin: 20px;
                 }
 
                 .location {
