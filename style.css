@@ -22,6 +22,10 @@ html {
         background-color: purple;
     }
 
+    hr {
+        background-color: white !important;
+    }
+
     .work .work-name {
         color: rgb(179, 179, 0);
     }
