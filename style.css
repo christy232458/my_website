@@ -40,6 +40,10 @@ html {
         border: 5px solid silver !important; 
     }
 
+    .languages .progress-container {
+        border: 5px solid grey ;
+    }
+
     #email i {
         color: white !important;
     }
@@ -448,7 +452,7 @@ html {
         
                     #tagline {
                         text-align: end;
-                        font-size: 5.5em;
+                        font-size: 5em;
                         margin: .2em .5em;
                         padding: .1em .2em;
                         width: 90%;
@@ -468,8 +472,8 @@ html {
                     list-style-type: none;
                     text-align: center;
                     width: 80%;
-                    font-size: 5.5em;
-                    padding: .2em;
+                    font-size: 5em;
+                    padding: .5em;
                 }
             }
 
