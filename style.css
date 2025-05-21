@@ -2315,7 +2315,6 @@ html {
             .progress-bar {
                 height: 100%;  /* Fill the container */
                 background-color: #4caf50;  /* Green color for the filled part */
-                border-radius: 5px;  /* Match the rounded corners of the container */
             } 
 
             .percentage-container {
@@ -2451,7 +2450,6 @@ html {
                     .progress-bar {
                         height: 100%;  /* Fill the container */
                         background-color: #4caf50;  /* Green color for the filled part */
-                        border-radius: 5px;  /* Match the rounded corners of the container */
                     }
         
                     .percentage-container {
@@ -2595,7 +2593,6 @@ html {
                     .progress-bar {
                         height: 100%;  /* Fill the container */
                         background-color: #4caf50;  /* Green color for the filled part */
-                        border-radius: 5px;  /* Match the rounded corners of the container */
                     }
                     
                     .percentage-container {
