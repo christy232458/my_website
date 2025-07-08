@@ -891,6 +891,11 @@ html {
                         max-height: 300px;
                     }
 
+                    iframe {
+                        max-width: 400px;
+                        max-height: 460px;
+                    }
+
                     #interests-list li:not(:nth-child(4n))::after { 
                         content: "";
                         position: absolute;
