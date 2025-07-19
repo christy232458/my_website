@@ -167,7 +167,7 @@ section {
                 width: var(--round-border_small);
                 height: var(--round-border_small);
             background-color: #f2f2f2;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
         }
             .quick-contact_intro-icon {
                 font-size: var(--icon);
@@ -177,6 +177,7 @@ section {
                 .quick-contact:hover {
                     background-color: #ffcc80; /* warm peach */
                     color: #5a63e0;            /* deep soft blue */
+                    transform: scale(1.05);
                 }
     /**/
     /* Resume */
@@ -247,11 +248,12 @@ section {
                     width: clamp(32px, 6vw + 3vh, 50px);
                     padding: 1.5em;
                 background-color: #f0b0b0;
-                transition: background 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease;
             }
                 .eng-zh_resume:hover {
                     background-color: gray;
                     color: rgb(158, 255, 182);
+                    transform: scale(1.05);
                 }
     /**/
     /*   */
