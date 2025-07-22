@@ -287,19 +287,22 @@ section {
             padding: .5em;
             margin-bottom: 1em;
         background-color: #f89d9d;
+        display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: .5em;
     }
         .exp_titlePosition-wrapper {
-            border: 5px solid black;
                 border-radius: 15px;
             display: flex;
                 align-items: flex-start;
                 flex-direction: column;
             box-sizing: border-box;
-                padding: .2em;
+                padding: .5em 1em;
+                width: 100%;
             background-color: #eaf8a9;
         }
             .exp_title {
-                border: 2px solid yellow;
                     border-radius: 15px;
                 display: inline-flex;
                 font-size: var(--small-header);
@@ -318,7 +321,6 @@ section {
                 background-color: #edf7ff;
             }
                 .exp_info-wrapper {
-                    border: 5px dashed orange;
                         border-radius: 15px;
                     display: flex;
                         align-items: center;
