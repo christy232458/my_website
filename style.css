@@ -342,7 +342,7 @@ section {
             .exp_duties {
                 border: 5px solid brown;
                     border-radius: 25px;
-                display: flex;
+                display: none;
                     align-items: flex-start;
                     justify-content: center;
                     flex-direction: column;
