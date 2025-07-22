@@ -1,21 +1,38 @@
 // || LANDING PAGE ||
-function separator(id, childElements, separator) { // "id", "childElements" and "separator" must be strings
-    const container = document.getElementById(id);
+function separator(selector, childElements, separator) { // "selector", "childElements" and "separator" must be strings
+    const container = document.querySelector(selector);
+    if (!container) return;
+
     const children = container.querySelectorAll(childElements);
+    const safeSelector = selector.replace(/[^a-zA-Z0-9_-]/g, '');
 
-    for (let i = 0; i < children.length-1; i++) {
-        const separation = document.createElement('span'); // or 'p', 'div', etc.
-        separation.textContent = separator;
-        separation.classList.add(`${id}_separator`); // add class name to make it easier to style
-        children[i].after(separation);
+    for (let i = 0; i < children.length - 1; i++) {
+        let separation;
 
-        if (i == children.length-1) {
-            children[i].before(separation);
+        if (typeof separator === 'string') {
+            separation = document.createElement('span');
+            separation.textContent = separator;
+        } else if (separator instanceof HTMLElement) {
+            separation = separator.cloneNode(true);
+        } else {
+            console.warn('Invalid separator: must be a string or HTMLElement');
+            return;
         }
+
+        separation.classList.add(`${safeSelector}_separator`);
+        children[i].after(separation);
     }
 }
 
-separator("quick-intro_tagline", "p", "✦");
+separator("#quick-intro_tagline", "p", "✦");
+// ||   ||
+
+
+// ** EXPERIENCE SECTION **
+const hr = document.createElement('hr');
+
+separator(".exp_duties", "li", hr);
+// **   **
 
 
 // **UNIVERSAL**
