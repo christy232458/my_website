@@ -277,68 +277,93 @@ section {
 
 /* ** EXPERIENCE SECTION ** */
 #experience-section {
-    border: 5px solid red;
+    background: linear-gradient(109deg,  #fcf299, #cdf8b9)
 }
     /* Experience  */
     .exp_wrapper {
         border: 5px solid black;
+            border-radius: 25px;
         box-sizing: border-box;
             padding: .5em;
             margin-bottom: 1em;
+        background-color: #f89d9d;
     }
-        .exp_title {
-            border: 5px solid yellow;
+        .exp_titlePosition-wrapper {
+            border: 5px solid black;
                 border-radius: 15px;
-            display: inline-flex;
-            font-size: var(--small-header);
-                font-weight: 600;
+            display: flex;
+                align-items: flex-start;
+                flex-direction: column;
             box-sizing: border-box;
-                padding: .5em;
-                margin: .3em 0;
+                padding: .2em;
+            background-color: #eaf8a9;
         }
-            .exp_info-wrapper {
-                border: 5px dashed orange;
-                display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                margin-bottom: .5em;
+            .exp_title {
+                border: 2px solid yellow;
+                    border-radius: 15px;
+                display: inline-flex;
+                font-size: var(--small-header);
+                    font-weight: 600;
+                box-sizing: border-box;
+                    padding: .5em;
+                    margin: .3em 0;
+                background-color: #b6f3a3;
             }
-                .exp_datePlace-wrapper, .exp_summary-wrapper {
-                    box-sizing: border-box;
-                        width: 100%;
+            .exp_position {
+                border: 5px solid white;
+                    border-radius: 15px;
+                box-sizing: border-box;
+                    margin: .3em 0;
+                    padding: .5em;
+                background-color: #edf7ff;
+            }
+                .exp_info-wrapper {
+                    border: 5px dashed orange;
+                        border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    margin-bottom: .5em;
                 }
-                    .exp_datePlace-wrapper {
-                        border: 3px solid silver;
-                        font-size: var(--small-subtitle);
-                        display: flex;
-                            align-items: center;
-                            justify-content: space-around;
+                    .exp_datePlace-wrapper, .exp_summary-wrapper {
+                        box-sizing: border-box;
+                            width: 100%;
                     }
-                        .exp_date, .exp_place {
-                            box-sizing: border-box;
-                                padding: .5em;
-                                margin: .5em;
+                        .exp_datePlace-wrapper {
+                            border: 3px solid silver;
+                                border-radius: 15px 15px 0 0;
                             font-size: var(--small-subtitle);
+                            display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                            background-color: silver;
                         }
-                            .exp_date {
-                                border: 5px solid green;
-                                    border-radius: 999px;
+                            .exp_date, .exp_place {
+                                box-sizing: border-box;
+                                    padding: .5em;
+                                    margin: .5em;
+                                font-size: var(--small-subtitle);
                             }
-                            .exp_place {
-                                border: 5px solid gold;
-                                    border-radius: 15px;
-                            }
-                    .exp_summary-wrapper {
-                        border: 3px solid indigo;
-                        display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                            text-align: justify;
-                            flex-wrap: wrap;
-                        padding: .5em;
-                        font-size: var(--subtitle);
-                    }
+                                .exp_date {
+                                        border-radius: 999px;
+                                    background-color: #b6f3a3;
+                                }
+                                .exp_place {
+                                        border-radius: 15px;
+                                    background-color: lightyellow;
+                                }
+                        .exp_summary-wrapper {
+                                border-radius: 0 0 15px 15px;
+                            display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                text-align: justify;
+                                flex-wrap: wrap;
+                            padding: .5em;
+                            font-size: var(--subtitle);
+                            background-color: #f2f2f2;
+                        }
             .exp_duties {
                 border: 5px solid brown;
                     border-radius: 25px;
@@ -351,15 +376,26 @@ section {
                     padding: .5em;
                 list-style-type: none;
                 text-align: justify;
+                background-color: #dbe9f4;
             }
                 .exp_duties_separator {
                     height: 1px;
                 }
                 .exp_duty {
-                    border: 5px dotted purple;
+                        border-radius: 15px;
                     box-sizing: border-box;
                         padding: .3em;
                 }
+    .exp_see-all-button {
+        border: 3px solid black;
+            border-radius: 10px;
+        font-size: var(--small-subtitle);
+        display: flex;
+            align-self: center;
+            justify-self: center;
+        box-sizing: border-box;
+            padding: .5em;
+    }
     /**/    
 /* **   ** */
                 
