@@ -519,4 +519,64 @@ section {
                         max-height: clamp(15px, 4dvw + 1dvh, 25px);;
                     }
 /* ~~   ~~ */
+
+
+/* ++ SKILLS SECTION ++ */
+#skills-section {
+    display: flex;
+        flex-direction: column;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #b4fa8c 0%, #f0fd7b 100%);
+}
+    /* Languages */
+    .language-container {
+    }
+        .languages_wrapper {
+            border-radius: 20px;
+            display: flex;
+                align-items: center;
+                gap: .5em;
+            box-sizing: border-box;
+                padding: .5em;
+            overflow-y: auto;
+        }
+            .language {
+                    border-radius: 15px;
+                display: inline-flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: .5em;
+                box-sizing: border-box;
+                    padding: 1em;
+                background-color: #f0908a;
+            }
+                .language_progress {
+                    border-radius: 50%;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    width: clamp(30px, 19dvw + 1dvh, 100px);
+                    height: clamp(30px, 19dvw + 1dvh, 100px);
+                    background: conic-gradient(var(--fluency, black) calc(var(--progress, 5) * 1%), 
+                        transparent calc(var(--progress, 5) * 1%));
+                }
+                    .language_symbol {
+                        border-radius: 50%;
+                        box-sizing: border-box;
+                            max-width: 90%;
+                            max-height: 90%;
+                    }
+                .language_fluency {
+                    border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    box-sizing: border-box;
+                        padding: .5em;
+                    font-weight: 600;
+                    background-color: #f2f8dd;
+                }
+    /**/  
+/* ++   ++ */
                     
