@@ -15,6 +15,9 @@
         --semicircle-left: 50% 0 0 50% / 100% 0 0 100%;
         --semicircle-right: 0 50% 50% 0 / 0 100%  100% 0 ;
 }
+* {
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -531,6 +534,14 @@ section {
     /* Languages */
     .language-container {
     }
+        .language_title {
+            border-radius: 15px;
+            box-sizing: border-box;
+                margin-top: 0;
+                padding: .3em;
+            display: inline-flex;
+                align-self: flex-start;
+        }
         .languages_wrapper {
             border-radius: 20px;
             display: flex;
@@ -551,6 +562,9 @@ section {
                     padding: 1em;
                 background-color: #f0908a;
             }
+                .language_name {
+                    font-style: italic;
+                }
                 .language_progress {
                     border-radius: 50%;
                     display: flex;
@@ -577,6 +591,55 @@ section {
                     font-weight: 600;
                     background-color: #f2f8dd;
                 }
-    /**/  
+    /**/
+    /* Certifications */
+    .certifications-container {
+        border-radius: 15px;
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        padding: .5em;
+    } 
+        .cert_title {
+                border-radius: 15px;
+            box-sizing: border-box;
+                margin-top: 0;
+                padding: .3em;
+            display: flex;
+                align-self: flex-start;
+        }
+            .cert_wrapper {
+                border-radius: 15px;
+                display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: .5em;
+                padding: .5em; 
+                overflow-y: auto;
+            }
+                .certs {
+                    border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: .5em;
+                    width: 100%;
+                    padding: .5em;
+                    background-color: #9afada;
+                }
+                    .cert_name {
+                        border-radius: 15px;
+                        display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                        padding: .5em;
+                        font-size: clamp(15px, 3dvw + 1dvh, 25px);
+                        background-color: #3aebb0;
+                    }
+    /**/ 
 /* ++   ++ */
                     
