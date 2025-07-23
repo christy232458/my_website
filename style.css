@@ -35,6 +35,13 @@ hr {
     height: 3px;
     width: 25%;
 }
+li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
 img {
     max-width: 100%;
     display: block;
@@ -651,6 +658,7 @@ section {
     padding: 3rem 1rem;
     background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
 }
+    /* Bio */
     .about_title {
         border-radius: 15px;
         display: inline-flex;
@@ -691,5 +699,47 @@ section {
                 padding: .5em 1em;
                 background-color: #f7fddb;
             }
+    /**/
+    /* Hobbies */
+    .about_hobby-container {
+            border-radius: 25px;
+        padding: .5em;
+    }
+        .about_hobby-list {
+                border-radius: 15px 15px 0 0;
+            padding: .5em;
+            overflow-y: auto;
+            background-color: #b3d8ff;
+        }
+            .about_hobby {
+                    border-radius: 15px;
+                padding: .5em;
+                display: inline-flex;
+                background-color: rgb(143, 143, 248);
+            }
+        .about_hobby-media-wrapper {
+            border-radius: 0 0 15px 15px;
+            padding: .5em;
+            background-color: #fafafa;
+            overflow-y: auto;
+        }
+            .about_media {
+                    border-radius: 25px;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+                padding: .3em;
+                height: clamp(50px, 55dvw + 1dvh, 400px);
+                width: clamp(50px, 55dvw + 1dvh, 400px);
+                background-color: #f39dd2;
+            }
+                .about_media * {
+                    max-width: 95%;
+                    outline: 2px solid black;
+                    border-radius: 15px;
+                }
+    /**/
+    /* References */
+    /**/
 /* &&   && */
                     
