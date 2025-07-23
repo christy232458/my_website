@@ -631,7 +631,7 @@ section {
                     background-color: #9afada;
                 }
                     .cert_name {
-                        border-radius: 15px;
+                        border-radius: 10px;
                         display: flex;
                             flex-wrap: wrap;
                             align-items: center;
@@ -642,4 +642,13 @@ section {
                     }
     /**/ 
 /* ++   ++ */
+
+
+/* && ABOUT SECTION && */
+#about-section {
+    display: flex;
+        flex-direction: column;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
+}
                     
