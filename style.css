@@ -651,4 +651,45 @@ section {
     padding: 3rem 1rem;
     background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
 }
+    .about_title {
+        border-radius: 15px;
+        display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+        padding: .5em;
+        width: fit-content;
+    }
+        #about-me_wrapper {
+            border-radius: 25px;
+            display: flex;
+                flex-direction: column;
+                gap: 1em;
+                align-items: center;
+                justify-content: center;
+            padding: .5em;
+        }
+            .profile-pic_wrapper {
+                border-radius: 50%;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+                width: clamp(50px, 55dvw + 1dvh, 500px);
+                height: clamp(50px, 55dvw + 1dvh, 500px);
+                background-color: rgb(231, 114, 206);
+                padding: .2em;
+            }
+                .profile-pic {
+                    border-radius: 50%;
+                    max-width: 95%;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+            .about_bio {
+                border: 5px solid purple;
+                border-radius: 25px;
+                padding: .5em 1em;
+                background-color: #f7fddb;
+            }
+/* &&   && */
                     
