@@ -13,10 +13,10 @@ document.getElementById("experience-section").addEventListener("click", function
 
         if (duties.style.display === "none" || duties.style.display === "") {
             duties.style.display = "flex"; // or "block", depending on your layout
-            event.target.textContent = "Show less";
+            event.target.textContent = "Hide duties";
         } else {
             duties.style.display = "none";
-            event.target.textContent = "Show more";
+            event.target.textContent = "Show duties";
         }
     }
 });
