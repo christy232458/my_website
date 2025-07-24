@@ -841,4 +841,40 @@ section {
                             }
     /**/
 /* &&   && */
-                    
+
+
+/* ## CONTACT SECTION ## */
+#contact-section {
+    display: flex;
+        flex-direction: column;
+    padding: 3rem 1rem;
+    background-color: conic-gradient(#ffd6a5, #f09d9d);
+}
+    .contact_title {
+        border: 5px solid black;
+    }
+        #contact_wrapper {
+            border: 5px solid green;
+        }
+            #contact_email {
+                border: 5px solid red;
+            }
+            #contact_resume {
+                border: 5px solid blue;
+            }
+                #contact_resume-eng-zh {
+                    border: 5px solid brown;
+                }
+    .contact_socials {
+        border: 5px dotted yellow;
+    }
+        .contact_socials i {
+            border: 5px solid orange;
+            font-size: clamp(25px, 14dvw + 1dvh, 75px);
+        }
+        .contact_socials img {
+            border: 5px solid purple;
+            width: clamp(50px, 19dvw + 1dvh, 150px);
+            height: clamp(50px, 19dvw + 1dvh, 150px);
+        }
+/* ##   ## */      
