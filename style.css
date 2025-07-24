@@ -741,16 +741,15 @@ section {
     /**/
     /* References */
     .about_ref-wrapper {
-        border: 5px solid black;
         border-radius: 25px;
         padding: .5em;
         display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+        background-color: #d6cfb6;
     }
         .about_ref-intro {
-            border: 5px solid red;
             border-radius: 25px;
             padding: .5em;
             margin-bottom: .5em;
@@ -759,85 +758,80 @@ section {
                 justify-content: flex-start;
                 gap: 1em;
             width: 100%;
+            background-color: white;
         }
-            .namePic-wrapper {
-                border: 5px dotted green;
+            .ref-pic_wrapper {
+                border-radius: 50%;
                 display: flex;
                     align-items: center;
                     justify-content: center;
-                    justify-self: flex-start;
-                    gap: 1em;
+                width: clamp(75px, 25dvw + 1dvh, 200px);
+                height: clamp(75px, 25dvw + 1dvh, 200px);
+                background-color: #fae59e;
             }
-                .ref-pic_wrapper {
-                    border: 5px dotted blue;
+                .about_ref-pic {
                     border-radius: 50%;
+                    max-width: 90%;
+                }
+                .about_ref-name {
+                    border-radius: 25px;
                     display: flex;
                         align-items: center;
                         justify-content: center;
-                    width: clamp(75px, 25dvw + 1dvh, 200px);
-                    height: clamp(75px, 25dvw + 1dvh, 200px);
+                        flex-wrap: wrap;
+                    padding: .5em;
+                    margin: 0;
+                    font-size: clamp(15px, 3dvw + 1dvh, 75px);
+                    background-color: #ce9af8;
                 }
-                    .about_ref-pic {
-                        border: 5px solid green;
-                        border-radius: 50%;
-                        max-width: 90%;
-                    }
-                    .about_ref-name {
-                        border: 5px dashed purple;
-                        border-radius: 25px;
-                        display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            flex-wrap: wrap;
-                        padding: .5em;
-                        margin: 0;
-                        font-size: clamp(15px, 3dvw + 1dvh, 75px);
-                    }
-                    .about_see-more {
-                        border: 5px dashed gold;
-                            border-radius: 50%;
-                        display: inline-flex;
-                            align-items: center;
-                            justify-content: center;
-                        padding: .5em;
-                        width: clamp(15px, 7dvw + 1dvh, 50px);
-                        height: clamp(15px, 7dvw + 1dvh, 50px);
-                    }
-                .about_reference-wrapper {
-                    border: 5px solid black;
-                    border-radius: 25px;
-                    display: none;
+                .about_see-more {
+                    border-radius: 50%;
+                    display: inline-flex;
                         align-items: center;
                         justify-content: center;
-                        flex-direction: column;
                     padding: .5em;
-                    margin-top: 1em;
+                    width: clamp(15px, 7dvw + 1dvh, 50px);
+                    height: clamp(15px, 7dvw + 1dvh, 50px);
+                    background-color: gold;
                 }
-                    .about_reference {
-                        border: 5px solid silver;
-                        border-radius: 15px 15px 0 0;
+            .about_reference-wrapper {
+                border-radius: 25px;
+                display: none;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                padding: .5em;
+                margin-top: .5em;
+                background-color: #ce9af8;
+            }
+                .about_reference {
+                    border-radius: 15px 15px 0 0;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    padding: .5em;
+                    width: 100%;
+                    background-color: #eef085;
+                }
+                    .about_ref-contact {
+                        border-radius: 0 0 15px 15px;
                         display: flex;
                             align-items: center;
                             justify-content: center;
                         padding: .5em;
                         width: 100%;
+                        background-color: #8ef3c1;
                     }
-                        .about_ref-contact {
-                            border: 5px solid orange;
-                            border-radius: 0 0 15px 15px;
+                        .about_ref-icon-wrapper {
+                            border-radius: 15px;
                             display: flex;
                                 align-items: center;
                                 justify-content: center;
                             padding: .5em;
-                            width: 100%;
+                            background-color: gold;
                         }
-                            .about_ref-icon-wrapper {
-                                border: 5px solid gray;
-                                border-radius: 15px;
-                                display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                padding: .5em;
+                            .about_ref-icon-wrapper i {
+                                color: white;
                             }
     /**/
 /* &&   && */
@@ -850,31 +844,87 @@ section {
     padding: 3rem 1rem;
     background-color: conic-gradient(#ffd6a5, #f09d9d);
 }
-    .contact_title {
-        border: 5px solid black;
+    #contact-section i {
+        font-size: clamp(25px, 8dvw + 1dvh, 75px);
     }
-        #contact_wrapper {
-            border: 5px solid green;
+    .contact_title {
+            border-radius: 15px;
+        display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        width: fit-content;
+        padding: .5em;
+        background-color: #e0f5d4;
+    }
+        #contact-wrapper {
+                border-radius: 25px;
+            display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 1em;
+            padding: .5em;
+            background-color: #b3d8ff;
         }
             #contact_email {
-                border: 5px solid red;
+                    border-radius: 50%;
+                display: inline-flex;
+                padding: 1em;
+                background-color: #f794f7;
             }
             #contact_resume {
-                border: 5px solid blue;
+                outline: 2px solid white;
             }
-                #contact_resume-eng-zh {
-                    border: 5px solid brown;
+                #contact_resume {
+                    border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    box-sizing: border-box;
+                    background-color: #e0f180;
                 }
+                    .contact_resume-title {
+                            border-radius: 15px;
+                        margin: .5em 1em;
+                        padding: .5em;
+                        background-color: #f08cf0;
+                    }
+                    #contact_resume-eng-zh {
+                        border-radius: 0 10px 10px 0;
+                        display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 1em;
+                        padding: .5em;
+                        background-color: #f079d6;
+                    }
     .contact_socials {
-        border: 5px dotted yellow;
+        border: 5px solid rgb(245, 143, 203);
+            border-radius: 25px;
+        padding: .5em;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: .5em;
+        background-color: #e8f5a1;
     }
-        .contact_socials i {
-            border: 5px solid orange;
-            font-size: clamp(25px, 14dvw + 1dvh, 75px);
-        }
-        .contact_socials img {
-            border: 5px solid purple;
+        .contact_socials-icon-wrapper {
+                border-radius: 50%;
+            display: flex;
+                align-items: center;
+                justify-content: center;
             width: clamp(50px, 19dvw + 1dvh, 150px);
             height: clamp(50px, 19dvw + 1dvh, 150px);
+            padding: .5em;
+        } 
+        .contact_socials img {
+                border-radius: 50%;
+            width: clamp(50px, 19dvw + 1dvh, 150px);
+            height: clamp(50px, 19dvw + 1dvh, 150px);
+            padding: .5em;
         }
+            .contact_socials img, .contact_socials-icon-wrapper {
+                background-color: #f3a0b5;
+            }
 /* ##   ## */      
