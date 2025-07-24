@@ -8,8 +8,8 @@ const hr = document.createElement('hr');
 
 document.getElementById("experience-section").addEventListener("click", function (event) {
     if (event.target.classList.contains("exp_see-duties-button")) {
-        const wrapper = event.target.closest(".exp_wrapper");
-        const duties = wrapper.querySelector(".exp_duties");
+        const expWrapper = event.target.closest(".exp_wrapper");
+        const duties = expWrapper.querySelector(".exp_duties");
 
         if (duties.style.display === "none" || duties.style.display === "") {
             duties.style.display = "flex"; // or "block", depending on your layout
@@ -24,6 +24,24 @@ document.getElementById("experience-section").addEventListener("click", function
 separator(".exp_duties", "li", hr);
 // **   **
 
+
+// && ABOUT SECTION &&
+   // References
+   document.getElementById("about-section").addEventListener("click", function(event) {
+    if (event.target.classList.contains("about_see-more")) {
+        const aboutWrapper = event.target.closest(".about_ref-wrapper");
+        const reference = aboutWrapper.querySelector(".about_reference-wrapper")
+
+        if (reference.style.display === "none" || reference.style.display === "") {
+            reference.style.display = "flex";
+            event.target.textContent = "-";
+        } else {
+            reference.style.display = "none";
+            event.target.textContent = "+";
+        }
+    }
+   })
+// &&   &&
 
 // **UNIVERSAL**
 // Helper function for larger multilingual translation function

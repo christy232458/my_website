@@ -740,6 +740,105 @@ section {
                 }
     /**/
     /* References */
+    .about_ref-wrapper {
+        border: 5px solid black;
+        border-radius: 25px;
+        padding: .5em;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+    }
+        .about_ref-intro {
+            border: 5px solid red;
+            border-radius: 25px;
+            padding: .5em;
+            margin-bottom: .5em;
+            display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 1em;
+            width: 100%;
+        }
+            .namePic-wrapper {
+                border: 5px dotted green;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    justify-self: flex-start;
+                    gap: 1em;
+            }
+                .ref-pic_wrapper {
+                    border: 5px dotted blue;
+                    border-radius: 50%;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    width: clamp(75px, 25dvw + 1dvh, 200px);
+                    height: clamp(75px, 25dvw + 1dvh, 200px);
+                }
+                    .about_ref-pic {
+                        border: 5px solid green;
+                        border-radius: 50%;
+                        max-width: 90%;
+                    }
+                    .about_ref-name {
+                        border: 5px dashed purple;
+                        border-radius: 25px;
+                        display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                        padding: .5em;
+                        margin: 0;
+                        font-size: clamp(15px, 3dvw + 1dvh, 75px);
+                    }
+                    .about_see-more {
+                        border: 5px dashed gold;
+                            border-radius: 50%;
+                        display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                        padding: .5em;
+                        width: clamp(15px, 7dvw + 1dvh, 50px);
+                        height: clamp(15px, 7dvw + 1dvh, 50px);
+                    }
+                .about_reference-wrapper {
+                    border: 5px solid black;
+                    border-radius: 25px;
+                    display: none;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    padding: .5em;
+                    margin-top: 1em;
+                }
+                    .about_reference {
+                        border: 5px solid silver;
+                        border-radius: 15px 15px 0 0;
+                        display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        padding: .5em;
+                        width: 100%;
+                    }
+                        .about_ref-contact {
+                            border: 5px solid orange;
+                            border-radius: 0 0 15px 15px;
+                            display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            padding: .5em;
+                            width: 100%;
+                        }
+                            .about_ref-icon-wrapper {
+                                border: 5px solid gray;
+                                border-radius: 15px;
+                                display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                padding: .5em;
+                            }
     /**/
 /* &&   && */
                     
