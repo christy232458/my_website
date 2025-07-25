@@ -1,15 +1,16 @@
 /* UNIVERSAL */
 :root {
     --header: clamp(16px, 7.5dvw + 1dvh, 64px);
-        --medium-header: clamp(20px, 3dvw + 1dvh, 32px);
-        --small-header: clamp(15px, 3dvw + 1.2dvh, 30px);
+        --medium-header: clamp(10px, 2dvw + 1dvh, 24px);
+        --small-header: clamp(12px, 2.5dvw + 1dvh, 20px);
     --subtitle: clamp(12px, 3dvw + 1dvh, 32px);
-        --paragraph: clamp(16px, 3dvw + 1dvh, 25px);
+        --small-subtitle: clamp(10px, 2dvw + 1dvh, 16px);
+        --paragraph: clamp(12px, 2dvw + 1dvh, 20px);
     --icon: clamp(20px, 4.7dvw + 1dvh, 36px);
         --icon-image: clamp(25px, 8dvw + 1dvh, 35px);
     --profile-pic: clamp(50px, 52dvw + 1dvh, 450px);
-        --preview-image: clamp(50px, 40dvw + 1dvh, 400px);
-    --round-border: clamp(50px, 55dvw + 1dvh, 275px);
+        --preview-image: clamp(50px, 40dvw + 1dvh, 200px);
+    --round-border: clamp(50px, 40dvw + 1dvh, 275px);
 }
 * {
     box-sizing: border-box;
@@ -291,148 +292,166 @@ section {
         border-radius: 15px;
         background-color: #b5f1e9;
     }
-    /* Experience  */
-    .exp_wrapper {
-        border: 5px solid black;
-            border-radius: 25px;
-        box-sizing: border-box;
-            padding: .5em;
-            margin-bottom: 1em;
-            width: fit-content;
-        display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: .5em;
-        background-color: #df888b;
-    }
-        .exp_job-description-wrapper {
-            border-radius: 15px;
+        .exp-container {
             display: flex;
-                flex-direction: column;
                 align-items: center;
-                justify-content: baseline;
-                gap: .5em;
-            box-sizing: border-box;
-                padding: 0;
-        }
-            .exp_titlePosition-wrapper {
-                    border-radius: 15px;
-                display: flex;
-                    align-items: flex-start;
-                    flex-direction: column;
-                box-sizing: border-box;
-                    padding: .5em 1em;
-                    width: 100%;
-                background-color: #f4d6b7;
+                justify-content: center;
+                gap: 1em;
+            padding: .5em;
 
-                @media (min-width: 600px) {
-                    flex-direction: row;
-                        align-items: center;
-                        justify-content: space-around;
-                        flex-wrap: wrap;
-                }
+            @media (min-width: 950px) {
+                width: 75%;
+                justify-self: center;
+                margin-bottom: .5em;
             }
-                .exp_title {
-                    border-radius: 15px;
-                    display: inline-flex;
-                    font-size: var(--small-header);
-                        font-weight: 600;
-                    box-sizing: border-box;
-                        padding: .5em;
-                        margin: .3em 0;
-                    background-color: #d4b8ff;
-                }
-                .exp_position {
-                    border-radius: 15px;
-                    box-sizing: border-box;
-                        margin: .3em 0;
-                        padding: .5em;
-                    background-color: #b3d8ff;
-                    font-size: var(--small-subtitle);
-                }
-                    .exp_info-wrapper {
-                            border-radius: 15px;
-                        display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            flex-direction: column;
-                    }
-                        .exp_datePlace-wrapper, .exp_summary-wrapper {
-                            box-sizing: border-box;
-                                width: 100%;
-                        }
-                            .exp_datePlace-wrapper {
-                                border: 3px solid silver;
-                                    border-radius: 15px 15px 0 0;
-                                font-size: var(--small-subtitle);
-                                display: flex;
-                                    align-items: center;
-                                    justify-content: space-around;
-                                background-color: #d9d9d9;
-                            }
-                                .exp_date, .exp_place {
-                                    box-sizing: border-box;
-                                        padding: .5em;
-                                        margin: .5em;
-                                    font-size: var(--small-subtitle);
-                                }
-                                    .exp_date {
-                                        border-radius: 999px;
-                                        background-color: #b2a57a; /* slightly darker olive-beige for better contrast */
-                                        color: #490402; /* very dark olive/blackish text for max readability */
-                                    }
-                                        .exp_start-date, .exp_end-date {
-                                            
-                                        }
-                                    .exp_place {
-                                        border-radius: 15px;
-                                        background-color: #fff8b3; /* soft buttery yellow, warm and gentle */
-                                        color: #12007a; /* deeper mustard for text contrast */
-                                    }
-                            .exp_summary-wrapper {
-                                    border-radius: 0 0 15px 15px;
-                                display: flex;
-                                    align-items: flex-start;
-                                    justify-content: flex-start;
-                                    text-align: justify;
-                                    flex-wrap: wrap;
-                                padding: .5em 1em;
-                                font-size: var(--paragraph);
-                                background-color: #ddd4aa;
-                            }
-            /* See duties button */
-            .exp_see-duties-button {
-                border: 3px solid white;
-                    border-radius: 5px;
-                background-color: rgb(243, 71, 71);
-                box-sizing: border-box;
-                    padding: .3em;
-            }
-            /**/
-            .exp_duties {
-                border: 3px solid #9e5f3c; /* deep clay brown that matches your palette */
+        }
+            /* Experience  */
+            .exp_wrapper {
+                border: 5px solid black;
                     border-radius: 25px;
-                display: none;
-                    align-items: flex-start;
-                    justify-content: center;
-                    flex-direction: column;
-                font-size: var(--subtitle);
                 box-sizing: border-box;
                     padding: .5em;
-                    margin: 0;
-                list-style-type: none;
-                text-align: justify;
-                background-color: #f0e2c6; /* warm, parchment-like cream with a soft sand undertone */
-                color: #3b1f0f; /* rich espresso text for legibility */
+                    width: fit-content;
+                display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: .5em;
+                background-color: #df888b;
+
+                @media (min-width: 950px) {
+                    
+                }
             }
-                .exp_duties_separator {
-                    height: 1px;
-                }
-                .exp_duty {
-                        border-radius: 15px;
+                .exp_job-description-wrapper {
+                    border-radius: 15px;
+                    display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: baseline;
+                        gap: .5em;
                     box-sizing: border-box;
-                        padding: .3em;
+                        padding: 0;
                 }
+                    .exp_titlePosition-wrapper {
+                        border: 5px solid black;
+                            border-radius: 15px;
+                        display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+                        box-sizing: border-box;
+                            padding: .5em 1em;
+                            width: 100%;
+                        background-color: #f4d6b7;
+
+                        @media (min-width: 600px) {
+                            flex-direction: row;
+                                align-items: center;
+                                justify-content: space-around;
+                                flex-wrap: wrap;
+                        }
+                    }
+                        .exp_title {
+                            border-radius: 15px;
+                            display: inline-flex;
+                            font-size: var(--small-header);
+                                font-weight: 600;
+                            box-sizing: border-box;
+                                padding: .5em;
+                                margin: .3em 0;
+                            background-color: #d4b8ff;
+                        }
+                        .exp_position {
+                            border-radius: 15px;
+                            box-sizing: border-box;
+                                margin: .3em 0;
+                                padding: .5em;
+                            background-color: #b3d8ff;
+                            font-size: var(--small-subtitle);
+                        }
+                            .exp_info-wrapper {
+                                    border-radius: 15px;
+                                display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                            }
+                                .exp_datePlace-wrapper, .exp_summary-wrapper {
+                                    box-sizing: border-box;
+                                        width: 100%;
+                                }
+                                    .exp_datePlace-wrapper {
+                                        border: 3px solid silver;
+                                            border-radius: 15px 15px 0 0;
+                                        font-size: var(--small-subtitle);
+                                        display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        background-color: #d9d9d9;
+                                    }
+                                        .exp_date, .exp_place {
+                                            box-sizing: border-box;
+                                                padding: .5em;
+                                                margin: .5em;
+                                            font-size: var(--small-subtitle);
+                                        }
+                                            .exp_date {
+                                                border-radius: 999px;
+                                                background-color: #b2a57a; /* slightly darker olive-beige for better contrast */
+                                                color: #490402; /* very dark olive/blackish text for max readability */
+                                            }
+                                                .exp_start-date, .exp_end-date {
+                                                    
+                                                }
+                                            .exp_place {
+                                                border-radius: 15px;
+                                                background-color: #fff8b3; /* soft buttery yellow, warm and gentle */
+                                                color: #12007a; /* deeper mustard for text contrast */
+                                            }
+                                    .exp_summary-wrapper {
+                                            border-radius: 0 0 15px 15px;
+                                        display: flex;
+                                            align-items: flex-start;
+                                            justify-content: flex-start;
+                                            text-align: justify;
+                                            flex-wrap: wrap;
+                                        padding: .5em 1em;
+                                        font-size: var(--paragraph);
+                                        background-color: #ddd4aa;
+                                    }
+                    /* See duties button */
+                    .exp_see-duties-button {
+                        border: 3px solid white;
+                            border-radius: 5px;
+                        background-color: rgb(243, 71, 71);
+                        box-sizing: border-box;
+                            padding: .3em;
+                    }
+                    /**/
+                    .exp_duties {
+                        border: 3px solid #9e5f3c; /* deep clay brown that matches your palette */
+                            border-radius: 25px;
+                        display: none;
+                            align-items: flex-start;
+                            justify-content: center;
+                            flex-direction: column;
+                        font-size: var(--paragraph);
+                        box-sizing: border-box;
+                            padding: .5em;
+                            margin: 0;
+                            width: 100%;
+                        list-style-type: none;
+                        text-align: justify;
+                        background-color: #f0e2c6; /* warm, parchment-like cream with a soft sand undertone */
+                        color: #3b1f0f; /* rich espresso text for legibility */
+                    }
+                        .exp_duties_separator {
+                            height: 1px;
+                        }
+                        .exp_duty {
+                                border-radius: 15px;
+                            box-sizing: border-box;
+                                padding: .3em;
+                        }
     .exp_see-all-button {
         border: 3px solid black;
             border-radius: 10px;
@@ -573,7 +592,6 @@ section {
     /* Languages */
     .language-container {
         
-
     }
         .language_title {
             border-radius: 15px;
@@ -587,10 +605,16 @@ section {
             border-radius: 20px;
             display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: .5em;
             box-sizing: border-box;
                 padding: .5em;
             overflow-y: auto;
+
+            @media (min-width: 950px) {
+                width: 75%;
+                justify-self: center;
+            }
         }
             .language {
                     border-radius: 15px;
@@ -611,8 +635,8 @@ section {
                     display: flex;
                         align-items: center;
                         justify-content: center;
-                    width: clamp(30px, 19dvw + 1dvh, 100px);
-                    height: clamp(30px, 19dvw + 1dvh, 100px);
+                    width: clamp(30px, 12dvw + 1dvh, 100px);
+                    height: clamp(30px, 12dvw + 1dvh, 100px);
                     background: conic-gradient(var(--fluency, black) calc(var(--progress, 5) * 1%), 
                         transparent calc(var(--progress, 5) * 1%));
                 }
@@ -753,9 +777,17 @@ section {
         display: flex;
             gap: 1em;
             flex-direction: column;
+
+        @media (min-width: 950px) {
+            width: 75%;
+            align-self: center;
+        }
     }
         .about_hobby-list {
             border-radius: 15px;
+            display: flex;
+                align-items: center;
+                justify-content: center;
             padding: 1em;
             overflow-y: auto;
             background-color: #b3d8ff;
@@ -766,7 +798,7 @@ section {
                 display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                overflow-y: auto;
+                font-size: clamp(15px, 2.5dvw + 1dvh, 20px);
                 background-color: rgb(143, 143, 248);
             }
         .about_hobby-media-wrapper {
@@ -800,6 +832,11 @@ section {
             justify-content: center;
             flex-direction: column;
         background-color: #d6cfb6;
+
+        @media (min-width: 950px) {
+            width: 75%;
+            align-self: center;
+        }
     }
         .about_ref-intro {
             border-radius: 25px;
@@ -856,6 +893,11 @@ section {
                 margin-top: .5em;
                 background-color: #ce9af8;
                 width: 100%;
+
+                @media (min-width: 950px) {
+                    flex-direction: row;
+                    align-items: stretch;
+                }
             }
                 .about_reference {
                     border-radius: 15px 15px 0 0;
@@ -865,6 +907,12 @@ section {
                     padding: .5em;
                     width: 100%;
                     background-color: #eef085;
+                    font-size: var(--paragraph);
+
+                    @media (min-width: 950px) {
+                        border-radius: 15px 0 0 15px;
+                        flex: 1;
+                    }
                 }
                     .about_ref-contact {
                         border-radius: 0 0 15px 15px;
@@ -874,6 +922,11 @@ section {
                         padding: .5em;
                         width: 100%;
                         background-color: #8ef3c1;
+
+                        @media (min-width: 950px) {
+                            border-radius: 0 15px 15px 0;
+                            flex: 1;
+                        }
                     }
                         .about_ref-icon-wrapper {
                             border-radius: 15px;
