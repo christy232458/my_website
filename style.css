@@ -636,7 +636,6 @@ section {
         overflow-y: auto;
     }
         .language_title {
-            border: 5px solid black;
             border-radius: 15px;
             box-sizing: border-box;
                 padding: .3em;
@@ -708,7 +707,6 @@ section {
         overflow-y: auto;
     } 
         .cert_title {
-           border: 5px solid black;
            border-radius: 15px;
            box-sizing: border-box;
                 padding: .3em;
@@ -842,6 +840,10 @@ section {
             }
         .about_hobby-media-wrapper {
             border-radius: 15px;
+            display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: .5em;
             padding: .5em;
             background-color: #fafafa;
             overflow-y: auto;
@@ -851,13 +853,20 @@ section {
                 display: flex;
                     align-items: center;
                     justify-content: center;
-                padding: .3em;
-                height: var(--preview-image);
-                width: var(--preview-image);
+                    flex-shrink: 0;
+                padding: .5em;
                 background-color: #f39dd2;
             }
-                .about_media * {
-                    max-width: 95%;
+            .about_iframe {
+                border-radius: 0;
+            }
+                .about_media img {
+                    max-width: 200px;
+                    outline: 2px solid black;
+                    border-radius: 15px;
+                }
+                .about_media video {
+                    max-width: clamp(100px, 33dvw + 1dvh, 150px);
                     outline: 2px solid black;
                     border-radius: 15px;
                 }

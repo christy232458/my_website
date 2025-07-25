@@ -39,7 +39,41 @@
     "title": {
       "en": "EDUCATION",
       "zh": "學歷"
-    }
+    },
+    "schools": [
+      {
+        "name": {
+          "en": "National Ilan University",
+          "zh": "國立宜蘭大學"
+        },
+        "location": {
+          "en": "Yilan, Taiwan",
+          "zh": "宜蘭，台灣"
+        },
+        "degree": {
+          "en": "Bachelor of Arts in Foreign Language and Literature",
+          "zh": "外國語文學士"
+        },
+        "start": "2004",
+        "end": "2008"
+      },
+      {
+        "name": {
+          "en": "Jit Sin Independent High School",
+          "zh": "日新獨立中學"
+        },
+        "location": {
+          "en": "Bukit Mertajam, Malaysia",
+          "zh": "馬來西亞，武吉牛汝莪"
+        },
+        "degree": {
+          "en": "High School Diploma",
+          "zh": "高中畢業證書"
+        },
+        "start": "2000",
+        "end": "2004"
+      }
+    ]
   },
   "skills": {
     "title": {
@@ -53,25 +87,164 @@
     "certifications": {
       "en": "Certifications",
       "zh": "證照"
-    }
+    },
+    "languages_list": [
+      {
+        "name": {
+          "en": "English",
+          "zh": "英語"
+        },
+        "fluency": {
+          "en": "Fluent",
+          "zh": "流利"
+        },
+        "percent": 95
+      },
+      {
+        "name": {
+          "en": "Chinese Mandarin",
+          "zh": "中文（普通話）"
+        },
+        "fluency": {
+          "en": "Native",
+          "zh": "母語"
+        },
+        "percent": 100
+      },
+      {
+        "name": {
+          "en": "Cantonese",
+          "zh": "粵語"
+        },
+        "fluency": {
+          "en": "Native",
+          "zh": "母語"
+        },
+        "percent": 100
+      },
+      {
+        "name": {
+          "en": "Hokkien/Minnan",
+          "zh": "福建話／閩南語"
+        },
+        "fluency": {
+          "en": "Proficient",
+          "zh": "熟練"
+        },
+        "percent": 80
+      },
+      {
+        "name": {
+          "en": "Malay",
+          "zh": "馬來語"
+        },
+        "fluency": {
+          "en": "Conversational",
+          "zh": "會話程度"
+        },
+        "percent": 50
+      }
+    ],
+    "certifications_list": [
+      {
+        "name": {
+          "en": "TESOL",
+          "zh": "TESOL"
+        },
+        "file": "docs/TESOL.pdf"
+      },
+      {
+        "name": {
+          "en": "TEFL",
+          "zh": "TEFL"
+        },
+        "file": "docs/TEFL.pdf"
+      },
+      {
+        "name": {
+          "en": "Linguaskill (176/180+ B2)",
+          "zh": "Linguaskill（176/180+ B2）"
+        },
+        "file": "docs/linguaskill.pdf"
+      },
+      {
+        "name": {
+          "en": "Grade 5 Violin Level 2 Certificate",
+          "zh": "小提琴五級 第二級證書"
+        }
+      }
+    ]
   },
   "about": {
     "title": {
       "en": "ABOUT",
       "zh": "關於"
     },
-    "hobbies_interests": {
-      "en": "Hobbies and Interests",
-      "zh": "興趣與嗜好"
-    },
-    "references": {
-      "en": "References",
-      "zh": "推薦"
-    },
-    "see_more": {
-      "en": "+",
-      "zh": "+"
-    }
+    "bio": [
+      {
+        "en": "Hi, I'm Padma Christie — a passionate English teacher committed to helping students build confidence in using the language.",
+        "zh": "嗨，我是 Padma Christie — 一位充滿熱情的英文教師，致力於幫助學生建立使用英文的自信。"
+      },
+      {
+        "en": "With teaching experience in Taiwan, I specialize in working with elementary and junior high school students, helping them improve their language skills through engaging and interactive lessons.",
+        "zh": "我在台灣有教學經驗，專門教授國小與國中學生，透過有趣且互動的課程，協助他們提升語言能力。"
+      },
+      {
+        "en": "I believe learning English should be both fun and meaningful. In my classroom, I use games, group activities, and interactive exercises to keep students engaged while developing their communication skills. My goal is to create a supportive environment where students feel safe expressing themselves in English without fear of making mistakes.",
+        "zh": "我相信學習英文應該既有趣又有意義。在課堂上，我運用競賽團體遊戲、團隊合作活動與互動練習，讓學生保持參與，同時培養他們的溝通技巧。我的目標是營造一個支持性的學習環境，讓學生勇於用英文表達自己，無須害怕犯錯。"
+      },
+      {
+        "en": "I am patient, creative, and adaptable to different learning styles and classroom dynamics. I’m fluent in English, Mandarin, Cantonese, Hokkien, and Malay, which allows me to bridge language gaps and communicate clearly with both students and parents.",
+        "zh": "我具備耐心、創造力和穩健的教學風格，能依據不同的學習風格與班級動態調整教學方式。我能流利使用英語、華語、粵語、福建話與馬來語，有助於跨語言溝通，清楚傳達訊息給學生與家長。"
+      },
+      {
+        "en": "Outside of teaching, I enjoy playing the violin and guitar, singing, and spending time in nature. I often bring these interests into the classroom, as I believe music and nature can spark creativity and enhance learning.",
+        "zh": "課堂之外，我喜歡拉小提琴、彈吉他、唱歌與親近大自然。這些興趣也融入我的教學中，因為我相信音樂與自然能激發創造力與學習動機。"
+      },
+      {
+        "en": "I am currently seeking a teaching position in Taoyuan, where I can continue to inspire students and make learning English an enjoyable journey. If you're looking for a patient, caring teacher who makes English fun, I'd love to <a href=\"#contact-section\">connect with you</a>!",
+        "zh": "我目前正在尋找一份位於桃園的教職，希望能運用我的熱情與經驗，幫助學生取得成功。如果您正在尋找一位耐心、有愛心，並擅長讓英文變得有趣的教師，我很樂意<a href=\"#contact-section\">與您聯繫</a>！"
+      }
+    ],
+    "hobbies_interests": [
+      {
+        "en": "Playing violin and guitar",
+        "zh": "拉小提琴和彈吉他"
+      },
+      {
+        "en": "Singing",
+        "zh": "唱歌"
+      },
+      {
+        "en": "Listening to music",
+        "zh": "聽音樂"
+      },
+      {
+        "en": "Cross-stitching",
+        "zh": "十字繡"
+      },
+      {
+        "en": "Yoga",
+        "zh": "瑜珈"
+      },
+      {
+        "en": "Hiking and biking",
+        "zh": "登山騎行"
+      }
+    ],
+    "references": [
+      {
+        "name": "Asiah Crutchfield",
+        "statement": {
+          "en": "Padma is an exceptional English teacher. In all my interactions with her, I’ve been consistently impressed by her natural and confident command of the language. Her pronunciation is clear and standard, and her grammar is excellent. As a native English speaker, I’ve never once struggled to understand her — she communicates with ease, accuracy, and clarity.",
+          "zh": "Padma 是一位非常優秀的英文教師。在與她互動的過程中，我總是對她自然且自信的英文表達能力印象深刻。她對語言的掌握極為出色，說話口音標準清晰，讓人容易理解。作為一位英語母語者，我從未在理解她的溝通上遇到任何困難；她總是以清楚、準確且輕鬆的方式傳達訊息。"
+        },
+        "contact": {
+          "email": "asiah@asiahcrutchfield.com",
+          "website": "https://asiahcrutchfield.com/"
+        }
+      }
+    ]
   },
   "contact": {
     "title": {
@@ -86,5 +259,187 @@
       "en": "FOLLOW ME",
       "zh": "追蹤我"
     }
-  }
+  },
+  "experiences_list": [
+    {
+      "jobTitle": "Come True CAFE",
+      "position": "Restaurant Crew Member",
+      "startDate": {
+        "en": "June 2024",
+        "zh": "2024年6月"
+      },
+      "endDate": {
+        "en": "February 2025",
+        "zh": "2025年2月"
+      },
+      "city": {
+        "en": "Taipei City",
+        "zh": "台北市"
+      },
+      "country": {
+        "en": "Taiwan",
+        "zh": "台灣"
+      },
+      "summary": {
+        "en": "Assisted in food and beverage quality management and maintained consistency in product standards.",
+        "zh": "協助食品和飲料品質管理，保持產品標準的一致性。"
+      },
+      "duties": {
+        "en": [
+          "Assisted in food and beverage quality management and maintained consistency in product standards.",
+          "Assisted supervisor with staffing arrangements and scheduling.",
+          "Food preparation and inventory management.",
+          "Utilized my English language abilities to assist international patrons."
+        ],
+        "zh": [
+          "協助食品和飲料品質管理，保持產品標準的一致性。",
+          "協助主管安排人員和排班。",
+          "食品準備和庫存管理。",
+          "運用英語能力協助國際顧客。"
+        ]
+      }
+    },
+    {
+      "jobTitle": "Joy English School",
+      "position": "English Teacher",
+      "startDate": {
+        "en": "October 2023",
+        "zh": "2023年10月"
+      },
+      "endDate": {
+        "en": "February 2024",
+        "zh": "2024年2月"
+      },
+      "city": {
+        "en": "Yilan City",
+        "zh": "宜蘭市"
+      },
+      "country": {
+        "en": "Taiwan",
+        "zh": "台灣"
+      },
+      "summary": {
+        "en": "Taught and led English classes for students aged 5 to 12 years old.",
+        "zh": "教授並帶領5到12歲學生的英語課程。"
+      },
+      "duties": {
+        "en": [
+          "Taught and led English classes for students aged 5 to 12 years old.",
+          "Developed and organized lesson plans that aligned with school and institutional objectives as well as adapting existing materials and resources to suit students’ needs.",
+          "Used a variety of teaching methods (games, conversations, role-playing, etc.) to keep lessons engaging."
+        ],
+        "zh": [
+          "教授並帶領5到12歲學生的英語課程。",
+          "制定並組織教案，符合學校和機構目標，並調整教材以適應學生需求。",
+          "使用多種教學方法（遊戲、對話、角色扮演等）讓課程更有趣。"
+        ]
+      }
+    },
+    {
+      "jobTitle": "Yilan University",
+      "position": "English Teacher",
+      "startDate": {
+        "en": "October 2021",
+        "zh": "2021年10月"
+      },
+      "endDate": {
+        "en": "December 2021",
+        "zh": "2021年12月"
+      },
+      "city": {
+        "en": "Yilan",
+        "zh": "宜蘭"
+      },
+      "country": {
+        "en": "Taiwan",
+        "zh": "台灣"
+      },
+      "summary": {
+        "en": "Designed lesson plans for primary school-aged students.",
+        "zh": "為小學生設計教案。"
+      },
+      "duties": {
+        "en": [
+          "Designed lesson plans for primary school-aged students.",
+          "Assessed students abilities through assignments and adjusted lesson plans accordingly.",
+          "Helped students improve their English grammar, pronunciation, and sentence structures."
+        ],
+        "zh": [
+          "為小學生設計教案。",
+          "通過作業評估學生能力並相應調整教案。",
+          "幫助學生提高英語文法、發音和句型結構。"
+        ]
+      }
+    },
+    {
+      "jobTitle": "Mr. Lim’s Noodle Restaurant",
+      "position": "Restaurant Crew Member",
+      "startDate": {
+        "en": "September 2019",
+        "zh": "2019年9月"
+      },
+      "endDate": {
+        "en": "December 2020",
+        "zh": "2020年12月"
+      },
+      "city": {
+        "en": "Yilan",
+        "zh": "宜蘭"
+      },
+      "country": {
+        "en": "Taiwan",
+        "zh": "台灣"
+      },
+      "summary": {
+        "en": "Supported office manager through document coordination and customer relations.",
+        "zh": "協助辦公室經理處理文件協調和客戶關係。"
+      },
+      "duties": {
+        "en": [
+          "Supported office manager through document coordination and customer relations.",
+          "Handled payments.",
+          "Prepared and cooked food according to customer preferences."
+        ],
+        "zh": [
+          "協助辦公室經理處理文件協調和客戶關係。",
+          "處理付款事宜。",
+          "根據顧客喜好準備和烹飪食物。"
+        ]
+      }
+    },
+    {
+      "jobTitle": "TES Company",
+      "position": "Office Administrator",
+      "startDate": {
+        "en": "December 2017",
+        "zh": "2017年12月"
+      },
+      "endDate": {
+        "en": "August 2018",
+        "zh": "2018年8月"
+      },
+      "city": {
+        "en": "Penang",
+        "zh": "檳城"
+      },
+      "country": {
+        "en": "Malaysia",
+        "zh": "馬來西亞"
+      },
+      "summary": {
+        "en": "Provided excellent customer service by greeting customers, resolving complaints, serving food and answering customer inquiries.",
+        "zh": "透過迎接顧客、處理投訴、提供餐飲和回答詢問，提供優質客戶服務。"
+      },
+      "duties": {
+        "en": [
+          "Provided excellent customer service by greeting customers, resolving complaints, serving food and answering customer inquiries.",
+          "Managed office inventory."
+        ],
+        "zh": [
+          "透過迎接顧客、處理投訴、提供餐飲和回答詢問，提供優質客戶服務。",
+          "管理辦公室庫存。"
+        ]
+      }
+    }
+  ]
 }

@@ -309,10 +309,121 @@ function separatorForSingleContainer(container, childSelector, separatorFactory)
   }
 }
 
-let currentLang = 'en'; // default language
+const translationsURL = 'translations.json';
 
-function setLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem('lang', lang); // optional: remember preference
-  applyTranslations();
+let currentLang = localStorage.getItem('lang') || 'en';
+
+async function fetchTranslations() {
+  try {
+    const res = await fetch(translationsURL);
+    if (!res.ok) throw new Error('Failed to fetch translations');
+    const data = await res.json();
+    applyTranslations(data, currentLang);
+  } catch (err) {
+    console.error(err);
+  }
 }
+
+function applyTranslations(data, lang) {
+  // HERO TAGLINE
+  const taglineItems = document.querySelectorAll('#quick-intro_tagline .tagline_item');
+  if (taglineItems.length >= 3) {
+    taglineItems[0].textContent = data.hero.tagline_teacher[lang];
+    taglineItems[1].textContent = data.hero.tagline_musician[lang];
+    taglineItems[2].textContent = data.hero.tagline_nature_lover[lang];
+  }
+
+  // HERO RESUME TEXT
+  const resumeText = document.querySelector('#quick-resume p');
+  if (resumeText) resumeText.textContent = data.hero.resume[lang];
+
+  // EXPERIENCE SECTION TITLE
+  const expTitle = document.querySelector('#experience-section h2[data-i18n="experience_title"]');
+  if (expTitle) expTitle.textContent = data.experience.title[lang];
+
+  // EXPERIENCE SHOW/HIDE DUTIES BUTTONS
+  document.querySelectorAll('.exp_see-duties-button').forEach(button => {
+    // The button toggles between show/hide duties, so set initial text to "Show duties"
+    // You could extend this for toggle functionality if you want
+    button.textContent = data.experience.show_duties[lang];
+  });
+
+  // EDUCATION SECTION TITLE
+  const eduTitle = document.querySelector('#education-section h2');
+  if (eduTitle) eduTitle.textContent = data.education.title[lang];
+
+  // SKILLS SECTION TITLES
+  const skillsTitle = document.querySelector('#skills-section h2');
+  if (skillsTitle) skillsTitle.textContent = data.skills.title[lang];
+
+  const languageTitle = document.querySelector('#skills-section .language_title');
+  if (languageTitle) languageTitle.textContent = data.skills.languages[lang];
+
+  const certTitle = document.querySelector('#skills-section .cert_title');
+  if (certTitle) certTitle.textContent = data.skills.certifications[lang];
+
+  // ABOUT SECTION TITLE (there are multiple with class 'about_title')
+  document.querySelectorAll('#about-section .about_title').forEach((el, idx) => {
+    // We know the first is "ABOUT", second "Hobbies and Interests", third "References"
+    if (idx === 0) el.textContent = data.about.title[lang];
+    else if (idx === 1) el.textContent = lang === 'en' ? "Hobbies and Interests" : "興趣與嗜好"; // Add to JSON if you want
+    else if (idx === 2) el.textContent = lang === 'en' ? "References" : "推薦信"; // Add to JSON if you want
+  });
+
+  // ABOUT BIO PARAGRAPHS (6 paragraphs)
+  const aboutBioParagraphs = document.querySelectorAll('#about-section .about_bio p');
+  if (aboutBioParagraphs.length === data.about.bio.length) {
+    aboutBioParagraphs.forEach((p, i) => {
+      p.innerHTML = data.about.bio[i][lang]; // use innerHTML to preserve links like <a>
+    });
+  }
+
+  // ABOUT HOBBIES LIST
+  const aboutHobbies = document.querySelectorAll('#about-section .about_hobby-list li.about_hobby');
+  if (aboutHobbies.length === data.about.hobbies_interests.length) {
+    aboutHobbies.forEach((li, i) => {
+      li.textContent = data.about.hobbies_interests[i][lang];
+    });
+  }
+
+  // REFERENCES
+  document.querySelectorAll('#about-section .about_ref-name').forEach((el, i) => {
+    if (data.about.references[i]) {
+      el.textContent = data.about.references[i].name;
+    }
+  });
+
+  document.querySelectorAll('#about-section .about_reference p').forEach((el, i) => {
+    if (data.about.references[i]) {
+      el.textContent = data.about.references[i].statement[lang];
+    }
+  });
+
+  // CONTACT SECTION TITLES
+  document.querySelectorAll('#contact-section .contact_title').forEach((el, i) => {
+    if (i === 0) el.textContent = data.contact.title[lang];      // CONTACT ME
+    else if (i === 1) el.textContent = data.contact.follow[lang]; // FOLLOW ME
+  });
+
+  const contactResumeTitle = document.querySelector('#contact_resume .contact_resume-title');
+  if (contactResumeTitle) contactResumeTitle.textContent = data.contact.resume[lang];
+
+  // Change the text of language toggle button
+  const langToggleBtn = document.getElementById('language-toggle');
+  if (langToggleBtn) {
+    langToggleBtn.textContent = lang === 'en' ? '你好!' : 'Hi!';
+  }
+}
+
+// Language toggle event
+document.getElementById('language-toggle').addEventListener('click', () => {
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('lang', currentLang);
+  fetchTranslations();
+});
+
+// On page load
+document.addEventListener('DOMContentLoaded', () => {
+  fetchTranslations();
+});
+
