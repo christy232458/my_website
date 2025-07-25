@@ -17,11 +17,13 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #ffd6a5, #ffc6ff);
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -50,8 +52,8 @@ section {
 }
 #language-toggle {
   position: fixed;
-  top: 5px;
-  left: 100px;
+  bottom: 1rem;         /* 16px from bottom */
+  right: 1rem;          /* 16px from right */
   width: 48px;
   height: 48px;
   background-color: #333;
