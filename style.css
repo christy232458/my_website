@@ -5,7 +5,7 @@
         --small-header: clamp(15px, 3dvw + 1.2dvh, 30px);
     --subtitle: clamp(12px, 3dvw + 1dvh, 32px);
         --paragraph: clamp(16px, 3dvw + 1dvh, 25px);
-    --icon: clamp(20px, 4.7dvw + 1dvh, 45px);
+    --icon: clamp(20px, 4.7dvw + 1dvh, 36px);
         --icon-image: clamp(25px, 8dvw + 1dvh, 35px);
     --profile-pic: clamp(50px, 52dvw + 1dvh, 450px);
         --preview-image: clamp(50px, 40dvw + 1dvh, 400px);
@@ -473,10 +473,6 @@ section {
         @media (min-width: 650px) {
             flex-direction: row;
         }
-
-        @media (min-width: 950px) {
-            padding: 3rem 20dvw;
-        }
     }
         .education_wrapper {
             outline: 2px solid black;
@@ -484,8 +480,11 @@ section {
             display: flex;
                 flex-direction: column;
             box-sizing: border-box;
-                width: 100%;
             background-color: #f8a8eb;
+
+            @media (min-width: 950px) {
+                flex-direction: row;
+            }
         }
             .education_wrapper div {
                 display: flex;
@@ -499,8 +498,14 @@ section {
                 box-sizing: border-box;
                     padding: .1em;
             }
-                .education_info-wrapper {
-
+                .education_intro-wrapper {
+                    display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                    
+                    @media (min-width: 950px) {
+                        flex-direction: column;
+                    }
                 }
                     .education_school {
                         border-radius: 15px;
@@ -516,17 +521,25 @@ section {
                         font-style: italic;
                         text-decoration: underline;
                         width: fit-content;
+
+                        @media (min-width: 950px) {
+                            flex-direction: row;
+                                align-self: flex-start;
+                        }
                     }
                 .education_info-wrapper {
-                    border-radius: 0 0 15px 15px;
                     display: flex;
                         align-items: center;
                         justify-content: space-around;
                         gap: .5em;
                     box-sizing: border-box;
                         padding: .5em;
-                        width: 100%;
                     background-color: rgb(247, 237, 237);
+
+                    @media (min-width: 950px) {
+                        border-radius: 0 15px 15px 0;
+                        flex-direction: column;
+                    }
                 }
                     .education_date {
                         border-radius: 15px;
@@ -561,9 +574,6 @@ section {
     .language-container {
         
 
-        @media (min-width: 950px) {
-            padding: 3rem 20dvw;
-        }
     }
         .language_title {
             border-radius: 15px;
@@ -807,8 +817,8 @@ section {
                 display: flex;
                     align-items: center;
                     justify-content: center;
-                width: clamp(75px, 25dvw + 1dvh, 200px);
-                height: clamp(75px, 25dvw + 1dvh, 200px);
+                width: clamp(75px, 25dvw + 1dvh, 125px);
+                height: clamp(75px, 25dvw + 1dvh, 125px);
                 background-color: #fae59e;
             }
                 .about_ref-pic {
@@ -823,7 +833,7 @@ section {
                         flex-wrap: wrap;
                     padding: .5em;
                     margin: 0;
-                    font-size: clamp(15px, 3dvw + 1dvh, 75px);
+                    font-size: clamp(15px, 3dvw + 1dvh, 24px);
                     background-color: #ce9af8;
                 }
                 .about_see-more {
@@ -885,6 +895,7 @@ section {
 #contact-section {
     display: flex;
         flex-direction: column;
+        gap: 1em;
     padding: 3rem 1rem;
     background-color: conic-gradient(#ffd6a5, #f09d9d);
 
@@ -892,11 +903,12 @@ section {
         flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 1em;
+            gap: 3em;
     }
 }
     #contact-section h2 {
         font-size: var(--medium-header);
+        align-self: flex-start;
     }
     #contact-section i {
         font-size: var(--icon);
@@ -910,89 +922,101 @@ section {
         padding: .5em;
         background-color: #e0f5d4;
     }
-        #contact_all-socials-wrapper, #contact_emailResume-wrapper {
+        .contactSocial-wrapper {
+            border-radius: 25px;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
             padding: .5em;
-
-            @media (min-width: 950px) {
-                width: 50%;
-            }
         }
-            .contact-section_container {
-                padding: .5em;
-            }
-                #contact-wrapper {
-                        border-radius: 25px;
-                    display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        flex-direction: column;
-                        gap: 1em;
-                    padding: .5em;
-                    background-color: #b3d8ff;
-
-                    @media (min-width: 650px) {
-                        flex-direction: row;
-                    }
-                }
-                    #contact_email {
-                        border-radius: 50%;
-                        display: inline-flex;
-                        padding: 1em;
-                        background-color: #f794f7;
-                    }
-                    #contact_resume {
-                        outline: 2px solid white;
-                        height: clamp(50px, 15vw + 4vh, 70px);
-                    }
-                        #contact_resume {
-                            border-radius: 15px;
-                            display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            box-sizing: border-box;
-                            background-color: #e0f180;
-                        }
-                            .contact_resume-title {
-                                border-radius: 15px;
-                                margin: .5em 1em;
-                                padding: .5em;
-                                background-color: #f08cf0;
-                            }
-                            #contact_resume-eng-zh {
-                                border-radius: 0 10px 10px 0;
-                                display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    gap: 1em;
-                                height: clamp(50px, 15vw + 4vh, 70px);
-                                padding: .5em;
-                                background-color: #f079d6;
-                            }
-            .contact_socials {
-                border: 5px solid rgb(245, 143, 203);
-                    border-radius: 25px;
-                padding: .5em;
+            .contact_resumeEmail-wrapper {
+                border-radius: 25px;
                 display: flex;
                     align-items: center;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    gap: .5em;
-                background-color: #e8f5a1;
+                    justify-content: space-around;
+                    flex-direction: column;
+                padding: 1em;
+                gap: 1em;
+                background-color: #b3d8ff;
+                width: 100%;
+
+                @media (min-width: 950px) {
+                    flex-direction: row;
+                    gap: 2em;
+                }
             }
-                .contact_socials-icon-wrapper {
-                        border-radius: 50%;
+                #contact_email {
+                    border-radius: 50%;
+                    display: inline-flex;
+                    padding: 1em;
+                    background-color: #f794f7;
+                }
+                #contact_resume {
+                    outline: 2px solid white;
+                    border-radius: 15px;
                     display: flex;
                         align-items: center;
                         justify-content: center;
-                    width: clamp(35px, 11dvw + 1dvh, 100px);
-                    height: clamp(35px, 11dvw + 1dvh, 100px);
-                } 
-                .contact_socials img {
-                    border-radius: 50%;
-                    width: var(--icon-image);
-                    height: var(--icon-image);
+                    box-sizing: border-box;
+                    background-color: #e0f180;
                 }
-                    .contact_socials img, .contact_socials-icon-wrapper {
-                        background-color: #f3a0b5;
+                    .contact_resume-title {
+                        border-radius: 15px;
+                        margin: .5em 1em;
+                        padding: .5em;
+                        background-color: #f08cf0;
+                        display: flex;
+                            justify-self: flex-start;
                     }
+                    #contact_resume-eng-zh {
+                        border-radius: 0 10px 10px 0;
+                        display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 1em;
+                        padding: .5em;
+                        background-color: #f079d6;
+                    }
+                    .resume-end {
+                        width: clamp(12px, 5dvw + 1dvh, 50px);
+                        height: clamp(12px, 5dvw + 1dvh, 50px);;
+                        padding: 1.5em;
+                    }
+                        .resume-end p {
+                            font-size: clamp(12px, 2dvw + 1dvh, 16px);
+                        }
+    .contact_socials {
+        border: 5px solid rgb(245, 143, 203);
+            border-radius: 25px;
+        padding: .5em;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: .5em;
+        background-color: #e8f5a1;
+    }
+        .contact_socials-icon-wrapper {
+            border-radius: 50%;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            height: clamp(20px, 11dvw + 1dvh, 65px);
+            width: clamp(20px, 11dvw + 1dvh, 65px);
+        } 
+        .contact_socials img {
+            border-radius: 50%;
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+        .contact_socials a {
+            display: inline-flex;
+                align-items: center;
+                justify-content: center;
+        }
+            .contact_socials img, .contact_socials-icon-wrapper {
+                background-color: #f3a0b5;
+            }
 /* ##   ## */      
