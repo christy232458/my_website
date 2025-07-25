@@ -2,17 +2,6 @@
   "languages": [
     {
       "name": {
-        "en": "English",
-        "zh": "英語"
-      },
-      "fluency": {
-        "en": "Fluent",
-        "zh": "流利"
-      },
-      "percent": 95
-    },
-    {
-      "name": {
         "en": "Chinese Mandarin",
         "zh": "中文（普通話）"
       },
@@ -32,6 +21,17 @@
         "zh": "母語"
       },
       "percent": 100
+    },
+    {
+      "name": {
+        "en": "English",
+        "zh": "英語"
+      },
+      "fluency": {
+        "en": "Fluent",
+        "zh": "流利"
+      },
+      "percent": 95
     },
     {
       "name": {
