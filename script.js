@@ -151,7 +151,7 @@ fetch('skills.json')
 
       const progress = languageElem.querySelector('.language_progress');
       const symbol = progress.querySelector('.language_symbol');
-      const langKey = langData.name.en.toLowerCase().replace(/\s+/g, '_'); // For file name matching
+      const langKey = langData.name.en.toLowerCase().replace(/[^a-z0-9]/g, '_'); // For file name matching
 
       symbol.src = `images/logos_icons/${langKey}.png`;
       symbol.alt = langData.name[lang];
