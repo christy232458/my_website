@@ -197,6 +197,66 @@ fetch('skills.json')
   .catch(error => console.error("Error loading skills.json:", error));
 // ++   ++
 
+
+// && ABOUT SECTION &&
+async function loadHobbiesAndReferences() {
+  try {
+    const response = await fetch('about.json'); // Adjust path if needed
+    const data = await response.json();
+
+    // --- Hobbies ---
+    const hobbiesList = document.querySelector('.about_hobby-list');
+    // Clear existing hobby <li> items
+    hobbiesList.innerHTML = '';
+
+    data.hobbies.forEach(hobby => {
+      const li = document.createElement('li');
+      li.className = 'about_hobby';
+      li.textContent = hobby[currentLang] || hobby['en'];
+      hobbiesList.appendChild(li);
+    });
+
+    // --- References ---
+    const referencesContainer = document.querySelector('.about_ref-wrapper');
+    const referenceTemplate = document.querySelector('.about-template_references');
+
+    // Clear previous reference entries
+    referencesContainer.querySelectorAll('.about_ref-intro, .about_reference-wrapper').forEach(el => el.remove());
+
+    data.references.forEach(ref => {
+      const clone = referenceTemplate.content.cloneNode(true);
+
+      clone.querySelector('.about_ref-name').textContent = ref.name;
+      clone.querySelector('.about_reference p').textContent = ref.statement[currentLang] || ref.statement['en'];
+
+      const contactList = clone.querySelector('.about_ref-contact');
+      contactList.innerHTML = '';
+
+      if (ref.contact?.email) {
+        const liEmail = document.createElement('li');
+        liEmail.className = 'about_ref-icon-wrapper';
+        liEmail.innerHTML = `<a href="mailto:${ref.contact.email}" title="Email"><i class="fas fa-envelope"></i></a>`;
+        contactList.appendChild(liEmail);
+      }
+      if (ref.contact?.website) {
+        const liWeb = document.createElement('li');
+        liWeb.className = 'about_ref-icon-wrapper';
+        liWeb.innerHTML = `<a href="${ref.contact.website}" target="_blank" rel="noopener" title="Website"><i class="fas fa-globe"></i></a>`;
+        contactList.appendChild(liWeb);
+      }
+
+      referencesContainer.appendChild(clone);
+    });
+
+  } catch (error) {
+    console.error("Error loading about.json:", error);
+  }
+}
+
+loadHobbiesAndReferences();
+// &&   && 
+
+
 // **UNIVERSAL**
 // Helper function for larger multilingual translation function
 function nameSwitch(nameContainer, nameClass) {

@@ -524,7 +524,7 @@ section {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            gap: .5em;
+            gap: 1em;
             flex-wrap: wrap;
 
         @media (min-width: 650px) {
@@ -828,7 +828,8 @@ section {
             border-radius: 15px;
             display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
+                gap: 1em;
             padding: 1em;
             overflow-y: auto;
             background-color: #b3d8ff;
@@ -836,9 +837,6 @@ section {
             .about_hobby {
                 border-radius: 15px;
                 padding: .5em;
-                display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
                 font-size: clamp(15px, 2.5dvw + 1dvh, 20px);
                 background-color: rgb(143, 143, 248);
             }
@@ -960,6 +958,7 @@ section {
                         display: flex;
                             align-items: center;
                             justify-content: center;
+                            gap: 1em;
                         padding: .5em;
                         width: 100%;
                         background-color: #8ef3c1;
