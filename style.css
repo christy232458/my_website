@@ -48,6 +48,39 @@ section {
     margin: 0;
     padding: .5em;
 }
+#language-toggle {
+  position: fixed;
+  top: 5px;
+  left: 100px;
+  width: 48px;
+  height: 48px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+    #language-toggle:hover {
+        background-color: #555;
+    }
+/* Larger screens - make button bigger and move a bit farther */
+@media (min-width: 768px) {
+  #language-toggle {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}
 /* UNIVERSAL */
 
 
@@ -307,8 +340,7 @@ section {
         }
             /* Experience  */
             .exp_wrapper {
-                border: 5px solid black;
-                    border-radius: 25px;
+                border-radius: 25px;
                 box-sizing: border-box;
                     padding: .5em;
                     width: fit-content;
@@ -333,7 +365,6 @@ section {
                         padding: 0;
                 }
                     .exp_titlePosition-wrapper {
-                        border: 5px solid black;
                             border-radius: 15px;
                         display: flex;
                             align-items: flex-start;

@@ -1,0 +1,36 @@
+{
+  "schools": [
+    {
+      "name": {
+        "en": "National Ilan University",
+        "zh": "國立宜蘭大學"
+      },
+      "location": {
+        "en": "Yilan, Taiwan",
+        "zh": "宜蘭，台灣"
+      },
+      "degree": {
+        "en": "Bachelor of Arts in Foreign Language and Literature",
+        "zh": "外國語文學士"
+      },
+      "start": "2004",
+      "end": "2008"
+    },
+    {
+      "name": {
+        "en": "Jit Sin Independent High School",
+        "zh": "日新獨立中學"
+      },
+      "location": {
+        "en": "Bukit Mertajam, Malaysia",
+        "zh": "馬來西亞，武吉牛汝莪"
+      },
+      "degree": {
+        "en": "High School Diploma",
+        "zh": "高中畢業證書"
+      },
+      "start": "2000",
+      "end": "2004"
+    }
+  ]
+}

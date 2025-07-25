@@ -11,6 +11,10 @@
 </head>
 <body>
 
+<!-- == LANGUAGE BUTTON == -->
+<button id="language-toggle">你好!</button>
+<!-- ==   == -->
+
 <!-- || HERO PAGE || -->
 <section id="hero-section">
     <div class="hero_intro" id="hero_intro1">
@@ -80,52 +84,56 @@
 
 <!-- ** EXPERIENCE SECTION ** -->
 <section id="experience-section">
-    <h2>EXPERIENCE</h2>
+    <h2 data-i18n="experience_title">EXPERIENCE</h2>
     <!-- Experience -->
     <div class="exp-container">
-        <div class="exp_wrapper">
-            <div class="exp_job-description-wrapper">
-                <!-- Title and position -->
-                <div class="exp_titlePosition-wrapper">
-                    <h3 class="exp_title">JOB</h3>
-                    <h4 class="exp_position">Worker</h4>
-                </div>
-                <!---->
-                    <!-- Date, location, and description -->
-                    <div class="exp_info-wrapper">
-                        <div class="exp_datePlace-wrapper">
-                            <!-- Date -->
-                            <p class="exp_date"><span class="exp_start-date">2000</span> -
-                            <span class="exp_end-date">2001</span></p>
-                            <!---->
-                            <!-- Location -->
-                            <p class="exp_place">
-                                <span class="exp_city">Taipei</span>, 
-                                <span class="exp_country">Taiwan</span>
-                            </p>
-                            <!---->
+
+        <template class="exp-template">
+            <div class="exp_wrapper">
+                <div class="exp_job-description-wrapper">
+                    <!-- Title and position -->
+                    <div class="exp_titlePosition-wrapper">
+                        <h3 class="exp_title">JOB</h3>
+                        <h4 class="exp_position">Worker</h4>
+                    </div>
+                    <!---->
+                        <!-- Date, location, and description -->
+                        <div class="exp_info-wrapper">
+                            <div class="exp_datePlace-wrapper">
+                                <!-- Date -->
+                                <p class="exp_date"><span class="exp_start-date">2000</span> -
+                                <span class="exp_end-date">2001</span></p>
+                                <!---->
+                                <!-- Location -->
+                                <p class="exp_place">
+                                    <span class="exp_city">Taipei</span>, 
+                                    <span class="exp_country">Taiwan</span>
+                                </p>
+                                <!---->
+                            </div>
+                            <!-- -->
+                            <!-- Summary -->
+                            <div class="exp_summary-wrapper">
+                                <p class="exp_summary">This is a summary of my time here.
+                                    I really liked it here until the fire nation attacked.
+                                </p>
+                            </div>
                         </div>
                         <!-- -->
-                        <!-- Summary -->
-                        <div class="exp_summary-wrapper">
-                            <p class="exp_summary">This is a summary of my time here.
-                                I really liked it here until the fire nation attacked.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- -->
+                </div>
+                    <!-- Duty toggle button -->
+                    <button class="exp_see-duties-button">Show duties</button>
+                    <!---->
+                    <!-- Duties -->
+                    <ul class="exp_duties">
+                        <li class="exp_duty">This is my first duty. I washed dishes.</li>
+                        <li class="exp_duty">This is my second duty. I mopped the floor with a broom.</li>
+                        <li class="exp_duty">This is my third duty. I talked on the phone with my mom and her dog.</li>
+                    </ul>
+                    <!---->
             </div>
-                <!-- Duty toggle button -->
-                <button class="exp_see-duties-button">Show duties</button>
-                <!---->
-                <!-- Duties -->
-                <ul class="exp_duties">
-                    <li class="exp_duty">This is my first duty. I washed dishes.</li>
-                    <li class="exp_duty">This is my second duty. I mopped the floor with a broom.</li>
-                    <li class="exp_duty">This is my third duty. I talked on the phone with my mom and her dog.</li>
-                </ul>
-                <!---->
-        </div>
+        </template>
+
         <!--   -->
     </div>
     <button class="exp_see-all-button">See All</button>
@@ -137,29 +145,33 @@
 <section id="education-section">
     <h2>EDUCATION</h2>
     <div class="education_container">
-        <div class="education_wrapper">
-            <div class="education_intro-wrapper">
-                <div class="education_school">
-                    <img class="education_icon" src="images/logos_icons/resume_icon.png">
-                Jit Sin Independent High School
-                </div>
-                    <div class="education_location">
+
+        <template class="education-template">
+            <div class="education_wrapper">
+                <div class="education_intro-wrapper">
+                    <div class="education_school">
                         <img class="education_icon" src="images/logos_icons/resume_icon.png">
-                    Bukit Mertajam, Malaysia
+                    Jit Sin Independent High School
                     </div>
-                </div>
-                <div class="education_info-wrapper">
-                    <div class="education_date"> 
+                        <div class="education_location">
+                            <img class="education_icon" src="images/logos_icons/resume_icon.png">
+                        Bukit Mertajam, Malaysia
+                        </div>
+                    </div>
+                    <div class="education_info-wrapper">
+                        <div class="education_date"> 
+                            <img class="education_icon" src="images/logos_icons/resume_icon.png">
+                        <span class="education_start-date">2000</span>- 
+                        <span class="education_end-date">2004</span> 
+                        </div>
+                    <div class="education_degree">
                         <img class="education_icon" src="images/logos_icons/resume_icon.png">
-                    <span class="education_start-date">2000</span>- 
-                    <span class="education_end-date">2004</span> 
+                    High School Diploma
                     </div>
-                <div class="education_degree">
-                    <img class="education_icon" src="images/logos_icons/resume_icon.png">
-                High School Diploma
                 </div>
             </div>
-        </div>
+        </template>
+
     </div>
 </section>
 <!-- ~~   ~~ -->
@@ -171,6 +183,8 @@
         <!-- Languages -->
         <div class="language-container">
             <h3 class="language_title">Languages</h3>
+
+        <template class="skills-template_language">
             <div class="languages_wrapper">
                 <div class="language">
                     <span class="language_name">Chinese</span>
@@ -181,17 +195,23 @@
                             <span class="language_fluency">fluent</span>
                 </div>
             </div>
+        </template>
+
         </div>
         <!---->
 
         <!-- Certifications -->
         <div class="certifications-container">
             <h3 class="cert_title">Certifications</h3>
-            <div class="cert_wrapper">
-                <a class="certs">
-                    <div class="cert_name">Certification</div>
-                </a>
-            </div>
+
+            <template class="skills-template_certs">
+                <div class="cert_wrapper">
+                    <a class="certs">
+                        <div class="cert_name">Certification</div>
+                    </a>
+                </div>
+            </template>
+
         </div>
         <!---->
 </section>
@@ -253,35 +273,46 @@
         <!-- Hobbies -->
         <h3 class="about_title">Hobbies and Interests</h3>
             <div class="about_hobby-container">
+
+            <template class="about-template_hobby">
                 <ul class="about_hobby-list">
                     <li class="about_hobby">Hobby</li>
                 </ul>
+            </template>
+
+            <template class="about-template_hobby-media">
                 <ul class="about_hobby-media-wrapper">
                     <li class="about_media"> 
                         <img src="images/hobbies/animal_care_1.jpg"> 
                     </li>
                 </ul>
+            </template>
+
             </div>
         <!-- -->
 
         <!-- References -->
         <h3 class="about_title">References</h3>
             <div class="about_ref-wrapper">
-                <div class="about_ref-intro">
-                    <div class="ref-pic_wrapper">
-                        <img class="about_ref-pic" src="images/references/referant_asiah_2.jpg">
+
+                <template class="about-template_references">
+                    <div class="about_ref-intro">
+                        <div class="ref-pic_wrapper">
+                            <img class="about_ref-pic" src="images/references/referant_asiah_2.jpg">
+                        </div>
+                        <h5 class="about_ref-name">My Name</h5>
                     </div>
-                    <h5 class="about_ref-name">My Name</h5>
-                </div>
-                <span class="about_see-more"> + </span>
-                <div class="about_reference-wrapper">
-                    <div class="about_reference">
-                        <p>I really like this person. She passes the vibe check.</p>
+                    <span class="about_see-more"> + </span>
+                    <div class="about_reference-wrapper">
+                        <div class="about_reference">
+                            <p>I really like this person. She passes the vibe check.</p>
+                        </div>
+                        <ul class="about_ref-contact">
+                            <li class="about_ref-icon-wrapper"><i class="fab fa-instagram"></i></li>
+                        </ul>
                     </div>
-                    <ul class="about_ref-contact">
-                        <li class="about_ref-icon-wrapper"><i class="fab fa-instagram"></i></li>
-                    </ul>
-                </div>
+                </template>
+
             </div>
         <!-- -->
 </section>

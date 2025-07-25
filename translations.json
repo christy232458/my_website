@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "tagline_teacher": {
+      "en": "Teacher",
+      "zh": "教師"
+    },
+    "tagline_musician": {
+      "en": "Musician",
+      "zh": "音樂人"
+    },
+    "tagline_nature_lover": {
+      "en": "Nature lover",
+      "zh": "自然愛好者"
+    },
+    "resume": {
+      "en": "RESUME",
+      "zh": "履歷"
+    }
+  },
+  "experience": {
+    "title": {
+      "en": "EXPERIENCE",
+      "zh": "工作經歷"
+    },
+    "show_duties": {
+      "en": "Show duties",
+      "zh": "顯示職責"
+    },
+    "hide_duties": {
+      "en": "Hide duties",
+      "zh": "隱藏職責"
+    },
+    "see_all": {
+      "en": "See All",
+      "zh": "顯示全部"
+    }
+  },
+  "education": {
+    "title": {
+      "en": "EDUCATION",
+      "zh": "學歷"
+    }
+  },
+  "skills": {
+    "title": {
+      "en": "SKILLS",
+      "zh": "技能"
+    },
+    "languages": {
+      "en": "Languages",
+      "zh": "語言能力"
+    },
+    "certifications": {
+      "en": "Certifications",
+      "zh": "證照"
+    }
+  },
+  "about": {
+    "title": {
+      "en": "ABOUT",
+      "zh": "關於"
+    },
+    "hobbies_interests": {
+      "en": "Hobbies and Interests",
+      "zh": "興趣與嗜好"
+    },
+    "references": {
+      "en": "References",
+      "zh": "推薦"
+    },
+    "see_more": {
+      "en": "+",
+      "zh": "+"
+    }
+  },
+  "contact": {
+    "title": {
+      "en": "CONTACT ME",
+      "zh": "聯絡我"
+    },
+    "resume": {
+      "en": "Resume",
+      "zh": "履歷"
+    },
+    "follow": {
+      "en": "FOLLOW ME",
+      "zh": "追蹤我"
+    }
+  }
+}
