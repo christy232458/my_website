@@ -586,6 +586,7 @@ section {
                         }
                     }
                 .education_info-wrapper {
+                    border-radius: 0 0 15px 15px;
                     display: flex;
                         align-items: center;
                         justify-content: space-around;
