@@ -1,4 +1,24 @@
-[
+{
+    "experience": {
+    "title": {
+      "en": "EXPERIENCE",
+      "zh": "工作經歷"
+    },
+    "show_duties": {
+      "en": "Show duties",
+      "zh": "顯示職責"
+    },
+    "hide_duties": {
+      "en": "Hide duties",
+      "zh": "隱藏職責"
+    },
+    "see_all": {
+      "en": "See All",
+      "zh": "顯示全部"
+    }
+  },
+
+  [
   {
     "jobTitle": "Come True CAFE",
     "position": "Restaurant Crew Member",
@@ -180,3 +200,5 @@
     }
   }
 ]
+
+}
