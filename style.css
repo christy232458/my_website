@@ -3,7 +3,7 @@
     --header: clamp(16px, 3dvw + 3dvh, 48px);
         --medium-header: clamp(10px, 2dvw + 1dvh, 24px);
         --small-header: clamp(12px, 2.5dvw + 1dvh, 20px);
-    --subtitle: clamp(12px, 1.5dvw + 1.5dvh, 36px);
+    --subtitle: clamp(12px, 1dvw + 1dvh, 24px);
         --small-subtitle: clamp(10px, 2dvw + 1dvh, 16px);
         --paragraph: clamp(12px, 2dvw + 1dvh, 20px);
     --icon: clamp(12px, 3dvw + 3dvh, 36px);

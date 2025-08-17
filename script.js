@@ -272,42 +272,7 @@ function nameSwitch(nameContainer, nameClass) {
         currentName.textContent = nextName.textContent;
         nextName.textContent = temp;
     }
-}
 
-function separator(selector, childElements, separator) {
-    const container = document.querySelector(selector);
-    if (!container) return;
-
-    const children = container.querySelectorAll(childElements);
-    const safeSelector = selector.replace(/[^a-zA-Z0-9_-]/g, '');
-
-    for (let i = 0; i < children.length - 1; i++) {
-        let separation;
-
-        if (typeof separator === 'string') {
-            separation = document.createElement('span');
-            separation.textContent = separator;
-        } else if (typeof separator === 'function') {
-            separation = separator();
-        } else if (separator instanceof HTMLElement) {
-            separation = separator.cloneNode(true);
-        } else {
-            console.warn('Invalid separator: must be string, function or HTMLElement');
-            return;
-        }
-
-        separation.classList.add(`${safeSelector}_separator`);
-        children[i].after(separation);
-    }
-}
-
-function separatorForSingleContainer(container, childSelector, separatorFactory) {
-  const children = container.querySelectorAll(childSelector);
-  for (let i = 0; i < children.length - 1; i++) {
-    const sep = separatorFactory();
-    children[i].after(sep);
-  }
-}
 
 const translationsURL = 'translations.json';
 
@@ -330,7 +295,7 @@ function applyTranslations(data, lang) {
   if (taglineItems.length >= 3) {
     taglineItems[0].textContent = data.hero.tagline_teacher[lang];
     taglineItems[1].textContent = data.hero.tagline_musician[lang];
-    taglineItems[2].textContent = data.hero.tagline_nature_lover[lang];
+    taglineItems[2].textContent = data.hero.tagline_animal_lover[lang];
   }
 
   // HERO RESUME TEXT
