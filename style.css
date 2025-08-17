@@ -1,9 +1,9 @@
 /* UNIVERSAL */
 :root {
-    --header: clamp(16px, 7.5dvw + 1dvh, 64px);
+    --header: clamp(16px, 6dvw + 1dvh, 48px);
         --medium-header: clamp(10px, 2dvw + 1dvh, 24px);
         --small-header: clamp(12px, 2.5dvw + 1dvh, 20px);
-    --subtitle: clamp(12px, 3dvw + 1dvh, 32px);
+    --subtitle: clamp(12px, 1dvw + 1dvh, 24px);
         --small-subtitle: clamp(10px, 2dvw + 1dvh, 16px);
         --paragraph: clamp(12px, 2dvw + 1dvh, 20px);
     --icon: clamp(20px, 4.7dvw + 1dvh, 36px);
@@ -111,6 +111,7 @@ section {
             box-sizing: border-box;
                 width: 100%;
                 padding: .5em 0;
+            background-color: #ffe3a3;
         }
             #quick-intro {
                 display: flex;
@@ -129,8 +130,6 @@ section {
                     box-sizing: border-box;
                         width: 100%;
                         padding: .7em;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    background-color: #ffe3a3;
 
                     @media (min-width: 650px) {
                         flex-direction: row;
@@ -158,7 +157,30 @@ section {
                                 writing-mode: vertical-lr;
                             }
                         }
+                    .hero_position {
+                        border-radius: 25px;
+                        padding: .75em;
+                        font-family: 'Segoe UI', sans-serif;
+                        font-size: clamp(16px, 3dvw + 1dvh, 24px);
+                        font-weight: bold;
+                        background-color: pink;
+                    }
     /**/
+         .chalkboard {
+            background-color: #2e5d39;
+            color: white;
+            border: 8px solid #c28d52;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 0 5px #00000033;
+        }
+            .chalkboard p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+                margin: 0;
+            }
         /* Tagline */
         #quick-intro_tagline {
             display: inline-flex;
@@ -166,9 +188,9 @@ section {
                 justify-content: center;
                 flex-wrap: wrap;
             box-sizing: border-box;
-                padding: .5em;
+                padding: .5em 0;
                 width: 100%;
-            background-color: #dbe9f4;
+                gap: .5em;
         }
             .quick-intro_tagline_separator {
                 margin: 0;
@@ -176,7 +198,11 @@ section {
             .tagline_item {
                 font-size: var(--subtitle);
                 margin: 0;
-                padding: .3em .5em;
+                border-radius: 25px;
+                padding: .75em;
+                font-family: 'Segoe UI', sans-serif;
+                font-weight: bold;
+                background-color: pink;
             }
         /**/
         /*   */
@@ -185,7 +211,6 @@ section {
     #hero_intro2 {
         flex-wrap: wrap;
             gap: 1.5em;
-            flex-direction: column;
         box-sizing: border-box;
             padding: .5em;
             width: 100%;
@@ -232,6 +257,7 @@ section {
             justify-content: center;
         box-sizing: border-box;
             height: clamp(50px, 15vw + 4vh, 70px);
+            width: fit-content;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: beige;
     }
@@ -240,7 +266,6 @@ section {
             display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: .5em;
             box-sizing: border-box;
                 width: 100%;
                 height: 100%;
@@ -248,7 +273,7 @@ section {
             background-color: #ffe2e2;
         }
             #quick-resume p {
-                font-size: clamp(16px, 2vw + 1vh, 20px);
+                font-size: clamp(12px, 2vw + 1vh, 16px);
                 margin: 0;
             }
             #quick-resume_icon-wrapper {
@@ -286,9 +311,8 @@ section {
                     align-items: center;
                     justify-content: center;
                 box-sizing: border-box;
-                    height: 95%;
-                    width: 95%;
-                    padding: 1.5em;
+                    width: clamp(25px, 10dvw + 1dvh, 75px);
+                    aspect-ratio: 1/1;
                 background-color: #f0b0b0;
                 transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease;
             }
