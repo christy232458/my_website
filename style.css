@@ -864,7 +864,7 @@ section {
             align-self: center;
         }
     }
-        .about_hobby-list {
+        #about_hobby-list {
             border-radius: 15px;
             display: flex;
                 align-items: center;

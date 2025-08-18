@@ -241,6 +241,28 @@ async function translateBio(lang) {
   bioTitle.textContent = lang == 'zh'? biographyTitle : ogBioTitle
 }
 
+const hobbyTitle = document.querySelector('#about_title')
+const ogHobbyTitle = hobbyTitle.textContent
+
+async function translateHobbies(lang) {
+  const response = await fetch('translations/about/hobbies.json')
+  const hobbies = await response.json()
+    const hobbyJSON = hobbies.hobbies
+  const hobbyList = document.getElementById('about_hobby-list')
+
+  hobbyList.innerHTML = ''
+
+  hobbyJSON.forEach(hobby => {
+    const li = document.createElement('li')
+    li.textContent = hobby[lang];
+    li.classList.add('about_hobby')
+
+    hobbyList.appendChild(li)
+  })
+  
+  hobbyTitle.textContent = lang == 'zh'? hobbies.hobbySectionTitle : ogHobbyTitle
+}
+translateHobbies(defaultLang)
 // &&   &&
 
 // ## CONTACT SECTION ##
@@ -269,5 +291,6 @@ languageToggle.addEventListener("click", function() {
   //---
   // About
   translateBio(defaultLang)
+  translateHobbies(defaultLang)
   //---
 })
