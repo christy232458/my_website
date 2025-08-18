@@ -1,204 +1,199 @@
 {
-    "experience": {
-    "title": {
-      "en": "EXPERIENCE",
-      "zh": "工作經歷"
+  "experience": 
+    {
+      "title": "工作經歷",
+      "show_duties": 
+        {
+          "en": "Show duties",
+          "zh": " 顯示職責"
+        },
+      "hide_duties": 
+        {
+          "en": "Hide duties",
+          "zh": "隱藏職責"
+        }
     },
-    "show_duties": {
-      "en": "Show duties",
-      "zh": "顯示職責"
-    },
-    "hide_duties": {
-      "en": "Hide duties",
-      "zh": "隱藏職責"
-    },
-    "see_all": {
-      "en": "See All",
-      "zh": "顯示全部"
-    }
-  },
 
-  [
-  {
-    "jobTitle": "Come True CAFE",
-    "position": "Restaurant Crew Member",
-    "startDate": {
-      "en": "June 2024",
-      "zh": "2024年6月"
-    },
-    "endDate": {
-      "en": "February 2025",
-      "zh": "2025年2月"
-    },
-    "city": {
-      "en": "Taipei City",
-      "zh": "台北市"
-    },
-    "country": {
-      "en": "Taiwan",
-      "zh": "台灣"
-    },
-    "summary": {
-      "en": "Assisted in food and beverage quality management and maintained consistency in product standards.",
-      "zh": "協助食品和飲料品質管理，保持產品標準的一致性。"
-    },
-    "duties": {
-      "en": [
-        "Assisted in food and beverage quality management and maintained consistency in product standards.",
-        "Assisted supervisor with staffing arrangements and scheduling.",
-        "Food preparation and inventory management.",
-        "Utilized my English language abilities to assist international patrons."
-      ],
-      "zh": [
-        "協助食品和飲料品質管理，保持產品標準的一致性。",
-        "協助主管安排人員和排班。",
-        "食品準備和庫存管理。",
-        "運用英語能力協助國際顧客。"
-      ]
-    }
-  },
-  {
-    "jobTitle": "Joy English School",
-    "position": "English Teacher",
-    "startDate": {
-      "en": "October 2023",
-      "zh": "2023年10月"
-    },
-    "endDate": {
-      "en": "February 2024",
-      "zh": "2024年2月"
-    },
-    "city": {
-      "en": "Yilan City",
-      "zh": "宜蘭市"
-    },
-    "country": {
-      "en": "Taiwan",
-      "zh": "台灣"
-    },
-    "summary": {
-      "en": "Taught and led English classes for students aged 5 to 12 years old.",
-      "zh": "教授並帶領5到12歲學生的英語課程。"
-    },
-    "duties": {
-      "en": [
-        "Taught and led English classes for students aged 5 to 12 years old.",
-        "Developed and organized lesson plans that aligned with school and institutional objectives as well as adapting existing materials and resources to suit students’ needs.",
-        "Used a variety of teaching methods (games, conversations, role-playing, etc.) to keep lessons engaging."
-      ],
-      "zh": [
-        "教授並帶領5到12歲學生的英語課程。",
-        "制定並組織教案，符合學校和機構目標，並調整教材以適應學生需求。",
-        "使用多種教學方法（遊戲、對話、角色扮演等）讓課程更有趣。"
-      ]
-    }
-  },
-  {
-    "jobTitle": "Yilan University",
-    "position": "English Teacher",
-    "startDate": {
-      "en": "October 2021",
-      "zh": "2021年10月"
-    },
-    "endDate": {
-      "en": "December 2021",
-      "zh": "2021年12月"
-    },
-    "city": {
-      "en": "Yilan",
-      "zh": "宜蘭"
-    },
-    "country": {
-      "en": "Taiwan",
-      "zh": "台灣"
-    },
-    "summary": {
-      "en": "Designed lesson plans for primary school-aged students.",
-      "zh": "為小學生設計教案。"
-    },
-    "duties": {
-      "en": [
-        "Designed lesson plans for primary school-aged students.",
-        "Assessed students abilities through assignments and adjusted lesson plans accordingly.",
-        "Helped students improve their English grammar, pronunciation, and sentence structures."
-      ],
-      "zh": [
-        "為小學生設計教案。",
-        "通過作業評估學生能力並相應調整教案。",
-        "幫助學生提高英語文法、發音和句型結構。"
-      ]
-    }
-  },
-  {
-    "jobTitle": "Mr. Lim’s Noodle Restaurant",
-    "position": "Restaurant Crew Member",
-    "startDate": {
-      "en": "September 2019",
-      "zh": "2019年9月"
-    },
-    "endDate": {
-      "en": "December 2020",
-      "zh": "2020年12月"
-    },
-    "city": {
-      "en": "Yilan",
-      "zh": "宜蘭"
-    },
-    "country": {
-      "en": "Taiwan",
-      "zh": "台灣"
-    },
-    "summary": {
-      "en": "Supported office manager through document coordination and customer relations.",
-      "zh": "協助辦公室經理處理文件協調和客戶關係。"
-    },
-    "duties": {
-      "en": [
-        "Supported office manager through document coordination and customer relations.",
-        "Handled payments.",
-        "Prepared and cooked food according to customer preferences."
-      ],
-      "zh": [
-        "協助辦公室經理處理文件協調和客戶關係。",
-        "處理付款事宜。",
-        "根據顧客喜好準備和烹飪食物。"
-      ]
-    }
-  },
-  {
-    "jobTitle": "TES Company",
-    "position": "Office Administrator",
-    "startDate": {
-      "en": "December 2017",
-      "zh": "2017年12月"
-    },
-    "endDate": {
-      "en": "August 2018",
-      "zh": "2018年8月"
-    },
-    "city": {
-      "en": "Penang",
-      "zh": "檳城"
-    },
-    "country": {
-      "en": "Malaysia",
-      "zh": "馬來西亞"
-    },
-    "summary": {
-      "en": "Provided excellent customer service by greeting customers, resolving complaints, serving food and answering customer inquiries.",
-      "zh": "透過迎接顧客、處理投訴、提供餐飲和回答詢問，提供優質客戶服務。"
-    },
-    "duties": {
-      "en": [
-        "Provided excellent customer service by greeting customers, resolving complaints, serving food and answering customer inquiries.",
-        "Managed office inventory."
-      ],
-      "zh": [
-        "透過迎接顧客、處理投訴、提供餐飲和回答詢問，提供優質客戶服務。",
-        "管理辦公室庫存。"
-      ]
-    }
-  }
-]
-
+  "jobs": [
+      {
+        "jobTitle": "Come True CAFE",
+        "position": "Restaurant Crew Member",
+        "startDate": {
+          "en": "June 2024",
+          "zh": "2024年6月"
+        },
+        "endDate": {
+          "en": "February 2025",
+          "zh": "2025年2月"
+        },
+        "city": {
+          "en": "Taipei City",
+          "zh": "台北市"
+        },
+        "country": {
+          "en": "Taiwan",
+          "zh": "台灣"
+        },
+        "summary": {
+          "en": "Assisted in food and beverage quality management and maintained consistency in product standards.",
+          "zh": "協助食品和飲料品質管理，保持產品標準的一致性。"
+        },
+        "duties": {
+          "en": [
+            "Assisted in food and beverage quality management and maintained consistency in product standards.",
+            "Assisted supervisor with staffing arrangements and scheduling.",
+            "Food preparation and inventory management.",
+            "Utilized my English language abilities to assist international patrons."
+          ],
+          "zh": [
+            "協助食品和飲料品質管理，保持產品標準的一致性。",
+            "協助主管安排人員和排班。",
+            "食品準備和庫存管理。",
+            "運用英語能力協助國際顧客。"
+          ]
+        }
+      },
+      {
+        "jobTitle": "Joy English School",
+        "position": "English Teacher",
+        "startDate": {
+          "en": "October 2023",
+          "zh": "2023年10月"
+        },
+        "endDate": {
+          "en": "February 2024",
+          "zh": "2024年2月"
+        },
+        "city": {
+          "en": "Yilan City",
+          "zh": "宜蘭市"
+        },
+        "country": {
+          "en": "Taiwan",
+          "zh": "台灣"
+        },
+        "summary": {
+          "en": "Taught and led English classes for students aged 5 to 12 years old.",
+          "zh": "教授並帶領5到12歲學生的英語課程。"
+        },
+        "duties": {
+          "en": [
+            "Taught and led English classes for students aged 5 to 12 years old.",
+            "Developed and organized lesson plans that aligned with school and institutional objectives as well as adapting existing materials and resources to suit students’ needs.",
+            "Used a variety of teaching methods (games, conversations, role-playing, etc.) to keep lessons engaging."
+          ],
+          "zh": [
+            "教授並帶領5到12歲學生的英語課程。",
+            "制定並組織教案，符合學校和機構目標，並調整教材以適應學生需求。",
+            "使用多種教學方法（遊戲、對話、角色扮演等）讓課程更有趣。"
+          ]
+        }
+      },
+      {
+        "jobTitle": "Yilan University",
+        "position": "English Teacher",
+        "startDate": {
+          "en": "October 2021",
+          "zh": "2021年10月"
+        },
+        "endDate": {
+          "en": "December 2021",
+          "zh": "2021年12月"
+        },
+        "city": {
+          "en": "Yilan City",
+          "zh": "宜蘭"
+        },
+        "country": {
+          "en": "Taiwan",
+          "zh": "台灣"
+        },
+        "summary": {
+          "en": "Designed lesson plans for primary school-aged students.",
+          "zh": "為小學生設計教案。"
+        },
+        "duties": {
+          "en": [
+            "Designed lesson plans for primary school-aged students.",
+            "Assessed students abilities through assignments and adjusted lesson plans accordingly.",
+            "Helped students improve their English grammar, pronunciation, and sentence structures."
+          ],
+          "zh": [
+            "為小學生設計教案。",
+            "通過作業評估學生能力並相應調整教案。",
+            "幫助學生提高英語文法、發音和句型結構。"
+          ]
+        }
+      },
+      {
+        "jobTitle": "Mr. Lim’s Noodle Restaurant",
+        "position": "Restaurant Crew Member",
+        "startDate": {
+          "en": "September 2019",
+          "zh": "2019年9月"
+        },
+        "endDate": {
+          "en": "December 2020",
+          "zh": "2020年12月"
+        },
+        "city": {
+          "en": "Yilan City",
+          "zh": "宜蘭"
+        },
+        "country": {
+          "en": "Taiwan",
+          "zh": "台灣"
+        },
+        "summary": {
+          "en": "Supported office manager through document coordination and customer relations.",
+          "zh": "協助辦公室經理處理文件協調和客戶關係。"
+        },
+        "duties": {
+          "en": [
+            "Supported office manager through document coordination and customer relations.",
+            "Handled payments.",
+            "Prepared and cooked food according to customer preferences."
+          ],
+          "zh": [
+            "協助辦公室經理處理文件協調和客戶關係。",
+            "處理付款事宜。",
+            "根據顧客喜好準備和烹飪食物。"
+          ]
+        }
+      },
+      {
+        "jobTitle": "TES Company",
+        "position": "Office Administrator",
+        "startDate": {
+          "en": "December 2017",
+          "zh": "2017年12月"
+        },
+        "endDate": {
+          "en": "August 2018",
+          "zh": "2018年8月"
+        },
+        "city": {
+          "en": "Penang",
+          "zh": "檳城"
+        },
+        "country": {
+          "en": "Malaysia",
+          "zh": "馬來西亞"
+        },
+        "summary": {
+          "en": "Provided excellent customer service by greeting customers, resolving complaints, serving food and answering customer inquiries.",
+          "zh": "透過迎接顧客、處理投訴、提供餐飲和回答詢問，提供優質客戶服務。"
+        },
+        "duties": {
+          "en": [
+            "Provided excellent customer service by greeting customers, resolving complaints, serving food and answering customer inquiries.",
+            "Managed office inventory."
+          ],
+          "zh": [
+            "透過迎接顧客、處理投訴、提供餐飲和回答詢問，提供優質客戶服務。",
+            "管理辦公室庫存。"
+          ]
+        }
+      }
+    ]
 }

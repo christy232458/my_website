@@ -47,7 +47,63 @@ async function translateHero(lang) {
 
 
 // ** EXPERIENCE SECTION **
+const experienceWrapper = document.getElementById('experience-section');
+const sectionTitle = experienceWrapper.querySelector('#experience-title');
+const ogSectionTitle = sectionTitle.textContent;
 
+async function translateExperience(lang) {
+  const response = await fetch('translations/experience.json');
+  const jobs = await response.json();
+  const jobsArray = jobs.jobs; // just use the jobs array
+
+  const experienceTemplate = document.querySelector('#exp-template');
+  const wrapper = document.querySelector('.exp-container');
+  wrapper.innerHTML = ''; // clear previous content
+
+  jobsArray.forEach(job => {
+    const clone = experienceTemplate.content.cloneNode(true);
+
+    // elements in the clone
+    const dutyButton = clone.querySelector('.exp_see-duties-button');
+    const dutyList = clone.querySelector('.exp_duties');
+      dutyList.innerHTML = ''
+      dutyList.style.display = 'none'; // hide duties by default
+
+    clone.querySelector('.exp_title').textContent = job.jobTitle;
+    clone.querySelector('.exp_position').textContent = job.position;
+    clone.querySelector('.exp_start-date').textContent = job.startDate[lang];
+    clone.querySelector('.exp_end-date').textContent = job.endDate[lang];
+    clone.querySelector('.exp_city').textContent = job.city[lang];
+    clone.querySelector('.exp_country').textContent = job.country[lang];
+    clone.querySelector('.exp_summary').textContent = job.summary[lang];
+
+    job.duties[lang].forEach(dutyText => {
+      const li = document.createElement('li');
+      li.classList.add('exp_duty');
+      li.textContent = dutyText;
+      dutyList.appendChild(li);
+    });
+
+    // button toggle for this clone only
+    dutyButton.textContent = jobs.experience.show_duties[lang];
+    dutyButton.addEventListener('click', function() {
+      if (dutyList.style.display === 'none') {
+        dutyList.style.display = 'flex';
+        dutyButton.textContent = jobs.experience.hide_duties[lang];
+      } else {
+        dutyList.style.display = 'none';
+        dutyButton.textContent = jobs.experience.show_duties[lang];
+      }
+    });
+
+    wrapper.appendChild(clone);
+  });
+
+  // update section title
+  sectionTitle.textContent = lang === 'zh' ? jobs.experience.title : ogSectionTitle;
+}
+// call translation
+translateExperience(defaultLang);
 // **   **
 
 
@@ -82,4 +138,5 @@ languageToggle.addEventListener("click", function() {
 
   changePageTitle(defaultLang);
   translateHero(defaultLang)
+  translateExperience(defaultLang)
 })
