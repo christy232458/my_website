@@ -195,8 +195,27 @@ async function translateCerts(lang) {
   const certsWrapper = document.querySelector('.certifications-container')
   certsWrapper.innerHTML = ''
 
+  certs.forEach(cert => {
+    const clone = template.content.cloneNode(true)
+
+    clone.querySelector('.cert_name').textContent = cert.name[lang]
+    // handle file link
+    const link = clone.querySelector('a'); // make sure your template has <a> inside
+      if (cert.file && link) {
+        link.href = cert.file;
+        link.style.pointerEvents = 'auto'; // enable click
+        link.style.opacity = '1';
+      } else if (link) {
+        link.removeAttribute('href'); // disable if no file
+        link.style.pointerEvents = 'none';
+      }
+
+    certsWrapper.appendChild(clone)
+  })
+
   certSectionTitle.textContent = lang == 'zh'? certs.certSectionTitle : ogCertTitle
 }
+translateCerts(defaultLang)
 // ++   ++
 
 
@@ -226,5 +245,6 @@ languageToggle.addEventListener("click", function() {
   // Skills
   translateSkills(defaultLang)
   translateLanguage(defaultLang)
+  translateCerts(defaultLang)
   //---
 })
