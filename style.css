@@ -182,7 +182,7 @@ section {
             }
         }
             .chalkboard p {
-                font-size: clamp(18px, 1.2dvh + 1.2dvw, 36px);
+                font-size: clamp(18px, 2dvh + 1.5dvw, 36px);
                 margin: 0;
                 height: 100%;
             }
@@ -670,7 +670,7 @@ section {
         display: flex;
             align-items: center;
             justify-content: flex-start;
-        overflow-y: auto;
+        overflow-x: auto;
     }
         .language_title {
             border-radius: 15px;
@@ -694,26 +694,30 @@ section {
             }
         }
             .language {
-                    border-radius: 15px;
-                display: inline-flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    gap: .5em;
-                box-sizing: border-box;
-                    padding: 1em;
+                display: flex; /* column alignment */
+                flex-direction: column;
+                align-items: center;
+                gap: 1em;
+                justify-content: center;
+                flex: 1 1 200px; /* equal width items, min width 150px */
+                min-width: 150px; /* optional max width */
+                aspect-ratio: 2/1;
+                border-radius: 15px;
+                padding: 1em;
                 background-color: #f0908a;
+                box-sizing: border-box;
             }
                 .language_name {
                     font-style: italic;
+                    text-align: center;
                 }
                 .language_progress {
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: clamp(30px, 12dvw + 1dvh, 100px);
-                    height: clamp(30px, 12dvw + 1dvh, 100px);
+                    width: clamp(30px, 12dvw + 3dvh, 100px);
+                    aspect-ratio: 1/1;
                     --progress: 0; /* default percentage */
                     --fluency: black; /* default color */
                     background: conic-gradient(
@@ -983,11 +987,6 @@ section {
                 margin-top: .5em;
                 background-color: #ce9af8;
                 width: 100%;
-
-                @media (min-width: 950px) {
-                    flex-direction: row;
-                    align-items: stretch;
-                }
             }
                 .about_reference {
                     border-radius: 15px 15px 0 0;
