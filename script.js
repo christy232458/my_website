@@ -220,6 +220,26 @@ translateCerts(defaultLang)
 
 
 // && ABOUT SECTION &&
+const bio = document.querySelectorAll('.about_bio p')
+const bioTitle = document.querySelector('#about_title')
+const ogBioTitle = bioTitle.textContent;
+const ogBio = Array.from(bio).map(p => p.innerHTML); // use innerHTML to preserve links)
+
+async function translateBio(lang) {
+  const response = await fetch('translations/about/about.json')
+  const biography = await response.json()
+    const biographyTitle = biography.aboutSectionTitle
+
+  bio.forEach((pEl, index) => {
+    if (lang === 'zh') {
+      pEl.innerHTML = biography.about.bio[index]?.zh || ogBio[index];
+    } else {
+      pEl.innerHTML = ogBio[index];
+    }
+  });
+  
+  bioTitle.textContent = lang == 'zh'? biographyTitle : ogBioTitle
+}
 
 // &&   &&
 
@@ -246,5 +266,8 @@ languageToggle.addEventListener("click", function() {
   translateSkills(defaultLang)
   translateLanguage(defaultLang)
   translateCerts(defaultLang)
+  //---
+  // About
+  translateBio(defaultLang)
   //---
 })
