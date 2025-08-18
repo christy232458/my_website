@@ -350,456 +350,12 @@ section {
     /**/
 /* ||   || */
 
-
-/* ** EXPERIENCE SECTION ** */
-#experience-section {
-   padding: 3rem 1rem;
-   background: linear-gradient(180deg, #fad9b0 0%, #ce9af8 100%);
-}
-    #experience-section h2 {
-        font-size: var(--medium-header);
-        padding: .5em;
-        width: fit-content;
-        border-radius: 15px;
-        background-color: #b5f1e9;
-    }
-        .exp-container {
-            display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 1em;
-            padding: .5em;
-
-            @media (min-width: 950px) {
-                width: 75%;
-                justify-self: center;
-                margin-bottom: .5em;
-            }
-        }
-            /* Experience  */
-            .exp_wrapper {
-                border-radius: 25px;
-                box-sizing: border-box;
-                    padding: .5em;
-                    width: fit-content;
-                display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    gap: .5em;
-                background-color: #df888b;
-
-                @media (min-width: 950px) {
-                    
-                }
-            }
-                .exp_job-description-wrapper {
-                    border-radius: 15px;
-                    display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: baseline;
-                        gap: .5em;
-                    box-sizing: border-box;
-                        padding: 0;
-                }
-                    .exp_titlePosition-wrapper {
-                            border-radius: 15px;
-                        display: flex;
-                            align-items: flex-start;
-                            flex-direction: column;
-                        box-sizing: border-box;
-                            padding: .5em 1em;
-                            width: 100%;
-                        background-color: #f4d6b7;
-
-                        @media (min-width: 600px) {
-                            flex-direction: row;
-                                align-items: center;
-                                justify-content: space-around;
-                                flex-wrap: wrap;
-                        }
-                    }
-                        .exp_title {
-                            border-radius: 15px;
-                            display: inline-flex;
-                            font-size: var(--small-header);
-                                font-weight: 600;
-                            box-sizing: border-box;
-                                padding: .5em;
-                                margin: .3em 0;
-                            background-color: #d4b8ff;
-                        }
-                        .exp_position {
-                            border-radius: 15px;
-                            box-sizing: border-box;
-                                margin: .3em 0;
-                                padding: .5em;
-                            background-color: #b3d8ff;
-                            font-size: var(--small-subtitle);
-                        }
-                            .exp_info-wrapper {
-                                    border-radius: 15px;
-                                display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    flex-direction: column;
-                            }
-                                .exp_datePlace-wrapper, .exp_summary-wrapper {
-                                    box-sizing: border-box;
-                                        width: 100%;
-                                }
-                                    .exp_datePlace-wrapper {
-                                        border: 3px solid silver;
-                                            border-radius: 15px 15px 0 0;
-                                        font-size: var(--small-subtitle);
-                                        display: flex;
-                                            align-items: center;
-                                            justify-content: space-around;
-                                        background-color: #d9d9d9;
-                                    }
-                                        .exp_date, .exp_place {
-                                            display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                flex-wrap: wrap;
-                                            box-sizing: border-box;
-                                                padding: .5em;
-                                                margin: .5em;
-                                            font-size: var(--small-subtitle);
-                                        }
-                                            .exp_date {
-                                                border-radius: 999px;
-                                                background-color: #b2a57a; /* slightly darker olive-beige for better contrast */
-                                                color: #490402; /* very dark olive/blackish text for max readability */
-                                            }
-                                                .exp_start-date, .exp_end-date {
-                                                    
-                                                }
-                                            .exp_place {
-                                                border-radius: 15px;
-                                                background-color: #fff8b3; /* soft buttery yellow, warm and gentle */
-                                                color: #12007a; /* deeper mustard for text contrast */
-                                            }
-                                    .exp_summary-wrapper {
-                                            border-radius: 0 0 15px 15px;
-                                        display: flex;
-                                            align-items: flex-start;
-                                            justify-content: flex-start;
-                                            text-align: justify;
-                                            flex-wrap: wrap;
-                                        padding: .5em 1em;
-                                        font-size: var(--paragraph);
-                                        background-color: #ddd4aa;
-                                    }
-                    /* See duties button */
-                    .exp_see-duties-button {
-                        border: 3px solid white;
-                            border-radius: 5px;
-                        background-color: rgb(243, 71, 71);
-                        box-sizing: border-box;
-                            padding: .3em;
-                    }
-                    /**/
-                    .exp_duties {
-                        border: 3px solid #9e5f3c; /* deep clay brown that matches your palette */
-                            border-radius: 25px;
-                        display: none;
-                            align-items: flex-start;
-                            justify-content: center;
-                            flex-direction: column;
-                        font-size: var(--paragraph);
-                        box-sizing: border-box;
-                            padding: .5em;
-                            margin: 0;
-                            width: 100%;
-                        list-style-type: none;
-                        text-align: justify;
-                        background-color: #f0e2c6; /* warm, parchment-like cream with a soft sand undertone */
-                        color: #3b1f0f; /* rich espresso text for legibility */
-                    }
-                        .exp_duties_separator {
-                            height: 1px;
-                        }
-                        .exp_duty {
-                                border-radius: 15px;
-                            box-sizing: border-box;
-                                padding: .3em;
-                        }
-    .exp_see-all-button {
-        border: 3px solid black;
-            border-radius: 10px;
-        font-size: var(--small-subtitle);
-        display: flex;
-            align-self: center;
-            justify-self: center;
-        box-sizing: border-box;
-            padding: .5em;
-    }
-    /**/    
-/* **   ** */
-
-
-/* ~~ EDUCATION SECTION ~~ */
-#education-section {
-    display: flex;
-        flex-direction: column;
-    padding: 3rem 1rem;
-    background: linear-gradient(180deg, #ce9af8 0%, #b4fa8c 100%);
-}
-    #education-section h2 {
-        font-size: var(--medium-header);
-        padding: .5em;
-        width: fit-content;
-        border-radius: 15px;
-        background-color: #f1ebb5;
-    }
-    .education_container {
-        border-radius: 20px;
-        display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 1em;
-            flex-wrap: wrap;
-
-        @media (min-width: 650px) {
-            flex-direction: row;
-        }
-    }
-        .education_wrapper {
-            outline: 2px solid black;
-                border-radius: 20px;
-            display: flex;
-                flex-direction: column;
-            box-sizing: border-box;
-            background-color: #f8a8eb;
-
-            @media (min-width: 950px) {
-                flex-direction: row;
-            }
-        }
-            .education_wrapper div {
-                display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: .5em;
-                box-sizing: border-box;
-                    padding: .5em;
-            }
-            .education_date span {
-                box-sizing: border-box;
-                    padding: .1em;
-            }
-                .education_intro-wrapper {
-                    display: flex;
-                        align-items: center;
-                        justify-content: flex-start;
-                    
-                    @media (min-width: 950px) {
-                        flex-direction: column;
-                    }
-                }
-                    .education_school {
-                        border-radius: 15px;
-                        display: inline-flex;
-                        width: fit-content;
-                        background-color: rgb(243, 91, 91);
-                        font-weight: 600;
-                        font-size: clamp(15px, 3dvw + 1dvh, 20px);
-                    }
-                    .education_location {
-                        border-radius: 15px;
-                        background-color: rgb(253, 208, 109);
-                        font-style: italic;
-                        text-decoration: underline;
-                        width: fit-content;
-
-                        @media (min-width: 950px) {
-                            flex-direction: row;
-                                align-self: flex-start;
-                        }
-                    }
-                .education_info-wrapper {
-                    border-radius: 0 0 15px 15px;
-                    display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        gap: .5em;
-                    box-sizing: border-box;
-                        padding: .5em;
-                    background-color: rgb(247, 237, 237);
-
-                    @media (min-width: 950px) {
-                        border-radius: 0 15px 15px 0;
-                        flex-direction: column;
-                    }
-                }
-                    .education_date {
-                        border-radius: 15px;
-                        background-color: rgb(109, 228, 236);
-                    }
-                    .education_degree {
-                        border-radius: 15px;
-                        background-color: rgb(218, 142, 253);
-                    }
-                        .education_icon {
-                            max-width: clamp(15px, 4dvw + 1dvh, 25px);
-                            max-height: clamp(15px, 4dvw + 1dvh, 25px);;
-                        }
-/* ~~   ~~ */
-
-
-/* ++ SKILLS SECTION ++ */
-#skills-section {
-    display: flex;
-        flex-direction: column;
-    padding: 3rem 1rem;
-    background: linear-gradient(180deg, #b4fa8c 0%, #f0fd7b 100%);
-}
-    #skills-section h2 {
-        font-size: var(--medium-header);
-        padding: .5em;
-        width: fit-content;
-        border-radius: 15px;
-        background-color: #f1d0b5;
-    }
-    /* Languages */
-    .language-container {
-        border-radius: 15px;
-        display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        overflow-x: auto;
-    }
-        .language_title {
-            border-radius: 15px;
-            box-sizing: border-box;
-                padding: .3em;
-            display: inline-flex;
-                align-self: flex-start;
-        }
-        .languages_wrapper {
-            border-radius: 20px;
-            display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: .5em;
-            box-sizing: border-box;
-                padding: .5em;
-
-            @media (min-width: 950px) {
-                width: 75%;
-                justify-self: center;
-            }
-        }
-            .language {
-                display: flex; /* column alignment */
-                flex-direction: column;
-                align-items: center;
-                gap: 1em;
-                justify-content: center;
-                flex: 1 1 200px; /* equal width items, min width 150px */
-                min-width: 150px; /* optional max width */
-                aspect-ratio: 2/1;
-                border-radius: 15px;
-                padding: 1em;
-                background-color: #f0908a;
-                box-sizing: border-box;
-            }
-                .language_name {
-                    font-style: italic;
-                    text-align: center;
-                }
-                .language_progress {
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: clamp(30px, 12dvw + 3dvh, 100px);
-                    aspect-ratio: 1/1;
-                    --progress: 0; /* default percentage */
-                    --fluency: black; /* default color */
-                    background: conic-gradient(
-                        var(--fluency) calc(var(--progress) * 1%),
-                        transparent calc(var(--progress) * 1%)
-                    );
-                    transition: background 0.5s ease; /* smooth update */
-                }
-                    .language_symbol {
-                        border-radius: 50%;
-                        box-sizing: border-box;
-                            max-width: 90%;
-                            max-height: 90%;
-                    }
-                .language_fluency {
-                    border-radius: 15px;
-                    display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    box-sizing: border-box;
-                        padding: .5em;
-                    font-weight: 600;
-                    background-color: #f2f8dd;
-                }
-    /**/
-    /* Certifications */
-    .certifications-container {
-        border-radius: 15px;
-        display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-        overflow-y: auto;
-    } 
-        .cert_title {
-           border-radius: 15px;
-           box-sizing: border-box;
-                padding: .3em;
-           display: inline-flex;
-                align-self: flex-start;
-        }
-            .cert_wrapper {
-                border-radius: 15px;
-                display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    flex-direction: column;
-                    gap: .5em;
-                padding: .5em; 
-                overflow-y: auto;
-            }
-                .certs {
-                    border-radius: 15px;
-                    display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
-                        gap: .5em;
-                    width: 100%;
-                    padding: .5em;
-                    background-color: #9afada;
-                }
-                    .cert_name {
-                        border-radius: 10px;
-                        display: flex;
-                            flex-wrap: wrap;
-                            align-items: center;
-                            justify-content: center;
-                        padding: .5em;
-                        font-size: clamp(15px, 3dvw + 1dvh, 25px);
-                        background-color: #3aebb0;
-                    }
-    /**/ 
-/* ++   ++ */
-
-
 /* && ABOUT SECTION && */
 #about-section {
     display: flex;
         flex-direction: column;
     padding: 3rem 1rem;
-    background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
+    background: linear-gradient(180deg, #fad9b0 0%, #ce9af8 100%);
 }
     #about-section h2 {
         font-size: var(--medium-header);
@@ -1033,6 +589,448 @@ section {
     /**/
 /* &&   && */
 
+/* ** EXPERIENCE SECTION ** */
+#experience-section {
+   padding: 3rem 1rem;
+   background: linear-gradient(180deg, #ce9af8 0%, #b4fa8c 100%);
+}
+    #experience-section h2 {
+        font-size: var(--medium-header);
+        padding: .5em;
+        width: fit-content;
+        border-radius: 15px;
+        background-color: #b5f1e9;
+    }
+        .exp-container {
+            display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1em;
+            padding: .5em;
+
+            @media (min-width: 950px) {
+                width: 75%;
+                justify-self: center;
+                margin-bottom: .5em;
+            }
+        }
+            /* Experience  */
+            .exp_wrapper {
+                border-radius: 25px;
+                box-sizing: border-box;
+                    padding: .5em;
+                    width: fit-content;
+                display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: .5em;
+                background-color: #df888b;
+
+                @media (min-width: 950px) {
+                    
+                }
+            }
+                .exp_job-description-wrapper {
+                    border-radius: 15px;
+                    display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: baseline;
+                        gap: .5em;
+                    box-sizing: border-box;
+                        padding: 0;
+                }
+                    .exp_titlePosition-wrapper {
+                            border-radius: 15px;
+                        display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+                        box-sizing: border-box;
+                            padding: .5em 1em;
+                            width: 100%;
+                        background-color: #f4d6b7;
+
+                        @media (min-width: 600px) {
+                            flex-direction: row;
+                                align-items: center;
+                                justify-content: space-around;
+                                flex-wrap: wrap;
+                        }
+                    }
+                        .exp_title {
+                            border-radius: 15px;
+                            display: inline-flex;
+                            font-size: var(--small-header);
+                                font-weight: 600;
+                            box-sizing: border-box;
+                                padding: .5em;
+                                margin: .3em 0;
+                            background-color: #d4b8ff;
+                        }
+                        .exp_position {
+                            border-radius: 15px;
+                            box-sizing: border-box;
+                                margin: .3em 0;
+                                padding: .5em;
+                            background-color: #b3d8ff;
+                            font-size: var(--small-subtitle);
+                        }
+                            .exp_info-wrapper {
+                                    border-radius: 15px;
+                                display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                            }
+                                .exp_datePlace-wrapper, .exp_summary-wrapper {
+                                    box-sizing: border-box;
+                                        width: 100%;
+                                }
+                                    .exp_datePlace-wrapper {
+                                        border: 3px solid silver;
+                                            border-radius: 15px 15px 0 0;
+                                        font-size: var(--small-subtitle);
+                                        display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        background-color: #d9d9d9;
+                                    }
+                                        .exp_date, .exp_place {
+                                            display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                flex-wrap: wrap;
+                                            box-sizing: border-box;
+                                                padding: .5em;
+                                                margin: .5em;
+                                            font-size: var(--small-subtitle);
+                                        }
+                                            .exp_date {
+                                                border-radius: 999px;
+                                                background-color: #b2a57a; /* slightly darker olive-beige for better contrast */
+                                                color: #490402; /* very dark olive/blackish text for max readability */
+                                            }
+                                                .exp_start-date, .exp_end-date {
+                                                    
+                                                }
+                                            .exp_place {
+                                                border-radius: 15px;
+                                                background-color: #fff8b3; /* soft buttery yellow, warm and gentle */
+                                                color: #12007a; /* deeper mustard for text contrast */
+                                            }
+                                    .exp_summary-wrapper {
+                                            border-radius: 0 0 15px 15px;
+                                        display: flex;
+                                            align-items: flex-start;
+                                            justify-content: flex-start;
+                                            text-align: justify;
+                                            flex-wrap: wrap;
+                                        padding: .5em 1em;
+                                        font-size: var(--paragraph);
+                                        background-color: #ddd4aa;
+                                    }
+                    /* See duties button */
+                    .exp_see-duties-button {
+                        border: 3px solid white;
+                            border-radius: 5px;
+                        background-color: rgb(243, 71, 71);
+                        box-sizing: border-box;
+                            padding: .3em;
+                    }
+                    /**/
+                    .exp_duties {
+                        border: 3px solid #9e5f3c; /* deep clay brown that matches your palette */
+                            border-radius: 25px;
+                        display: none;
+                            align-items: flex-start;
+                            justify-content: center;
+                            flex-direction: column;
+                        font-size: var(--paragraph);
+                        box-sizing: border-box;
+                            padding: .5em;
+                            margin: 0;
+                            width: 100%;
+                        list-style-type: none;
+                        text-align: justify;
+                        background-color: #f0e2c6; /* warm, parchment-like cream with a soft sand undertone */
+                        color: #3b1f0f; /* rich espresso text for legibility */
+                    }
+                        .exp_duties_separator {
+                            height: 1px;
+                        }
+                        .exp_duty {
+                                border-radius: 15px;
+                            box-sizing: border-box;
+                                padding: .3em;
+                        }
+    .exp_see-all-button {
+        border: 3px solid black;
+            border-radius: 10px;
+        font-size: var(--small-subtitle);
+        display: flex;
+            align-self: center;
+            justify-self: center;
+        box-sizing: border-box;
+            padding: .5em;
+    }
+    /**/    
+/* **   ** */
+
+
+/* ~~ EDUCATION SECTION ~~ */
+#education-section {
+    display: flex;
+        flex-direction: column;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #b4fa8c 0%, #f0fd7b 100%);
+}
+    #education-section h2 {
+        font-size: var(--medium-header);
+        padding: .5em;
+        width: fit-content;
+        border-radius: 15px;
+        background-color: #f1ebb5;
+    }
+    .education_container {
+        border-radius: 20px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1em;
+            flex-wrap: wrap;
+
+        @media (min-width: 650px) {
+            flex-direction: row;
+        }
+    }
+        .education_wrapper {
+            outline: 2px solid black;
+                border-radius: 20px;
+            display: flex;
+                flex-direction: column;
+            box-sizing: border-box;
+            background-color: #f8a8eb;
+
+            @media (min-width: 950px) {
+                flex-direction: row;
+            }
+        }
+            .education_wrapper div {
+                display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: .5em;
+                box-sizing: border-box;
+                    padding: .5em;
+            }
+            .education_date span {
+                box-sizing: border-box;
+                    padding: .1em;
+            }
+                .education_intro-wrapper {
+                    display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                    
+                    @media (min-width: 950px) {
+                        flex-direction: column;
+                    }
+                }
+                    .education_school {
+                        border-radius: 15px;
+                        display: inline-flex;
+                        width: fit-content;
+                        background-color: rgb(243, 91, 91);
+                        font-weight: 600;
+                        font-size: clamp(15px, 3dvw + 1dvh, 20px);
+                    }
+                    .education_location {
+                        border-radius: 15px;
+                        background-color: rgb(253, 208, 109);
+                        font-style: italic;
+                        text-decoration: underline;
+                        width: fit-content;
+
+                        @media (min-width: 950px) {
+                            flex-direction: row;
+                                align-self: flex-start;
+                        }
+                    }
+                .education_info-wrapper {
+                    border-radius: 0 0 15px 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        gap: .5em;
+                    box-sizing: border-box;
+                        padding: .5em;
+                    background-color: rgb(247, 237, 237);
+
+                    @media (min-width: 950px) {
+                        border-radius: 0 15px 15px 0;
+                        flex-direction: column;
+                    }
+                }
+                    .education_date {
+                        border-radius: 15px;
+                        background-color: rgb(109, 228, 236);
+                    }
+                    .education_degree {
+                        border-radius: 15px;
+                        background-color: rgb(218, 142, 253);
+                    }
+                        .education_icon {
+                            max-width: clamp(15px, 4dvw + 1dvh, 25px);
+                            max-height: clamp(15px, 4dvw + 1dvh, 25px);;
+                        }
+/* ~~   ~~ */
+
+
+/* ++ SKILLS SECTION ++ */
+#skills-section {
+    display: flex;
+        flex-direction: column;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
+}
+    #skills-section h2 {
+        font-size: var(--medium-header);
+        padding: .5em;
+        width: fit-content;
+        border-radius: 15px;
+        background-color: #f1d0b5;
+    }
+    /* Languages */
+    .language-container {
+        border-radius: 15px;
+        display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        overflow-x: auto;
+    }
+        .language_title {
+            border-radius: 15px;
+            box-sizing: border-box;
+                padding: .3em;
+            display: inline-flex;
+                align-self: flex-start;
+        }
+        .languages_wrapper {
+            border-radius: 20px;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5em;
+            box-sizing: border-box;
+                padding: .5em;
+
+            @media (min-width: 950px) {
+                width: 75%;
+                justify-self: center;
+            }
+        }
+            .language {
+                display: flex; /* column alignment */
+                flex-direction: column;
+                align-items: center;
+                gap: 1em;
+                justify-content: center;
+                flex: 1 1 200px; /* equal width items, min width 150px */
+                min-width: 150px; /* optional max width */
+                aspect-ratio: 2/1;
+                border-radius: 15px;
+                padding: 1em;
+                background-color: #f0908a;
+                box-sizing: border-box;
+            }
+                .language_name {
+                    font-style: italic;
+                    text-align: center;
+                }
+                .language_progress {
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: clamp(30px, 12dvw + 3dvh, 100px);
+                    aspect-ratio: 1/1;
+                    --progress: 0; /* default percentage */
+                    --fluency: black; /* default color */
+                    background: conic-gradient(
+                        var(--fluency) calc(var(--progress) * 1%),
+                        transparent calc(var(--progress) * 1%)
+                    );
+                    transition: background 0.5s ease; /* smooth update */
+                }
+                    .language_symbol {
+                        border-radius: 50%;
+                        box-sizing: border-box;
+                            max-width: 90%;
+                            max-height: 90%;
+                    }
+                .language_fluency {
+                    border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    box-sizing: border-box;
+                        padding: .5em;
+                    font-weight: 600;
+                    background-color: #f2f8dd;
+                }
+    /**/
+    /* Certifications */
+    .certifications-container {
+        border-radius: 15px;
+        display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        overflow-y: auto;
+    } 
+        .cert_title {
+           border-radius: 15px;
+           box-sizing: border-box;
+                padding: .3em;
+           display: inline-flex;
+                align-self: flex-start;
+        }
+            .cert_wrapper {
+                border-radius: 15px;
+                display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: .5em;
+                padding: .5em; 
+                overflow-y: auto;
+            }
+                .certs {
+                    border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: .5em;
+                    width: 100%;
+                    padding: .5em;
+                    background-color: #9afada;
+                }
+                    .cert_name {
+                        border-radius: 10px;
+                        display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                        padding: .5em;
+                        font-size: clamp(15px, 3dvw + 1dvh, 25px);
+                        background-color: #3aebb0;
+                    }
+    /**/ 
+/* ++   ++ */
+
 
 /* ## CONTACT SECTION ## */
 #contact-section {
@@ -1040,7 +1038,7 @@ section {
         flex-direction: column;
         gap: 1em;
     padding: 3rem 1rem;
-    background-color: conic-gradient(#ffd6a5, #f09d9d);
+    background: linear-gradient(#ffd6a5 0%, #f09d9d 100%);
 
     @media (min-width: 950px) {
         flex-direction: row;
