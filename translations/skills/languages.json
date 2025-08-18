@@ -1,0 +1,69 @@
+{
+    "languages": [
+        {
+        "name": {
+            "en": "Chinese Mandarin",
+            "zh": "中文（普通話）"
+        },
+        "fluency": {
+            "en": "Native",
+            "zh": "母語"
+        },
+        "percent": 100,
+        "image": "images/logos_icons/chinese_mandarin.png"
+        },
+        {
+        "name": {
+            "en": "Cantonese",
+            "zh": "粵語"
+        },
+        "fluency": {
+            "en": "Native",
+            "zh": "母語"
+        },
+        "percent": 100,
+        "image": "images/logos_icons/cantonese.png"
+        },
+
+        {
+        "name": {
+            "en": "English",
+            "zh": "英語"
+        },
+        "fluency": {
+            "en": "Fluent",
+            "zh": "流利"
+        },
+        "percent": 95,
+        "image": "images/logos_icons/english.png"
+        },
+
+        {
+        "name": {
+            "en": "Hokkien/Minnan",
+            "zh": "福建話／閩南語"
+        },
+        "fluency": {
+            "en": "Proficient",
+            "zh": "熟練"
+        },
+        "percent": 80,
+        "image": "images/logos_icons/hokkien_minnan.png"
+        },
+
+        {
+        "name": {
+            "en": "Malay",
+            "zh": "馬來語"
+        },
+        "fluency": {
+            "en": "Conversational",
+            "zh": "會話程度"
+        },
+        "percent": 50,
+        "image": "images/logos_icons/malay.png"
+        }
+    ],
+
+    "langSectionTitle": "語言"
+}

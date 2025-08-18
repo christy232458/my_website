@@ -133,8 +133,70 @@ translateEducation(defaultLang);
 // ~~   ~~
 
 
-// ++ SKILLS AND CERTIFICATIONS SECTION ++
+// ++ SKILLS SECTION ++
+const skillsSectionTitle = document.querySelector('#skills-title')
+const ogSkillsTitle = skillsSectionTitle.textContent;
 
+async function translateSkills(lang) {
+  const response = await fetch('translations/skills/skills.json');
+  const title = await response.json();
+
+  skillsSectionTitle.textContent = lang == 'zh'? title.skillsSectionTitle : ogSkillsTitle
+}
+
+const languageSectionTitle = document.querySelector('.language_title')
+const ogLangTitle = languageSectionTitle.textContent;
+
+async function translateLanguage(lang) {
+  const response = await fetch('translations/skills/languages.json');
+  const languages = await response.json();
+    const langs = languages.languages
+  const template = document.querySelector('#skills-template_language')
+
+  const langWrapper = document.querySelector('.language-container')
+  langWrapper.innerHTML = ''
+
+  langs.forEach(language => {
+    const clone = template.content.cloneNode(true)
+
+    clone.querySelector('.language_name').textContent = language.name[lang]
+    clone.querySelector('.language_fluency').textContent = language.fluency[lang]
+    clone.querySelector('.language_symbol').src = language.image
+    const progress = clone.querySelector('.language_progress');
+
+    // Set CSS variables
+    progress.style.setProperty('--progress', language.percent); // e.g., 80
+    let fluencyColor = 'red';
+    if (language.percent >= 90) fluencyColor = 'green';
+    else if (language.percent >= 80) fluencyColor = 'yellow';
+    else if (language.percent >= 70) fluencyColor = 'orange';
+    else if (language.percent >= 60) fluencyColor = 'purple';
+    else if (language.percent >= 50) fluencyColor = 'blue';
+
+    // Set CSS variable for color
+    progress.style.setProperty('--fluency', fluencyColor);
+
+    langWrapper.appendChild(clone)
+  })
+
+  languageSectionTitle.textContent = lang == 'zh'? languages.langSectionTitle : ogLangTitle
+}
+translateLanguage(defaultLang);
+
+const certSectionTitle = document.querySelector('.cert_title')
+const ogCertTitle = certSectionTitle.textContent;
+
+async function translateCerts(lang) {
+  const response = await fetch('translations/skills/certifications.json');
+  const certifications = await response.json();
+    const certs = certifications.certifications
+  const template = document.querySelector('#skills-template_certs')
+
+  const certsWrapper = document.querySelector('.certifications-container')
+  certsWrapper.innerHTML = ''
+
+  certSectionTitle.textContent = lang == 'zh'? certs.certSectionTitle : ogCertTitle
+}
 // ++   ++
 
 
@@ -161,4 +223,8 @@ languageToggle.addEventListener("click", function() {
   translateHero(defaultLang)
   translateExperience(defaultLang)
   translateEducation(defaultLang)
+  // Skills
+  translateSkills(defaultLang)
+  translateLanguage(defaultLang)
+  //---
 })
