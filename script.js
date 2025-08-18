@@ -67,7 +67,6 @@ async function translateExperience(lang) {
     const dutyButton = clone.querySelector('.exp_see-duties-button');
     const dutyList = clone.querySelector('.exp_duties');
       dutyList.innerHTML = ''
-      dutyList.style.display = 'none'; // hide duties by default
 
     clone.querySelector('.exp_title').textContent = job.jobTitle;
     clone.querySelector('.exp_position').textContent = job.position;
