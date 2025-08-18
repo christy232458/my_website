@@ -133,7 +133,7 @@ async function translateEducation(lang) {
   });
 
   // update section title
-  eduSectionTitle.textContent = lang === 'zh' ? school.sectionTitle : ogEduSectionTitle;
+  eduSectionTitle.textContent = lang === 'zh' ? schools.sectionTitle : ogEduSectionTitle;
 }
 // call translation
 translateEducation(defaultLang);
