@@ -1,20 +1,5 @@
 {
-    "hero": {
-        "tagline_teacher": {
-        "en": "English Teacher",
-        "zh": "英文教師"
-        },
-        "tagline_musician": {
-        "en": "Musician",
-        "zh": "英文教師"
-        },
-        "tagline_animal_lover": {
-        "en": "Animal lover",
-        "zh": "英文教師"
-        },
-        "resume": {
-        "en": "RESUME",
-        "zh": "履歷"
-        }
-    }
+    "tagline": ["英文教師", "音樂人", "動物愛好者"],
+    "resume": "履歷",
+    "intro": "賦能學習者，自信清晰地使用英文表達！"
 }
