@@ -187,6 +187,11 @@ section {
                 margin: 0;
                 height: 100%;
             }
+            .chalkboard span {
+                display: inline-block;
+                font-size: clamp(20px, 2dvh + 2dvw, 36px);
+                min-width: 100%; /* prevents shrink */
+            }
         /* Tagline */
         #quick-intro_tagline {
             display: inline-flex;

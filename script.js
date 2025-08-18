@@ -19,6 +19,7 @@ function changePageTitle(lang) {
 const heroWrapper = document.getElementById('hero-section')
   const taglines = heroWrapper.querySelectorAll('.tagline_item')
   const chalkboard = heroWrapper.querySelector('.chalkboard')
+    const chalkboardText = document.getElementById('chalkboard-text');
   const resume = heroWrapper.querySelector('#quick-resume')
   // original html text
   const ogTagline = Array.from(taglines).map(tagline => tagline.textContent);
@@ -29,19 +30,11 @@ async function translateHero(lang) {
   const response = await fetch('translations/hero.json');
   const hero = await response.json();
 
-  if (lang == 'zh') {
-    chalkboard.textContent = hero.intro;
-    resume.textContent = hero.resume
-      taglines.forEach((tagline, i) => {
-        tagline.textContent = hero.tagline[i];
-      })
-  } else {
-    chalkboard.textContent = ogChalkboard;
-    resume.textContent = ogResume;
-      taglines.forEach((tagline, i) => {
-        tagline.textContent = ogTagline[i];
-      })
-  }
+  chalkboardText.textContent = lang === 'zh' ? hero.intro : ogChalkboard;
+  resume.textContent = lang === 'zh' ? hero.resume : ogResume;
+  taglines.forEach((tagline, i) => {
+    tagline.textContent = lang === 'zh' ? hero.tagline[i] : ogTagline[i];
+  });
 }
 // ||   ||
 
