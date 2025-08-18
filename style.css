@@ -182,15 +182,9 @@ section {
             }
         }
             .chalkboard p {
-                font-size: clamp(20px, 2dvh + 2dvw, 36px);
-                line-height: 1.6;
+                font-size: clamp(18px, 1.2dvh + 1.2dvw, 36px);
                 margin: 0;
                 height: 100%;
-            }
-            .chalkboard span {
-                display: inline-block;
-                font-size: clamp(20px, 2dvh + 2dvw, 36px);
-                min-width: 100%; /* prevents shrink */
             }
         /* Tagline */
         #quick-intro_tagline {
