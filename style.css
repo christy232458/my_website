@@ -914,7 +914,7 @@ section {
                 }
     /**/
     /* References */
-    .about_ref-wrapper {
+    #about_ref-wrapper {
         border-radius: 25px;
         padding: .5em;
         display: flex;

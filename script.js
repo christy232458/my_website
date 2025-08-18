@@ -241,7 +241,7 @@ async function translateBio(lang) {
   bioTitle.textContent = lang == 'zh'? biographyTitle : ogBioTitle
 }
 
-const hobbyTitle = document.querySelector('#about_title')
+const hobbyTitle = document.querySelector('#hobby-title')
 const ogHobbyTitle = hobbyTitle.textContent
 
 async function translateHobbies(lang) {
@@ -263,6 +263,70 @@ async function translateHobbies(lang) {
   hobbyTitle.textContent = lang == 'zh'? hobbies.hobbySectionTitle : ogHobbyTitle
 }
 translateHobbies(defaultLang)
+
+const refTitle = document.querySelector('#ref-title')
+const ogRefTitle = refTitle.textContent
+
+async function translateReferences(lang) {
+  const response = await fetch('translations/about/references.json')
+  const references = await response.json()
+    const refs = references.references
+  const template = document.querySelector('#about-template_references')
+
+  const wrapper = document.querySelector('#about_ref-wrapper')
+  wrapper.innerHTML = ''
+
+  refs.forEach(ref => {
+    const clone = template.content.cloneNode(true)
+
+    // image, name, statement
+    clone.querySelector('.about_ref-pic').src = ref.image
+    clone.querySelector('.about_ref-name').textContent = ref.name[lang]
+    clone.querySelector('.about_reference p').textContent = ref.statement[lang]
+
+    // contacts
+    const contactWrapper = clone.querySelector('.about_ref-contact')
+    contactWrapper.innerHTML = ''
+
+    ref.contact.forEach(contact => {
+      const li = document.createElement('li')
+      li.classList.add('about_ref-icon-wrapper')
+
+      const a = document.createElement('a')
+      const i = document.createElement('i')
+
+      if (contact.type === 'email') {
+        a.href = `mailto:${contact.value}`
+        i.className = 'fas fa-envelope'
+      } else if (contact.type === 'website') {
+        a.href = contact.value
+        a.target = '_blank'
+        i.className = 'fa-solid fa-globe'
+      }
+
+      a.appendChild(i)
+      li.appendChild(a)
+      contactWrapper.appendChild(li)
+    })
+
+    const button = clone.querySelector('.about_see-more')
+    const refWrapper = clone.querySelector('.about_reference-wrapper')
+    button.addEventListener('click', function() {
+      if (refWrapper.style.display == 'none') {
+        refWrapper.style.display = 'flex'
+        button.textContent = '-'
+      } else {
+        refWrapper.style.display = 'none'
+        button.textContent = '+'
+      }
+    })
+
+    wrapper.appendChild(clone)
+  })
+
+  refTitle.textContent = lang == 'zh'? references.refSectionTitle : ogRefTitle
+}
+translateReferences(defaultLang)
 // &&   &&
 
 // ## CONTACT SECTION ##
@@ -292,5 +356,6 @@ languageToggle.addEventListener("click", function() {
   // About
   translateBio(defaultLang)
   translateHobbies(defaultLang)
+  translateReferences(defaultLang)
   //---
 })
