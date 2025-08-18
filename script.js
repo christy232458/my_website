@@ -38,6 +38,115 @@ async function translateHero(lang) {
 }
 // ||   ||
 
+// && ABOUT SECTION &&
+const bio = document.querySelectorAll('.about_bio p')
+const bioTitle = document.querySelector('#about_title')
+const ogBioTitle = bioTitle.textContent;
+const ogBio = Array.from(bio).map(p => p.innerHTML); // use innerHTML to preserve links)
+
+async function translateBio(lang) {
+  const response = await fetch('translations/about/about.json')
+  const biography = await response.json()
+    const biographyTitle = biography.aboutSectionTitle
+
+  bio.forEach((pEl, index) => {
+    if (lang === 'zh') {
+      pEl.innerHTML = biography.about.bio[index]?.zh || ogBio[index];
+    } else {
+      pEl.innerHTML = ogBio[index];
+    }
+  });
+  
+  bioTitle.textContent = lang == 'zh'? biographyTitle : ogBioTitle
+}
+
+const hobbyTitle = document.querySelector('#hobby-title')
+const ogHobbyTitle = hobbyTitle.textContent
+
+async function translateHobbies(lang) {
+  const response = await fetch('translations/about/hobbies.json')
+  const hobbies = await response.json()
+    const hobbyJSON = hobbies.hobbies
+  const hobbyList = document.getElementById('about_hobby-list')
+
+  hobbyList.innerHTML = ''
+
+  hobbyJSON.forEach(hobby => {
+    const li = document.createElement('li')
+    li.textContent = hobby[lang];
+    li.classList.add('about_hobby')
+
+    hobbyList.appendChild(li)
+  })
+  
+  hobbyTitle.textContent = lang == 'zh'? hobbies.hobbySectionTitle : ogHobbyTitle
+}
+translateHobbies(defaultLang)
+
+const refTitle = document.querySelector('#ref-title')
+const ogRefTitle = refTitle.textContent
+
+async function translateReferences(lang) {
+  const response = await fetch('translations/about/references.json')
+  const references = await response.json()
+    const refs = references.references
+  const template = document.querySelector('#about-template_references')
+
+  const wrapper = document.querySelector('#about_ref-wrapper')
+  wrapper.innerHTML = ''
+
+  refs.forEach(ref => {
+    const clone = template.content.cloneNode(true)
+
+    // image, name, statement
+    clone.querySelector('.about_ref-pic').src = ref.image
+    clone.querySelector('.about_ref-name').textContent = ref.name[lang]
+    clone.querySelector('.about_reference p').textContent = ref.statement[lang]
+
+    // contacts
+    const contactWrapper = clone.querySelector('.about_ref-contact')
+    contactWrapper.innerHTML = ''
+
+    ref.contact.forEach(contact => {
+      const li = document.createElement('li')
+      li.classList.add('about_ref-icon-wrapper')
+
+      const a = document.createElement('a')
+      const i = document.createElement('i')
+
+      if (contact.type === 'email') {
+        a.href = `mailto:${contact.value}`
+        i.className = 'fas fa-envelope'
+      } else if (contact.type === 'website') {
+        a.href = contact.value
+        a.target = '_blank'
+        i.className = 'fa-solid fa-globe'
+      }
+
+      a.appendChild(i)
+      li.appendChild(a)
+      contactWrapper.appendChild(li)
+    })
+
+    const button = clone.querySelector('.about_see-more')
+    const refWrapper = clone.querySelector('.about_reference-wrapper')
+    button.addEventListener('click', function() {
+      if (refWrapper.style.display === 'none' || refWrapper.style.display === '') {
+        refWrapper.style.display = 'flex'
+        button.textContent = '-'
+      } else {
+        refWrapper.style.display = 'none'
+        button.textContent = '+'
+      }
+    })
+
+    wrapper.appendChild(clone)
+  })
+
+  refTitle.textContent = lang == 'zh'? references.refSectionTitle : ogRefTitle
+}
+translateReferences(defaultLang)
+// &&   &&
 
 // ** EXPERIENCE SECTION **
 const experienceWrapper = document.getElementById('experience-section');
@@ -217,117 +326,6 @@ async function translateCerts(lang) {
 }
 translateCerts(defaultLang)
 // ++   ++
-
-
-// && ABOUT SECTION &&
-const bio = document.querySelectorAll('.about_bio p')
-const bioTitle = document.querySelector('#about_title')
-const ogBioTitle = bioTitle.textContent;
-const ogBio = Array.from(bio).map(p => p.innerHTML); // use innerHTML to preserve links)
-
-async function translateBio(lang) {
-  const response = await fetch('translations/about/about.json')
-  const biography = await response.json()
-    const biographyTitle = biography.aboutSectionTitle
-
-  bio.forEach((pEl, index) => {
-    if (lang === 'zh') {
-      pEl.innerHTML = biography.about.bio[index]?.zh || ogBio[index];
-    } else {
-      pEl.innerHTML = ogBio[index];
-    }
-  });
-  
-  bioTitle.textContent = lang == 'zh'? biographyTitle : ogBioTitle
-}
-
-const hobbyTitle = document.querySelector('#hobby-title')
-const ogHobbyTitle = hobbyTitle.textContent
-
-async function translateHobbies(lang) {
-  const response = await fetch('translations/about/hobbies.json')
-  const hobbies = await response.json()
-    const hobbyJSON = hobbies.hobbies
-  const hobbyList = document.getElementById('about_hobby-list')
-
-  hobbyList.innerHTML = ''
-
-  hobbyJSON.forEach(hobby => {
-    const li = document.createElement('li')
-    li.textContent = hobby[lang];
-    li.classList.add('about_hobby')
-
-    hobbyList.appendChild(li)
-  })
-  
-  hobbyTitle.textContent = lang == 'zh'? hobbies.hobbySectionTitle : ogHobbyTitle
-}
-translateHobbies(defaultLang)
-
-const refTitle = document.querySelector('#ref-title')
-const ogRefTitle = refTitle.textContent
-
-async function translateReferences(lang) {
-  const response = await fetch('translations/about/references.json')
-  const references = await response.json()
-    const refs = references.references
-  const template = document.querySelector('#about-template_references')
-
-  const wrapper = document.querySelector('#about_ref-wrapper')
-  wrapper.innerHTML = ''
-
-  refs.forEach(ref => {
-    const clone = template.content.cloneNode(true)
-
-    // image, name, statement
-    clone.querySelector('.about_ref-pic').src = ref.image
-    clone.querySelector('.about_ref-name').textContent = ref.name[lang]
-    clone.querySelector('.about_reference p').textContent = ref.statement[lang]
-
-    // contacts
-    const contactWrapper = clone.querySelector('.about_ref-contact')
-    contactWrapper.innerHTML = ''
-
-    ref.contact.forEach(contact => {
-      const li = document.createElement('li')
-      li.classList.add('about_ref-icon-wrapper')
-
-      const a = document.createElement('a')
-      const i = document.createElement('i')
-
-      if (contact.type === 'email') {
-        a.href = `mailto:${contact.value}`
-        i.className = 'fas fa-envelope'
-      } else if (contact.type === 'website') {
-        a.href = contact.value
-        a.target = '_blank'
-        i.className = 'fa-solid fa-globe'
-      }
-
-      a.appendChild(i)
-      li.appendChild(a)
-      contactWrapper.appendChild(li)
-    })
-
-    const button = clone.querySelector('.about_see-more')
-    const refWrapper = clone.querySelector('.about_reference-wrapper')
-    button.addEventListener('click', function() {
-      if (refWrapper.style.display == 'none') {
-        refWrapper.style.display = 'flex'
-        button.textContent = '-'
-      } else {
-        refWrapper.style.display = 'none'
-        button.textContent = '+'
-      }
-    })
-
-    wrapper.appendChild(clone)
-  })
-
-  refTitle.textContent = lang == 'zh'? references.refSectionTitle : ogRefTitle
-}
-translateReferences(defaultLang)
-// &&   &&
 
 const contactTitle = document.querySelector('#contact_email-title')
 const socialsTitle = document.querySelector('#socials-title')
