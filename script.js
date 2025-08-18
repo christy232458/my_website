@@ -48,8 +48,8 @@ async function translateHero(lang) {
 
 // ** EXPERIENCE SECTION **
 const experienceWrapper = document.getElementById('experience-section');
-const sectionTitle = experienceWrapper.querySelector('#experience-title');
-const ogSectionTitle = sectionTitle.textContent;
+const expSectionTitle = experienceWrapper.querySelector('#experience-title');
+const ogExpSectionTitle = expSectionTitle.textContent;
 
 async function translateExperience(lang) {
   const response = await fetch('translations/experience.json');
@@ -99,7 +99,7 @@ async function translateExperience(lang) {
   });
 
   // update section title
-  sectionTitle.textContent = lang === 'zh' ? jobs.experience.title : ogSectionTitle;
+  expSectionTitle.textContent = lang === 'zh' ? jobs.experience.title : ogExpSectionTitle;
 }
 // call translation
 translateExperience(defaultLang);
@@ -107,7 +107,36 @@ translateExperience(defaultLang);
 
 
 // ~~ EDUCATION SECTION ~~
+const educationWrapper = document.getElementById('education-section');
+const eduSectionTitle = educationWrapper.querySelector('#education-title');
+const ogEduSectionTitle = eduSectionTitle.textContent;
 
+async function translateEducation(lang) {
+  const response = await fetch('translations/education.json');
+  const schools = await response.json();
+    const eduSchool = schools.schools
+
+  const educationTemplate = document.querySelector('#education-template');
+  const wrapper = document.querySelector('.education_container');
+  wrapper.innerHTML = ''; // clear previous content
+
+  eduSchool.forEach(school => {
+    const clone = educationTemplate.content.cloneNode(true);
+
+    clone.querySelector('.education_school').textContent = school.name[lang];
+    clone.querySelector('.education_location').textContent = school.location[lang];
+    clone.querySelector('.education_start-date').textContent = school.start;
+    clone.querySelector('.education_end-date').textContent = school.end;
+    clone.querySelector('.education_degree').textContent = school.degree[lang];
+
+    wrapper.appendChild(clone);
+  });
+
+  // update section title
+  eduSectionTitle.textContent = lang === 'zh' ? school.sectionTitle : ogEduSectionTitle;
+}
+// call translation
+translateEducation(defaultLang);
 // ~~   ~~
 
 
@@ -138,4 +167,5 @@ languageToggle.addEventListener("click", function() {
   changePageTitle(defaultLang);
   translateHero(defaultLang)
   translateExperience(defaultLang)
+  translateEducation(defaultLang)
 })
