@@ -329,8 +329,22 @@ async function translateReferences(lang) {
 translateReferences(defaultLang)
 // &&   &&
 
+const contactTitle = document.querySelector('#contact_email-title')
+const socialsTitle = document.querySelector('#socials-title')
+const resumeTitle = document.querySelector('#contact_resume-title')
+  const ogContactTitle = contactTitle.textContent
+  const ogSocialsTitle = socialsTitle.textContent
+  const ogResumeTitle = resumeTitle.textContent
 // ## CONTACT SECTION ##
+async function translateContact(lang) {
+  const response = await fetch('translations/contact.json')
+  const contact = await response.json()
+    const titles = contact.titles
 
+  contactTitle.textContent = lang == 'zh'? titles.email : ogContactTitle
+  socialsTitle.textContent = lang == 'zh'? titles.socials : ogSocialsTitle
+  resumeTitle.textContent = lang == 'zh'? titles.resume : ogResumeTitle
+}
 // ##   ##
 
 
@@ -358,4 +372,5 @@ languageToggle.addEventListener("click", function() {
   translateHobbies(defaultLang)
   translateReferences(defaultLang)
   //---
+  translateContact(defaultLang)
 })
