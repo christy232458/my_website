@@ -553,11 +553,6 @@ section {
                     width: 100%;
                     background-color: #eef085;
                     font-size: var(--paragraph);
-
-                    @media (min-width: 950px) {
-                        border-radius: 15px 0 0 15px;
-                        flex: 1;
-                    }
                 }
                     .about_ref-contact {
                         border-radius: 0 0 15px 15px;
@@ -568,11 +563,6 @@ section {
                         padding: .5em;
                         width: 100%;
                         background-color: #8ef3c1;
-
-                        @media (min-width: 950px) {
-                            border-radius: 0 15px 15px 0;
-                            flex: 1;
-                        }
                     }
                         .about_ref-icon-wrapper {
                             border-radius: 15px;
