@@ -141,6 +141,7 @@ section {
                     justify-content: center;
                     flex-direction: column;
                 box-sizing: border-box;
+                margin-bottom: .5em;
                 width: 100%;
                 grid-column: 2;
 
@@ -200,7 +201,7 @@ section {
                 }
 
                 @media (min-width: 750px) and (min-height: 1024px) {
-                    width: 60%;
+                    width: 80%;
                 }
             }
                 .chalkboard {
@@ -216,7 +217,7 @@ section {
 
                     @media (max-width: 1050px) and (min-height: 1100px) {
                         min-height: 35%;
-                        max-width: 60%;
+                        max-width: 80%;
                     }
 
                     @media (min-width: 1024px) {
@@ -225,7 +226,7 @@ section {
                     }
                 }
                     .chalkboard p {
-                        font-size: clamp(18px, 2dvh + 1.5dvw, 48px);
+                        font-size: clamp(18px, 2dvh + 1.5dvw, 40px);
                         margin: 0;
                         height: 100%;
                     }
@@ -245,20 +246,36 @@ section {
                         grid-row: 2;
                     }
 
-                    @media (min-width: 1024px) and (max-width: 1499px) and (min-height: 750px) {
+                    @media (orientation: landscape) {
                         flex-direction: column;
                         padding: 0.5em 1em;
                         text-align: center;
                     }
+
+                    @media (min-width: 1024px) and (max-height: 650px) {
+                        flex-direction: row;
+                    }
+
+                    @media (min-width: 1500px) {
+                        flex-direction: row;
+                    }
                 }
                     #dog-sitting img {
                         max-width: 30%;
-                    }
+
+                        @media (orientation: landscape) {
+                            max-width: 35%;
+                        }
+
+                        @media (min-width: 1500px) {
+                            max-width: 25%;
+                        }
+                        }
                     #dog-sitting p {
                         margin: 0;
                         padding: .25em;
                         font-weight: bold;
-                        font-size: clamp(16px, 1dvh + 1.5dvw, 24px);
+                        font-size: clamp(16px, 1dvh + 1.5dvw, 30px);
                     }
         /* Tagline */
         #quick-intro_tagline {
