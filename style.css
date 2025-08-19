@@ -372,9 +372,10 @@ section {
                 justify-content: center;
             box-sizing: border-box;
                 padding: .3em .5em;
+            font-size: clamp(12px, 1dvw + 1dvh, 16px);
         }
             #quick-resume p {
-                font-size: clamp(12px, 2vw + 1vh, 16px);
+                font-size: clamp(12px, .5dvw + .5dvh, 16px);
                 margin: 0;
             }
             #quick-resume_icon-wrapper {
@@ -403,7 +404,7 @@ section {
             box-sizing: border-box;
                 height: 100%;
                 padding: .3em .5em;
-            
+            font-size: clamp(12px, 1dvw + 1dvh, 16px);
         }
             .eng-zh_resume {
                 border: 3px solid black;
