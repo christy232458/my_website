@@ -20,17 +20,21 @@ const heroWrapper = document.getElementById('hero-section')
   const taglines = heroWrapper.querySelectorAll('.tagline_item')
   const chalkboard = heroWrapper.querySelector('.chalkboard')
     const chalkboardText = document.getElementById('chalkboard-text');
+  const dogSitting = document.getElementById('dog-sitting');
+    const dogSittingText = document.querySelector('#dog-sitting p');
   const resume = heroWrapper.querySelector('#quick-resume')
   // original html text
   const ogTagline = Array.from(taglines).map(tagline => tagline.textContent);
   const ogChalkboard = chalkboard.textContent;
+  const ogDogSitting = dogSitting.textContent;
   const ogResume = resume.textContent;
 
 async function translateHero(lang) {
   const response = await fetch('translations/hero.json');
   const hero = await response.json();
 
-  chalkboardText.textContent = lang === 'zh' ? hero.intro : ogChalkboard;
+  chalkboardText.textContent = lang === 'zh' ? hero.introTeaching : ogChalkboard;
+  dogSittingText.textContent = lang === 'zh' ? hero.introDog : ogDogSitting;
   resume.textContent = lang === 'zh' ? hero.resume : ogResume;
   taglines.forEach((tagline, i) => {
     tagline.textContent = lang === 'zh' ? hero.tagline[i] : ogTagline[i];
