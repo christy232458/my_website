@@ -245,7 +245,7 @@ section {
                         grid-row: 2;
                     }
 
-                    @media (min-width: 1024px) and (min-height: 750px) {
+                    @media (min-width: 1024px) and (max-width: 1499px) and (min-height: 750px) {
                         flex-direction: column;
                         padding: 0.5em 1em;
                         text-align: center;
