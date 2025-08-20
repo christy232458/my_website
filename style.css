@@ -6,11 +6,10 @@
     --subtitle: clamp(12px, 1dvw + 1dvh, 24px);
         --small-subtitle: clamp(10px, 2dvw + 1dvh, 16px);
         --paragraph: clamp(12px, 2dvw + 1dvh, 20px);
-    --icon: clamp(12px, 3dvw + 3dvh, 36px);
+    --icon: clamp(12px, 1.5dvw + 1.5dvh, 20px);
         --icon-image: clamp(25px, 8dvw + 1dvh, 35px);
     --profile-pic: clamp(50px, 52dvw + 1dvh, 450px);
         --preview-image: clamp(50px, 40dvw + 1dvh, 200px);
-    --round-border: clamp(50px, 40dvw + 1dvh, 275px);
 }
 * {
     box-sizing: border-box;
@@ -476,16 +475,24 @@ section {
                 align-items: center;
                 justify-content: center;
             padding: .5em;
+
+            @media (min-width: 950px) {
+                flex-direction: row;
+            }
         }
             .profile-pic_wrapper {
                 border-radius: 50%;
                 display: flex;
                     align-items: center;
                     justify-content: center;
-                width: var(--round-border);
-                height: var(--round-border);
+                width: clamp(50px, 40dvw + 1dvh, 200px);
+                aspect-ratio: 1/1;
                 background-color: rgb(231, 114, 206);
                 padding: .2em;
+
+                @media (min-width: 950px) {
+                    align-self: flex-start;
+                }
             }
                 .profile-pic {
                     border-radius: 50%;
@@ -503,6 +510,10 @@ section {
 
                 @media (min-width: 950px) {
                     max-width: 75%;
+                }
+
+                @media (min-width: 1500px) {
+                    max-width: 50%;
                 }
             }
     /**/
@@ -570,107 +581,130 @@ section {
     /**/
     /* References */
     #about_ref-wrapper {
-        border-radius: 25px;
-        padding: .5em;
         display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        background-color: #d6cfb6;
+            align-items: flex-start;
+            justify-content: flex-start;
+        overflow-y: auto;
+        max-height: 1000px;
 
         @media (min-width: 950px) {
             width: 75%;
             align-self: center;
+            justify-content: center;
         }
     }
-        .about_ref-intro {
+        .about_referant {
             border-radius: 25px;
-            padding: .5em;
-            margin-bottom: .5em;
             display: flex;
                 align-items: center;
-                justify-content: flex-start;
-                gap: 1em;
+                flex-direction: column;
+                gap: .5em;
             width: 100%;
-            background-color: white;
+            padding: .5em;
+            background-color: rgb(241, 230, 230);
+
+            @media (min-width: 950px) {
+                width: 50%;
+            }
+
+            @media (min-width: 1500px) {
+                width: 30%;
+            }
         }
-            .ref-pic_wrapper {
-                border-radius: 50%;
+            .about_ref-intro {
+                border-radius: 25px;
+                padding: .5em;
                 display: flex;
                     align-items: center;
-                    justify-content: center;
-                width: clamp(75px, 25dvw + 1dvh, 125px);
-                height: clamp(75px, 25dvw + 1dvh, 125px);
-                background-color: #fae59e;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                width: 100%;
             }
-                .about_ref-pic {
-                    border-radius: 50%;
-                    max-width: 90%;
-                }
                 .about_ref-name {
-                    border-radius: 25px;
+                    border-radius: 15px 15px 0 0 ;
                     display: flex;
                         align-items: center;
-                        justify-content: center;
+                        justify-content: flex-start;
                         flex-wrap: wrap;
-                    padding: .5em;
+                    padding: .25em;
                     margin: 0;
+                    width: 100%;
                     font-size: clamp(15px, 3dvw + 1dvh, 24px);
                     background-color: #ce9af8;
                 }
+                .about_ref-contact {
+                    border-radius: 0 0 15px 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1em;
+                    padding: .25em;
+                    width: 100%;
+                    background-color: #8ef3c1;
+                } 
+                    .about_ref-contact a {
+                        border-radius: 5px;
+                        display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        padding: .5em;
+                        background-color: gold;
+                    }
+                        .about_ref-icon-wrapper i {
+                            color: white;
+                            font-size: var(--icon);
+                        }
                 .about_see-more {
                     border-radius: 50%;
                     display: inline-flex;
                         align-items: center;
                         justify-content: center;
-                    padding: .5em;
+                    padding: .25em;
                     width: clamp(15px, 7dvw + 1dvh, 50px);
                     height: clamp(15px, 7dvw + 1dvh, 50px);
                     background-color: gold;
                 }
-            .about_reference-wrapper {
-                border-radius: 25px;
-                display: none;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                padding: .5em;
-                margin-top: .5em;
-                background-color: #ce9af8;
-                width: 100%;
-            }
-                .about_reference {
-                    border-radius: 15px 15px 0 0;
+                .ref-pic_wrapper {
+                    border-radius: 50%;
                     display: flex;
                         align-items: center;
                         justify-content: center;
-                    padding: .5em;
-                    width: 100%;
-                    background-color: #eef085;
-                    font-size: var(--paragraph);
+                    width: clamp(75px, 25dvw + 1dvh, 125px);
+                    height: clamp(75px, 25dvw + 1dvh, 125px);
+                    background-color: #fae59e;
                 }
-                    .about_ref-contact {
-                        border-radius: 0 0 15px 15px;
-                        display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 1em;
-                        padding: .5em;
-                        width: 100%;
-                        background-color: #8ef3c1;
+                    .about_ref-pic {
+                        border-radius: 50%;
+                        max-width: 90%;
                     }
-                        .about_ref-icon-wrapper {
-                            border-radius: 15px;
-                            display: flex;
-                                align-items: center;
-                                justify-content: center;
-                            padding: .5em;
-                            background-color: gold;
+                .about_reference-wrapper {
+                    border-radius: 25px;
+                    display: none;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    padding: .5em;
+                    margin-top: .5em;
+                    background-color: #ce9af8;
+                    width: 100%;
+                }
+                    .about_reference {
+                        border-radius: 15px;
+                        display: flex;
+                            align-items: flex-start;
+                            justify-content: center;
+                        padding: .25em 1em;
+                        margin: 0;
+                        width: 100%;
+                        max-height: 300px;
+                        overflow-y: auto;
+                        background-color: #eef085;
+                        font-size: var(--paragraph);
+
+                        @media (min-width: 950px) {
+                            max-height: 450px;
                         }
-                            .about_ref-icon-wrapper i {
-                                color: white;
-                                font-size: var(--icon);
-                            }
+                    }  
     /**/
 /* &&   && */
 
@@ -862,123 +896,12 @@ section {
     /**/    
 /* **   ** */
 
-
-/* ~~ EDUCATION SECTION ~~ */
-#education-section {
-    display: flex;
-        flex-direction: column;
-    padding: 3rem 1rem;
-    background: linear-gradient(180deg, #b4fa8c 0%, #f0fd7b 100%);
-}
-    #education-section h2 {
-        font-size: var(--medium-header);
-        padding: .5em;
-        width: fit-content;
-        border-radius: 15px;
-        background-color: #f1ebb5;
-    }
-    .education_container {
-        border-radius: 20px;
-        display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 1em;
-            flex-wrap: wrap;
-
-        @media (min-width: 650px) {
-            flex-direction: row;
-        }
-    }
-        .education_wrapper {
-            outline: 2px solid black;
-                border-radius: 20px;
-            display: flex;
-                flex-direction: column;
-            box-sizing: border-box;
-            background-color: #f8a8eb;
-
-            @media (min-width: 950px) {
-                flex-direction: row;
-            }
-        }
-            .education_wrapper div {
-                display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: .5em;
-                box-sizing: border-box;
-                    padding: .5em;
-            }
-            .education_date span {
-                box-sizing: border-box;
-                    padding: .1em;
-            }
-                .education_intro-wrapper {
-                    display: flex;
-                        align-items: center;
-                        justify-content: flex-start;
-                    
-                    @media (min-width: 950px) {
-                        flex-direction: column;
-                    }
-                }
-                    .education_school {
-                        border-radius: 15px;
-                        display: inline-flex;
-                        width: fit-content;
-                        background-color: rgb(243, 91, 91);
-                        font-weight: 600;
-                        font-size: clamp(15px, 3dvw + 1dvh, 20px);
-                    }
-                    .education_location {
-                        border-radius: 15px;
-                        background-color: rgb(253, 208, 109);
-                        font-style: italic;
-                        text-decoration: underline;
-                        width: fit-content;
-
-                        @media (min-width: 950px) {
-                            flex-direction: row;
-                                align-self: flex-start;
-                        }
-                    }
-                .education_info-wrapper {
-                    border-radius: 0 0 15px 15px;
-                    display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        gap: .5em;
-                    box-sizing: border-box;
-                        padding: .5em;
-                    background-color: rgb(247, 237, 237);
-
-                    @media (min-width: 950px) {
-                        border-radius: 0 15px 15px 0;
-                        flex-direction: column;
-                    }
-                }
-                    .education_date {
-                        border-radius: 15px;
-                        background-color: rgb(109, 228, 236);
-                    }
-                    .education_degree {
-                        border-radius: 15px;
-                        background-color: rgb(218, 142, 253);
-                    }
-                        .education_icon {
-                            max-width: clamp(15px, 4dvw + 1dvh, 25px);
-                            max-height: clamp(15px, 4dvw + 1dvh, 25px);;
-                        }
-/* ~~   ~~ */
-
-
 /* ++ SKILLS SECTION ++ */
 #skills-section {
     display: flex;
         flex-direction: column;
     padding: 3rem 1rem;
-    background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
+    background: linear-gradient(180deg, #b4fa8c 0%, #f0fd7b 100%);
 }
     #skills-section h2 {
         font-size: var(--medium-header);
@@ -1115,6 +1038,116 @@ section {
                     }
     /**/ 
 /* ++   ++ */
+
+
+/* ~~ EDUCATION SECTION ~~ */
+#education-section {
+    display: flex;
+        flex-direction: column;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
+}
+    #education-section h2 {
+        font-size: var(--medium-header);
+        padding: .5em;
+        width: fit-content;
+        border-radius: 15px;
+        background-color: #f1ebb5;
+    }
+    .education_container {
+        border-radius: 20px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1em;
+            flex-wrap: wrap;
+
+        @media (min-width: 650px) {
+            flex-direction: row;
+        }
+    }
+        .education_wrapper {
+            outline: 2px solid black;
+                border-radius: 20px;
+            display: flex;
+                flex-direction: column;
+            box-sizing: border-box;
+            background-color: #f8a8eb;
+
+            @media (min-width: 950px) {
+                flex-direction: row;
+            }
+        }
+            .education_wrapper div {
+                display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: .5em;
+                box-sizing: border-box;
+                    padding: .5em;
+            }
+            .education_date span {
+                box-sizing: border-box;
+                    padding: .1em;
+            }
+                .education_intro-wrapper {
+                    display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                    
+                    @media (min-width: 950px) {
+                        flex-direction: column;
+                    }
+                }
+                    .education_school {
+                        border-radius: 15px;
+                        display: inline-flex;
+                        width: fit-content;
+                        background-color: rgb(243, 91, 91);
+                        font-weight: 600;
+                        font-size: clamp(15px, 3dvw + 1dvh, 20px);
+                    }
+                    .education_location {
+                        border-radius: 15px;
+                        background-color: rgb(253, 208, 109);
+                        font-style: italic;
+                        text-decoration: underline;
+                        width: fit-content;
+
+                        @media (min-width: 950px) {
+                            flex-direction: row;
+                                align-self: flex-start;
+                        }
+                    }
+                .education_info-wrapper {
+                    border-radius: 0 0 15px 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        gap: .5em;
+                    box-sizing: border-box;
+                        padding: .5em;
+                    background-color: rgb(247, 237, 237);
+
+                    @media (min-width: 950px) {
+                        border-radius: 0 15px 15px 0;
+                        flex-direction: column;
+                    }
+                }
+                    .education_date {
+                        border-radius: 15px;
+                        background-color: rgb(109, 228, 236);
+                    }
+                    .education_degree {
+                        border-radius: 15px;
+                        background-color: rgb(218, 142, 253);
+                    }
+                        .education_icon {
+                            max-width: clamp(15px, 4dvw + 1dvh, 25px);
+                            max-height: clamp(15px, 4dvw + 1dvh, 25px);;
+                        }
+/* ~~   ~~ */
 
 
 /* ## CONTACT SECTION ## */

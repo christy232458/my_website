@@ -123,7 +123,6 @@ async function translateReferences(lang) {
     const clone = template.content.cloneNode(true)
 
     // image, name, statement
-    clone.querySelector('.about_ref-pic').src = ref.image
     clone.querySelector('.about_ref-name').textContent = ref.name[lang]
     clone.querySelector('.about_reference p').textContent = ref.statement[lang]
 
@@ -145,6 +144,10 @@ async function translateReferences(lang) {
         a.href = contact.value
         a.target = '_blank'
         i.className = 'fa-solid fa-globe'
+      } else if (contact.type === 'linkedin') {
+        a.href = contact.value
+        a.target = '_blank'
+        i.className = 'fa-brands fa-linkedin'
       }
 
       a.appendChild(i)
