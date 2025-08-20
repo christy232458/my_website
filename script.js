@@ -23,15 +23,32 @@ const heroWrapper = document.getElementById('hero-section')
   const dogSitting = document.getElementById('dog-sitting');
     const dogSittingText = document.querySelector('#dog-sitting p');
   const resume = heroWrapper.querySelector('#quick-resume')
+  const names = document.querySelectorAll('.name');
   // original html text
   const ogTagline = Array.from(taglines).map(tagline => tagline.textContent);
   const ogChalkboard = chalkboard.textContent;
   const ogDogSitting = dogSitting.textContent;
   const ogResume = resume.textContent;
+  const ogNames = Array.from(names).map(name => name.textContent);
 
 async function translateHero(lang) {
   const response = await fetch('translations/hero.json');
   const hero = await response.json();
+  // Names
+  let index = 0;
+  let tempName = names[index];
+
+  if (lang != 'en') {
+      tempName = names[index].textContent;
+      names[index].textContent = names[index+1].textContent;
+      names[index+1].textContent = tempName
+  } else {
+      // Restore original names for English
+      names.forEach((name, i) => {
+        name.textContent = ogNames[i];
+      });
+  }
+  // ---
 
   chalkboardText.textContent = lang === 'zh' ? hero.introTeaching : ogChalkboard;
   dogSittingText.textContent = lang === 'zh' ? hero.introDog : ogDogSitting;
