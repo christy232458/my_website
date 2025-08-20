@@ -41,12 +41,15 @@ async function translateHero(lang) {
   if (lang != 'en') {
       tempName = names[index].textContent;
       names[index].textContent = names[index+1].textContent;
+        names[index].lang = 'zh'
       names[index+1].textContent = tempName
+        names[index+1].lang = 'en'
   } else {
-      // Restore original names for English
-      names.forEach((name, i) => {
-        name.textContent = ogNames[i];
-      });
+      // Restore original English/Chinese order
+    names[0].textContent = ogNames[0]; // English
+    names[0].lang = 'en';
+    names[1].textContent = ogNames[1]; // Chinese
+    names[1].lang = 'zh';
   }
   // ---
 
