@@ -1045,7 +1045,7 @@ section {
     display: flex;
         flex-direction: column;
     padding: 3rem 1rem;
-    background: linear-gradient(180deg, #f0fd7b 0%, #ffd6a5 100%);
+    background: linear-gradient(180deg, #b4fa8c 0%, #f0fd7b 100%);
 }
     #education-section h2 {
         font-size: var(--medium-header);
