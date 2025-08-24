@@ -212,6 +212,7 @@ section {
                     box-shadow: inset 0 0 5px #00000033;
                     z-index: 1;
                     grid-column: 1;
+                    overflow-y: auto;
 
                     @media (orientation: landscape) {
                         width: 90%;
@@ -237,7 +238,7 @@ section {
                         height: 100%;
 
                         @media (orientation: landscape) {
-                            font-size: clamp(10px, 3.75dvh, 30px);
+                            font-size: clamp(10px, 3.75dvh + .25dvw, 30px);
                         }
 
                         @media (min-width: 750px) and (min-height: 1024px) and
@@ -718,10 +719,153 @@ section {
     /**/
 /* &&   && */
 
+/* ++ SKILLS SECTION ++ */
+#skills-section {
+    display: flex;
+        flex-direction: column;
+    padding: 2rem 1rem;
+    background: linear-gradient(180deg, #ce9af8 0%, #f0fd7b 100%);
+}
+    #skills-section h2 {
+        font-size: var(--medium-header);
+        padding: .5em;
+        width: fit-content;
+        border-radius: 15px;
+        background-color: #f1d0b5;
+    }
+    /* Languages */
+    .language-container {
+        border-radius: 15px;
+        display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        overflow-x: auto;
+    }
+        .language_title {
+            border-radius: 15px;
+            box-sizing: border-box;
+                padding: .3em;
+            display: inline-flex;
+                align-self: flex-start;
+        }
+        .languages_wrapper {
+            border-radius: 20px;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5em;
+            box-sizing: border-box;
+                padding: .5em;
+
+            @media (min-width: 950px) {
+                width: 75%;
+                justify-self: center;
+            }
+        }
+            .language {
+                display: flex; /* column alignment */
+                flex-direction: column;
+                align-items: center;
+                gap: 1em;
+                justify-content: center;
+                flex: 1 1 200px; /* equal width items, min width 150px */
+                min-width: 150px; /* optional max width */
+                aspect-ratio: 2/1;
+                border-radius: 15px;
+                padding: 1em;
+                background-color: #f0908a;
+                box-sizing: border-box;
+            }
+                .language_name {
+                    font-style: italic;
+                    text-align: center;
+                }
+                .language_progress {
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: clamp(30px, 12dvw + 3dvh, 100px);
+                    aspect-ratio: 1/1;
+                    --progress: 0; /* default percentage */
+                    --fluency: black; /* default color */
+                    background: conic-gradient(
+                        var(--fluency) calc(var(--progress) * 1%),
+                        transparent calc(var(--progress) * 1%)
+                    );
+                    transition: background 0.5s ease; /* smooth update */
+                }
+                    .language_symbol {
+                        border-radius: 50%;
+                        box-sizing: border-box;
+                            max-width: 90%;
+                            max-height: 90%;
+                    }
+                .language_fluency {
+                    border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    box-sizing: border-box;
+                        padding: .5em;
+                    font-weight: 600;
+                    background-color: #f2f8dd;
+                }
+    /**/
+    /* Certifications */
+    .certifications-container {
+        border-radius: 15px;
+        display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        overflow-y: auto;
+    } 
+        .cert_title {
+           border-radius: 15px;
+           box-sizing: border-box;
+                padding: .3em;
+           display: inline-flex;
+                align-self: flex-start;
+        }
+            .cert_wrapper {
+                border-radius: 15px;
+                display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: .5em;
+                padding: .5em; 
+                overflow-y: auto;
+            }
+                .certs {
+                    border-radius: 15px;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: .5em;
+                    width: 100%;
+                    padding: .5em;
+                    background-color: #9afada;
+                }
+                    .cert_name {
+                        border-radius: 10px;
+                        display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                        padding: .5em;
+                        font-size: clamp(15px, 3dvw + 1dvh, 25px);
+                        background-color: #3aebb0;
+                    }
+    /**/ 
+/* ++   ++ */
+
 /* ** EXPERIENCE SECTION ** */
 #experience-section {
    padding: 3rem 1rem;
-   background: linear-gradient(180deg, #ce9af8 0%, #b4fa8c 100%);
+   background: linear-gradient(180deg, #f0fd7b 0%, #b4fa8c 100%);
 }
     #experience-section h2 {
         font-size: var(--medium-header);
@@ -906,149 +1050,6 @@ section {
     /**/    
 /* **   ** */
 
-/* ++ SKILLS SECTION ++ */
-#skills-section {
-    display: flex;
-        flex-direction: column;
-    padding: 3rem 1rem;
-    background: linear-gradient(180deg, #b4fa8c 0%, #f0fd7b 100%);
-}
-    #skills-section h2 {
-        font-size: var(--medium-header);
-        padding: .5em;
-        width: fit-content;
-        border-radius: 15px;
-        background-color: #f1d0b5;
-    }
-    /* Languages */
-    .language-container {
-        border-radius: 15px;
-        display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        overflow-x: auto;
-    }
-        .language_title {
-            border-radius: 15px;
-            box-sizing: border-box;
-                padding: .3em;
-            display: inline-flex;
-                align-self: flex-start;
-        }
-        .languages_wrapper {
-            border-radius: 20px;
-            display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: .5em;
-            box-sizing: border-box;
-                padding: .5em;
-
-            @media (min-width: 950px) {
-                width: 75%;
-                justify-self: center;
-            }
-        }
-            .language {
-                display: flex; /* column alignment */
-                flex-direction: column;
-                align-items: center;
-                gap: 1em;
-                justify-content: center;
-                flex: 1 1 200px; /* equal width items, min width 150px */
-                min-width: 150px; /* optional max width */
-                aspect-ratio: 2/1;
-                border-radius: 15px;
-                padding: 1em;
-                background-color: #f0908a;
-                box-sizing: border-box;
-            }
-                .language_name {
-                    font-style: italic;
-                    text-align: center;
-                }
-                .language_progress {
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: clamp(30px, 12dvw + 3dvh, 100px);
-                    aspect-ratio: 1/1;
-                    --progress: 0; /* default percentage */
-                    --fluency: black; /* default color */
-                    background: conic-gradient(
-                        var(--fluency) calc(var(--progress) * 1%),
-                        transparent calc(var(--progress) * 1%)
-                    );
-                    transition: background 0.5s ease; /* smooth update */
-                }
-                    .language_symbol {
-                        border-radius: 50%;
-                        box-sizing: border-box;
-                            max-width: 90%;
-                            max-height: 90%;
-                    }
-                .language_fluency {
-                    border-radius: 15px;
-                    display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    box-sizing: border-box;
-                        padding: .5em;
-                    font-weight: 600;
-                    background-color: #f2f8dd;
-                }
-    /**/
-    /* Certifications */
-    .certifications-container {
-        border-radius: 15px;
-        display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-        overflow-y: auto;
-    } 
-        .cert_title {
-           border-radius: 15px;
-           box-sizing: border-box;
-                padding: .3em;
-           display: inline-flex;
-                align-self: flex-start;
-        }
-            .cert_wrapper {
-                border-radius: 15px;
-                display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    flex-direction: column;
-                    gap: .5em;
-                padding: .5em; 
-                overflow-y: auto;
-            }
-                .certs {
-                    border-radius: 15px;
-                    display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
-                        gap: .5em;
-                    width: 100%;
-                    padding: .5em;
-                    background-color: #9afada;
-                }
-                    .cert_name {
-                        border-radius: 10px;
-                        display: flex;
-                            flex-wrap: wrap;
-                            align-items: center;
-                            justify-content: center;
-                        padding: .5em;
-                        font-size: clamp(15px, 3dvw + 1dvh, 25px);
-                        background-color: #3aebb0;
-                    }
-    /**/ 
-/* ++   ++ */
-
 
 /* ~~ EDUCATION SECTION ~~ */
 #education-section {
@@ -1166,7 +1167,7 @@ section {
         flex-direction: column;
         gap: 1em;
     padding: 3rem 1rem;
-    background: linear-gradient(#ffd6a5 0%, #f09d9d 100%);
+    background: linear-gradient(#f0fd7b 0%, #f09d9d 100%);
 
     @media (min-width: 950px) {
         flex-direction: row;
