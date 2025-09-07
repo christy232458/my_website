@@ -123,7 +123,8 @@
             "通過作業評估學生能力並相應調整教案。",
             "幫助學生提高英語文法、發音和句型結構。"
           ]
-        }
+        }, 
+        "images": ["english_teaching_1.jpg", "english_teaching_2.jpg", "english_teaching_3.jpg"]
       },
       {
         "jobTitle": "Mr. Lim’s Noodle Restaurant",

@@ -196,6 +196,8 @@ async function translateExperience(lang) {
     const dutyButton = clone.querySelector('.exp_see-duties-button');
     const dutyList = clone.querySelector('.exp_duties');
       dutyList.innerHTML = ''
+    const imageList = clone.querySelector('.exp_images');
+      const jobImages = job.images;
 
     clone.querySelector('.exp_title').textContent = job.jobTitle;
     clone.querySelector('.exp_position').textContent = job.position;
@@ -215,10 +217,26 @@ async function translateExperience(lang) {
     // button toggle for this clone only
     dutyButton.textContent = jobs.experience.show_duties[lang];
     dutyButton.addEventListener('click', function() {
-      if (dutyList.style.display === 'none') {
+      const dutyDisplay = getComputedStyle(dutyList).display;
+
+      if (dutyDisplay === 'none') {
         dutyList.style.display = 'flex';
         dutyButton.textContent = jobs.experience.hide_duties[lang];
+        if (jobImages) {
+          imageList.style.display = 'flex';
+          imageList.innerHTML = ''
+          jobImages.forEach(imgFile => {
+            const li = document.createElement('li');
+            const img = document.createElement('img')
+            li.classList.add('exp_img-container');
+            img.classList.add('exp_img');
+            img.src = `images/work/${imgFile}`
+            li.appendChild(img);
+            imageList.appendChild(li);
+          })
+        }
       } else {
+        imageList.style.display = 'none'
         dutyList.style.display = 'none';
         dutyButton.textContent = jobs.experience.show_duties[lang];
       }

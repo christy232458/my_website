@@ -893,7 +893,7 @@ section {
                 border-radius: 25px;
                 box-sizing: border-box;
                     padding: .5em;
-                    width: fit-content;
+                    width: 100%;
                 display: flex;
                     align-items: center;
                     flex-direction: column;
@@ -913,6 +913,7 @@ section {
                         gap: .5em;
                     box-sizing: border-box;
                         padding: 0;
+                        width: 100%;
                 }
                     .exp_titlePosition-wrapper {
                             border-radius: 15px;
@@ -955,6 +956,7 @@ section {
                                     align-items: center;
                                     justify-content: center;
                                     flex-direction: column;
+                                width: 100%;
                             }
                                 .exp_datePlace-wrapper, .exp_summary-wrapper {
                                     box-sizing: border-box;
@@ -1029,6 +1031,30 @@ section {
                         background-color: #f0e2c6; /* warm, parchment-like cream with a soft sand undertone */
                         color: #3b1f0f; /* rich espresso text for legibility */
                     }
+                        .exp_images {
+                            border: 5px solid red;
+                            border-radius: 25px;
+                            width: 100%;
+                            display: none;
+                                align-items: center;
+                                justify-content: flex-start;
+                                gap: .5em;
+                            overflow-x: auto;
+                            padding: .5em;
+                            background-color: white;
+                        }
+                            .exp_img-container {
+                                border-radius: 20px;
+                                padding: .75em;
+                                background-color: #f191be;
+                            }
+                            .exp_img {
+                                outline: 2px solid black;
+                                max-width: 250px;     /* adjust as needed */
+                                height: auto;     /* maintains original aspect ratio */
+                                object-fit: cover; /* optional: crops to fill container nicely */
+                                border-radius: 10px; /* optional styling */
+                            }
                         .exp_duties_separator {
                             height: 1px;
                         }
