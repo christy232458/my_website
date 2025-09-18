@@ -436,8 +436,24 @@ section {
     /**/
     /*   */
 
-    /* Background circle  */
+    /* Background circle and image */
     #hero_bg-circle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ffb3ba;
+        width: clamp(150px, 15dvw + 15dvh, 250px);
+        aspect-ratio: 1/1;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+
+        @media (min-width: 650px) {
+            top: 50%;
+        }
+    }
+
+    .hero_bg_image {
         position: absolute;
         border-radius: 50%;
         background-color: #ffb3ba;
