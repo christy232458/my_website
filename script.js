@@ -3,13 +3,15 @@ const languageToggle = document.getElementById('language-toggle');
 const toggleOGText = languageToggle.textContent;
 
 // Page name
+const enTitleText = 'Padma Christie';
+const zhTitleText = '陳時慧';
 const titleText = document.title;
 
 function changePageTitle(lang) {
   if (lang == 'en') {
     document.title = titleText; // set back to original
   } else {
-    document.title = '陳時慧'
+    document.title = `${zhTitleText} | ${enTitleText}`
   }
 }
 // ---
