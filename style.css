@@ -571,13 +571,22 @@ section {
                 gap: 1em;
             padding: 1em;
             overflow-y: auto;
-            background-color: #b3d8ff;
+            background: linear-gradient(135deg, #e9f57d, #f599a8);
         }
             .about_hobby {
+                outline: 2px solid black;
+                text-align: justify;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
                 border-radius: 15px;
-                padding: .5em;
+                padding: .75em;
+                min-width: 125px;
+                width: clamp(125px, 2.5dvw + 1dvh, 250px);;
+                aspect-ratio: 1/1;
                 font-size: clamp(15px, 2.5dvw + 1dvh, 20px);
-                background-color: rgb(143, 143, 248);
+                font-weight: bold;
+                background-color: rgb(241, 173, 173);
             }
         .about_hobby-media-wrapper {
             border-radius: 15px;
@@ -588,6 +597,7 @@ section {
             padding: .5em;
             background-color: #fafafa;
             overflow-y: auto;
+            background: linear-gradient(135deg, #e9f57d, #f599a8);
         }
             .about_media {
                 border-radius: 25px;
@@ -596,7 +606,7 @@ section {
                     justify-content: center;
                     flex-shrink: 0;
                 padding: .5em;
-                background-color: #f39dd2;
+                background-color: #f06abc;
             }
             .about_iframe {
                 border-radius: 0;
@@ -617,7 +627,9 @@ section {
         display: flex;
             align-items: flex-start;
             justify-content: flex-start;
-        overflow-y: auto;
+            gap: .5em;
+        padding: .5em;
+        overflow-x: auto;
         max-height: 1000px;
 
         @media (min-width: 950px) {
@@ -632,6 +644,7 @@ section {
                 align-items: center;
                 flex-direction: column;
                 gap: .5em;
+                flex-shrink: 0;
             width: 100%;
             padding: .5em;
             background-color: rgb(241, 230, 230);
@@ -791,7 +804,7 @@ section {
                 gap: 1em;
                 justify-content: center;
                 flex: 1 1 200px; /* equal width items, min width 150px */
-                min-width: 150px; /* optional max width */
+                min-width: 175px; /* optional max width */
                 aspect-ratio: 2/1;
                 border-radius: 15px;
                 padding: 1em;
