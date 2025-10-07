@@ -1,6 +1,7 @@
-let defaultLang = 'en';
+let defaultLang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';;
 const languageToggle = document.getElementById('language-toggle');
 const toggleOGText = languageToggle.textContent;
+const documentLang = document.documentElement.lang
 
 // Page name
 const enTitleText = 'Padma Christie';
@@ -397,10 +398,12 @@ async function translateContact(lang) {
 languageToggle.addEventListener("click", function() {
   if (defaultLang == 'en') {
     defaultLang = 'zh';
-    languageToggle.textContent = 'Hi!';
+    languageToggle.textContent = 'Hi! (en)';
+    document.documentElement.lang = 'zh-TW'
   } else {
     defaultLang = 'en';
     languageToggle.textContent = toggleOGText;
+    document.documentElement.lang = documentLang;
   }
 
   changePageTitle(defaultLang);
