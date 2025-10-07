@@ -183,6 +183,7 @@ const experienceWrapper = document.getElementById('experience-section');
 const expSectionTitle = experienceWrapper.querySelector('#experience-title');
 const ogExpSectionTitle = expSectionTitle.textContent;
 
+
 async function translateExperience(lang) {
   const response = await fetch('translations/experience.json');
   const jobs = await response.json();
@@ -203,7 +204,7 @@ async function translateExperience(lang) {
       const jobImages = job.images;
 
     clone.querySelector('.exp_title').textContent = job.jobTitle;
-    clone.querySelector('.exp_position').textContent = job.position;
+    clone.querySelector('.exp_position').textContent = job.position[lang];
     clone.querySelector('.exp_start-date').textContent = job.startDate[lang];
     clone.querySelector('.exp_end-date').textContent = job.endDate[lang];
     clone.querySelector('.exp_city').textContent = job.city[lang];

@@ -17,7 +17,10 @@
   "jobs": [
       {
         "jobTitle": "Come True CAFE",
-        "position": "Restaurant Crew Member",
+        "position": {
+          "en": "Restaurant Crew Member",
+          "zh": "餐廳服務員"
+        },
         "startDate": {
           "en": "June 2024",
           "zh": "2024年6月"
@@ -55,7 +58,10 @@
       },
       {
         "jobTitle": "Joy English School",
-        "position": "English Teacher",
+        "position": {
+          "en": "English Teacher",
+          "zh": "英語教師"
+        },
         "startDate": {
           "en": "October 2023",
           "zh": "2023年10月"
@@ -91,7 +97,10 @@
       },
       {
         "jobTitle": "Yilan University",
-        "position": "English Teacher",
+        "position": {
+          "en": "English Teacher",
+          "zh": "英語教師"
+        },
         "startDate": {
           "en": "October 2021",
           "zh": "2021年10月"
@@ -128,7 +137,10 @@
       },
       {
         "jobTitle": "Mr. Lim’s Noodle Restaurant",
-        "position": "Restaurant Crew Member",
+        "position": {
+          "en": "Restaurant Crew Member",
+          "zh": "餐廳服務員"
+        },
         "startDate": {
           "en": "September 2019",
           "zh": "2019年9月"
@@ -164,7 +176,10 @@
       },
       {
         "jobTitle": "TES Company",
-        "position": "Office Administrator",
+        "position": {
+          "en": "Office Administrator",
+          "zh": "辦公室行政人員"
+        },
         "startDate": {
           "en": "December 2017",
           "zh": "2017年12月"
